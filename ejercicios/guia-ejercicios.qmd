@@ -1,0 +1,274 @@
+---
+title: "Guía de ejercicios prácticos"
+subtitle: "Sesión: OpenCode para gestión universitaria"
+author: "JA Palazón"
+date: "2 de julio de 2026"
+lang: es
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    code-fold: show
+    code-tools: true
+---
+
+## Introducción
+
+Esta guía accompanies la sesión práctica de 2 horas sobre OpenCode
+como asistente para gestión universitaria. Los ejercicios están
+diseñados para realizarse durante la sesión, con la ayuda del
+instructor.
+
+**Duración total:** 60 minutos (Bloque 2 de la sesión)
+
+**Requisitos:**
+
+- OpenCode instalado (versión GUI) o acceso a [opencode.ai](https://opencode.ai)
+- Conexión a internet
+- Un documento de texto para practicar (opcional)
+
+---
+
+## Preparación del entorno (10 minutos)
+
+### Verificar instalación de OpenCode
+
+1. **Versión de escritorio:**
+   - Busca "OpenCode" en tu menú de inicio
+   - Si se abre, ¡está instalado!
+
+2. **Versión web:**
+   - Abre tu navegador
+   - Ve a [opencode.ai](https://opencode.ai)
+   - Inicia sesión con tu cuenta
+
+3. **Verificar conexión:**
+   - Asegúrate de tener conexión a internet
+   - Prueba escribir "Hola, ¿estás funcionando?" en OpenCode
+
+::: {.callout-tip}
+## ¿No tienes OpenCode instalado?
+
+No te preocupes, puedes usar la versión web durante la sesión.
+Después puedes instalar la versión de escritorio siguiendo el
+ Curso 101: [palazon.github.io/ocCursoIntro](https://palazon.github.io/ocCursoIntro/)
+:::
+
+### Configuración inicial (si es necesario)
+
+Si es la primera vez que usas OpenCode:
+
+1. Abre la aplicación o ve a opencode.ai
+2. Inicia sesión con tu cuenta (puedes usar Google, GitHub, o crear una cuenta nueva)
+3. Verás una ventana de chat donde puedes escribir
+
+---
+
+## Ejercicio guiado 1: Crear un documento (15 minutos)
+
+### Objetivo
+
+Aprender a crear documentos a partir de peticiones en lenguaje natural.
+
+### Instrucciones
+
+1. **Abre OpenCode** (versión de escritorio o web)
+
+2. **Escribe la siguiente petición:**
+
+> Crea un borrador de correo electrónico para convocar una reunión
+> del claustro de profesores del Departamento de Biología el próximo
+> viernes 10 de julio a las 12:00 en el Salón de Actos.
+>
+> El correo debe incluir:
+> - Asunto claro
+> - Saludo formal
+> - Motivo de la reunión
+> - Fecha, hora y lugar
+> - Orden del día (3 puntos)
+> - Petición de confirmación de asistencia
+> - Despedida
+
+3. **Revisa el resultado:**
+   - ¿El tono es el adecuado?
+   - ¿La información es correcta?
+   - ¿Falta algo importante?
+
+4. **Pide ajustes si es necesario:**
+   - "Haz el correo más formal"
+   - "Añade una recordatorio de traer documentación"
+   - "Cambia el tono a más cercano"
+
+### Variantes para practicar
+
+Si terminas antes, prueba con estas peticiones:
+
+- "Redacta un acta de reunión de departamento con estos apuntes: [tus apuntes]"
+- "Crea una invitación para una conferencia sobre biología molecular"
+- "Escribe un correo de agradecimiento a un ponente externo"
+
+---
+
+## Ejercicio guiado 2: Reestructurar un documento (15 minutos)
+
+### Objetivo
+
+Aprender a mejorar y reestructurar documentos existentes.
+
+### Instrucciones
+
+1. **Prepara un documento:**
+   - Usa un borrador propio, O
+   - Copia el siguiente texto de ejemplo:
+
+> Reunión departamento biología. Fecha 5 julio. Asistieron: María,
+> Pedro, Ana, Juan. Se habló de lo del curso que viene. María va a
+> coordinar las prácticas. Pedro se encarga de la web. Hay que comprar
+> material nuevo para el lab. Quedamos en vernos en septiembre.
+
+2. **Escribe esta petición en OpenCode:**
+
+> Toma el siguiente texto y reestrúturalo como un acta formal de
+> reunión de departamento. Incluye: fecha, asistentes, orden del día,
+> intervenciones, acuerdos y tareas asignadas con responsables.
+>
+> [Pega aquí tu texto]
+
+3. **Revisa el resultado:**
+   - ¿Se mantienen todos los datos originales?
+   - ¿La estructura es clara y profesional?
+   - ¿Las tareas están bien asignadas?
+
+4. **Pide ajustes:**
+   - "Haz un resumen más conciso"
+   - "Añade un punto sobre evaluación del curso"
+   - "Incluye un apartado de Próximos pasos"
+
+### Variantes para practicar
+
+- "Convierte estos apuntes de clase en una guía didáctica estructurada"
+- "Toma este borrador de informe y mejora la claridad y coherencia"
+- "Reestructura este texto en formato de artículo académico"
+
+---
+
+## Ejercicio libre (15 minutos)
+
+### Objetivo
+
+Aplicar OpenCode a una tarea real de tu trabajo.
+
+### Instrucciones
+
+1. **Elige una tarea real** que tengas pendiente:
+   - ¿Necesitas redactar un acta?
+   - ¿Tienes que enviar un correo formal?
+   - ¿Quieres crear material docente?
+   - ¿Tienes un borrador para mejorar?
+   - ¿Necesitas traducir un documento?
+
+2. **Formula tu petición** recordando los consejos:
+   - Sé específico sobre el resultado que esperas
+   - Incluye contexto relevante
+   - Indica el formato deseado
+   - Menciona el destinatario si lo hay
+
+3. **Trabaja con OpenCode:**
+   - Escribe tu petición
+   - Revisa el resultado
+   - Pide ajustes hasta que estés satisfecho
+
+4. **Comparte tu experiencia** (opcional):
+   - ¿Qué tarea realizaste?
+   - ¿Qué resultado obtuviste?
+   - ¿Qué dificultades encontraste?
+
+### Ideas de tareas para practicar
+
+| Área | Tarea ejemplo |
+|------|---------------|
+| Docencia | Crear una rúbrica de evaluación |
+| Investigación | Resumir un artículo científico |
+| Administración | Redactar un informe de actividad |
+| Comunicación | Escribir una noticia para la web |
+| Gestión | Crear un cronograma de proyecto |
+
+---
+
+## Consejos para peticiones efectivas
+
+### Estructura de una buena petición
+
+1. **Acción:** ¿Qué quieres que haga OpenCode?
+   - "Crea", "Redacta", "Revisa", "Reestructura", "Traduce"
+
+2. **Contexto:** ¿Para qué es? ¿A quién va dirigido?
+   - "Para un acta de departamento", "Para un correo formal"
+
+3. **Formato:** ¿Qué estructura debe tener?
+   - "Con introducción, desarrollo y conclusiones"
+   - "En formato de tabla"
+
+4. **Ejemplos:** Si tienes algo similar, inclúyelo
+   - "Al estilo de este otro documento..."
+
+### Errores comunes
+
+| Error | Ejemplo | Solución |
+|-------|---------|----------|
+| Demasiado vago | "Hazme un informe" | "Crea un informe de 2 páginas sobre..." |
+| Sin contexto | "Redacta un correo" | "Redacta un correo formal para convocar..." |
+| Esperar perfección | "Esto no es lo que quería" | Pide ajustes específicos |
+| No revisar | Copiar sin leer | Siempre verifica lo generado |
+
+---
+
+## Recursos adicionales
+
+### Cursos completos
+
+- **OpenCode 101** — Curso básico de 12 pasos
+  [palazon.github.io/ocCursoIntro](https://palazon.github.io/ocCursoIntro/)
+
+- **OpenCode 102** — Curso avanzado de 8 pasos
+  [palazon.github.io/ocCursoAvanzado](https://palazon.github.io/ocCursoAvanzado/)
+
+### Documentación oficial
+
+- [opencode.ai](https://opencode.ai) — Página principal
+- Centro de ayuda de OpenCode
+
+### Comunidad
+
+- Foro de usuarios
+- Canal de Discord (si está disponible)
+
+---
+
+## Resumen de la sesión
+
+### Lo que hemos aprendido
+
+1. ✅ Qué es OpenCode y cómo funciona
+2. ✅ Casos de uso en gestión universitaria
+3. ✅ Crear documentos con lenguaje natural
+4. ✅ Reestructurar y mejorar documentos existentes
+5. ✅ Consejos para peticiones efectivas
+
+### Próximos pasos
+
+1. **Practica** con tareas reales de tu trabajo
+2. **Explora** los cursos 101 y 102
+3. **Comparte** tu experiencia con colegas
+4. **Experimenta** con diferentes tipos de peticiones
+
+### ¿Necesitas ayuda?
+
+- Revisa la sección de Preguntas Frecuentes del Curso 101
+- Consulta los ejemplos de uso en [palazon.github.io/ocCursoIntro/ideas101.html](https://palazon.github.io/ocCursoIntro/ideas101.html)
+
+---
+
+*Guía de ejercicios · Sesión "OpenCode para gestión universitaria" · 2 de julio de 2026*

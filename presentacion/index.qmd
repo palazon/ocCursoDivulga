@@ -1,0 +1,341 @@
+---
+title: "OpenCode como asistente para gestión universitaria"
+subtitle: "Programación con lenguaje natural para tareas académicas"
+author: "JA Palazón"
+date: "2 de julio de 2026"
+lang: es
+format:
+  revealjs:
+    theme: simple
+    transition: slide
+    slide-number: true
+    controls: true
+    progress: true
+    hash: true
+    self-contained: true
+    include-in-header:
+      text: |
+        <style>
+        :root {
+          --r-main-font-size: 24px;
+          --r-main-font: 'Segoe UI', system-ui, sans-serif;
+          --r-heading-font: 'Segoe UI', system-ui, sans-serif;
+          --r-heading1-size: 1.8em;
+          --r-heading2-size: 1.8em;
+          --r-heading3-size: 0.85em;
+          --r-link-color: #2d6a4f;
+          --r-link-color-dark: #1b4332;
+          --r-link-color-hover: #52b788;
+          --r-main-color: #1a1a2e;
+          --r-heading-color: #2d6a4f;
+          --r-background-color: #f7f4f0;
+        }
+        .reveal .controls { color: #2d6a4f !important; }
+        .reveal .progress { color: #2d6a4f !important; }
+        .reveal .smaller { font-size: 0.72em; }
+        .reveal h2 { margin-bottom: 0.8em; }
+        .reveal .highlight { background-color: #d8f3dc; padding: 10px; border-radius: 5px; }
+        .reveal .note { background-color: #fff3cd; padding: 10px; border-radius: 5px; font-size: 0.9em; }
+        </style>
+---
+
+## Bienvenidos
+
+**OpenCode como asistente para gestión universitaria**
+
+- Sesión práctica de 2 horas
+- Sin necesidad de saber programar
+- Enfoque en tareas reales de gestión universitaria
+
+[OpenCode](https://opencode.ai)
+
+---
+
+## Agenda
+
+::: {.smaller}
+::: {.columns}
+
+::: {.column width="50%"}
+### Bloque 1 — Presentación (60 min)
+
+1. Qué es OpenCode
+2. Casos de uso universitarios
+3. Demostración en vivo
+4. Recursos disponibles
+:::
+
+::: {.column width="50%"}
+### Bloque 2 — Práctica (60 min)
+
+1. Preparación del entorno
+2. Ejercicio guiado 1
+3. Ejercicio guiado 2
+4. Ejercicio libre
+5. Cierre
+:::
+
+:::
+:::
+
+---
+
+## ¿Qué es OpenCode?
+
+**Un asistente de IA que entiende lenguaje natural**
+
+- Describe lo que quieres y OpenCode lo hace
+- Sin sintaxis, sin etiquetas, sin comandos raros
+- Escribes, traduces, reestructuras, mantienes... **todo hablando en castellano**
+
+> *Si sabes lo que quieres y cómo lo quieres: pídelo a OpenCode.*
+
+---
+
+## ¿Por qué OpenCode?
+
+::: {.smaller}
+| Característica | ChatGPT/Claude | OpenCode |
+|----------------|----------------|----------|
+| Interfaz web | ✓ | ✓ |
+| Interfaz de escritorio | ✗ | ✓ |
+| Trabaja con archivos locales | ✗ | ✓ |
+| Memoria persistente | ✗ | ✓ |
+| Personalización avanzada | Limitada | ✓ |
+| Gratis para uso básico | ✓ | ✓ |
+:::
+
+---
+
+## Programación con lenguaje natural
+
+**No es programación tradicional**
+
+- No necesitas aprender Python, JavaScript u otro lenguaje
+- Escribes en castellano como lo harías con un colega
+- OpenCode interpreta tu petición y la ejecuta
+
+::: {.highlight}
+**Ejemplo:**
+
+"Toma este borrador del acta de reunión y conviértelo en un informe formal con secciones claras"
+
+"Redacta un correo electrónico para convocar una reunión de departamento el próximo viernes"
+:::
+
+---
+
+## Casos de uso en gestión universitaria
+
+::: {.smaller}
+::: {.columns}
+
+::: {.column width="50%"}
+### Documentación
+- Actas de reuniones
+- Informes de actividad
+- Memorias anuales
+- Actas de tribunales
+
+### Docencia
+- Guías didácticas
+- Cuestionarios
+- Rúbricas de evaluación
+- Material de apoyo
+:::
+
+::: {.column width="50%"}
+### Investigación
+- Borradores de artículos
+- Resúmenes de papers
+- Traducción de documentos
+- Organización de datos
+
+### Administración
+- Correos formales
+- Convocatorias
+- Protocolos
+- Plantillas
+:::
+
+:::
+
+---
+
+## Ejemplo 1: Acta de reunión
+
+**Petición en lenguaje natural:**
+
+> "Toma los siguientes apuntes de una reunión de departamento y conviértelos en un acta formal con los siguientes apartados: ordene del día, asistentes, puntos tratados, acuerdos y tareas asignadas."
+
+**Resultado:** Documento estructurado, profesional, listo para enviar.
+
+---
+
+## Ejemplo 2: Guía didáctica
+
+**Petición:**
+
+> "Crea una guía didáctica para un curso de Biología Molecular de 30 horas. Incluye: objetivos, contenidos por semanas, metodología, bibliografía y criterios de evaluación."
+
+**Resultado:** Guía completa con estructura académica estándar.
+
+---
+
+## Ejemplo 3: Revisión de documentos
+
+**Petición:**
+
+> "Revisa este borrador de informe y mejora: la claridad del lenguaje, la coherencia del texto, la corrección ortográfica y la estructura de párrafos."
+
+**Resultado:** Documento mejorado manteniendo el estilo del autor.
+
+---
+
+## Recursos disponibles
+
+::: {.smaller}
+::: {.columns}
+
+::: {.column width="50%"}
+### OpenCode 101
+Curso básico de 12 pasos
+
+- Instalación y primeros pasos
+- Creación de documentos
+- Investigación web
+- Traducción y tablas
+- Revisión asistida
+
+[palazon.github.io/ocCursoIntro](https://palazon.github.io/ocCursoIntro/)
+:::
+
+::: {.column width="50%"}
+### OpenCode 102
+Curso avanzado de 8 pasos
+
+- Agentes personalizados
+- Skills reutilizables
+- Modelos de IA
+- Git y colaboración
+- CLI y automatización
+
+[palazon.github.io/ocCursoAvanzado](https://palazon.github.io/ocCursoAvanzado/)
+:::
+
+:::
+
+---
+
+## Preparación para la práctica
+
+**Antes de empezar, verifica que tienes:**
+
+1. ✅ OpenCode instalado (versión GUI)
+2. ✅ Batería del portátil cargada
+3. ✅ Conexión a internet
+4. ✅ Un documento de texto para practicar
+
+::: {.note}
+**Si no tienes OpenCode instalado:** Puedes usar la versión web en [opencode.ai](https://opencode.ai) mientras tanto
+:::
+
+---
+
+## Ejercicio guiado 1
+
+**Crear un documento desde cero**
+
+1. Abre OpenCode
+2. Escribe una petición clara y concisa
+3. Revisa el resultado
+4. Pide ajustes si es necesario
+
+::: {.highlight}
+**Tu turno:**
+
+"Crea un borrador de correo electrónico para convocar una reunión del claustro de profesores del Departamento de Biología el próximo viernes 10 de julio a las 12:00 en el Salón de Actos."
+:::
+
+---
+
+## Consejos para peticiones efectivas
+
+::: {.smaller}
+1. **Sé específico:** No digas "haz un informe", di "haz un informe de 2 páginas sobre..."
+2. **Contexto:** Incluye información relevante (destinatario, propósito, formato)
+3. **Ejemplos:** Si tienes un ejemplo de lo que quieres, inclúyelo
+4. **Itera:** Si no sale perfecto la primera vez, pide ajustes
+5. **Formato:** Indica si quieres texto, listas, tablas, etc.
+:::
+
+---
+
+## Ejercicio guiado 2
+
+**Reestructurar un documento existente**
+
+1. Toma un documento que tengas (borrador, apuntes, etc.)
+2. Pide a OpenCode que lo reestructure
+3. Compara el resultado con el original
+
+::: {.highlight}
+**Tu turno:**
+
+"Toma el siguiente texto y reestructúralo en un informe formal con: introducción, desarrollo, conclusiones y recomendaciones. [Pega tu texto aquí]"
+:::
+
+---
+
+## Ejercicio libre
+
+**Elige una tarea real de tu trabajo**
+
+- ¿Tienes un acta pendiente?
+- ¿Necesitas redactar un correo formal?
+- ¿Quieres crear material docente?
+- ¿Tienes un borrador para mejorar?
+
+**Usa OpenCode para ayudarte**
+
+---
+
+## Errores comunes (y cómo evitarlos)
+
+::: {.smaller}
+| Error | Solución |
+|-------|----------|
+| Petición demasiado vaga | Sé más específico en tu petición |
+| No incluir contexto | Añade información relevante |
+| Esperar perfection la 1ª vez | Itera y pide ajustes |
+| No revisar el resultado | Siempre lee y verifica lo generado |
+| Copiar sin leer | Entiende lo que OpenCode produce |
+:::
+
+---
+
+## Cierre
+
+**Recuerda:**
+
+- OpenCode es una herramienta, no un reemplazo de tu criterio
+- La calidad del resultado depende de la calidad de tu petición
+- Practica, experimenta, no tengas miedo de equivocarte
+
+**Recursos:**
+
+- Cursos 101 y 102 disponibles online
+- Comunidad de usuarios
+- Soporte técnico
+
+---
+
+## ¡Gracias!
+
+**¿Preguntas?**
+
+[OpenCode](https://opencode.ai)
+
+ Curso 101: [palazon.github.io/ocCursoIntro](https://palazon.github.io/ocCursoIntro/)
+
+ Curso 102: [palazon.github.io/ocCursoAvanzado](https://palazon.github.io/ocCursoAvanzado/)

@@ -1,0 +1,518 @@
+---
+title: "Tu asistente IA para el trabajo universitario"
+subtitle: "Sesión práctica de introducción a OpenCode"
+author: "JA Palazón"
+date: "2 de julio de 2026"
+lang: es
+format:
+  revealjs:
+    theme: simple
+    transition: slide
+    slide-number: true
+    controls: true
+    progress: true
+    hash: true
+    self-contained: true
+    include-in-header:
+      text: |
+        <style>
+        :root {
+          --r-main-font-size: 24px;
+          --r-main-font: 'Segoe UI', system-ui, sans-serif;
+          --r-heading-font: 'Segoe UI', system-ui, sans-serif;
+          --r-heading1-size: 1.7em;
+          --r-heading2-size: 1.6em;
+          --r-heading3-size: 0.85em;
+          --r-main-color: #ffffff;
+          --r-heading-color: #52b788;
+          --r-link-color: #95d5b2;
+          --r-link-color-hover: #b7e4c7;
+          --r-background-color: #002028;
+        }
+        .reveal { background-color: #002028; }
+        .reveal .slides { color: #ffffff; }
+        .reveal .controls { color: #52b788 !important; }
+        .reveal .progress { color: #52b788 !important; }
+        .reveal .progress span { color: #52b788 !important; }
+        .reveal .smaller { font-size: 0.72em; }
+        .reveal h1, .reveal h2, .reveal h3 { color: #52b788; }
+        .reveal h2 { margin-bottom: 0.8em; }
+        .reveal .highlight { background-color: #0a3d2e; padding: 15px; border-radius: 8px; margin: 10px 0; border: 1px solid #52b788; }
+        .reveal .note { background-color: #1a3a4a; padding: 10px; border-radius: 5px; font-size: 0.9em; border: 1px solid #52b788; }
+        .reveal blockquote { border-left: 4px solid #52b788; padding-left: 15px; color: #b7e4c7; font-style: italic; background: #0a3d2e; }
+        .reveal .subtitle { color: #95d5b2; font-size: 0.8em; margin-top: -10px; }
+        .reveal .slides section { overflow-y: auto; max-height: 100vh; }
+        .reveal table { color: #ffffff; }
+        .reveal th { background-color: #52b788; color: #002028; }
+        .reveal td { border-bottom: 1px solid #0a3d2e; }
+        .reveal tr:hover td { background-color: #0a3d2e; }
+        .reveal a { color: #95d5b2; }
+        .reveal strong { color: #ffffff; }
+        </style>
+---
+
+::: {.highlight}
+**Parte 1 — La herramienta en 3 minutos**
+:::
+
+## Bienvenidos
+
+**Hoy vas a descubrir algo que te va a cambiar la forma de trabajar.**
+
+No es una conferencia. Es una sesión para que **tú** pruebes, toques, equivocotes y aprendas.
+
+Si quieres coger el portátil ahora, adelante. Nos va a hacer falta.
+
+[OpenCode](https://opencode.ai)
+
+---
+
+## Qué haremos hoy
+
+Vamos a **experimentar** con una herramienta de IA que trabaja en tu ordenador.
+
+- Ejemplos simples para que veas cómo funciona
+- Tú pruebas, ajustas, vuelves a intentar
+- No hay respuestas incorrectas, solo "a ver qué sale"
+
+**Clave:** Empieza pequeño. No intentes hacer todo de golpe.
+
+---
+
+## Qué es OpenCode
+
+**OpenCode es tu asistente. Trabaja en tu ordenador.**
+
+OpenCode tiene acceso directo a tus archivos: los lee, los edita, los guarda. Sin que tengas que copiar y pegar nada.
+
+Tú le hablas en castellano. Él entiende y hace.
+
+> *Si sabes lo que quieres y cómo lo quieres: pídelo a OpenCode.*
+
+---
+
+## La interfaz
+
+**Esto es todo. Una caja de texto y resultados.**
+
+No necesitas menús complicados ni opciones ocultas. Abres, escribes lo que quieres, y OpenCode lo hace.
+
+No te preocupes por los detalles ahora. Los justos para empezar están aquí.
+
+::: {.note}
+**Nota:** No insistas en los detalles de la interfaz. Los justos para empezar. Luego ya verás más.
+:::
+
+---
+
+## Entrar, salir, retomar
+
+**Abres, hablas, cierras. Cuando vuelves, está donde lo dejaste.**
+
+1. Abres OpenCode
+2. Escribes qué necesitas
+3. Cierras cuando quieras
+4. Cuando vuelvas, todo sigue ahí
+
+Es como un WhatsApp que nunca pierde el historial. Tus conversaciones, tus documentos, todo queda guardado en tu ordenador.
+
+---
+
+## Los dos modos: Plan y Build
+
+OpenCode tiene dos formas de trabajar. **Primero piensa, luego ejecuta.**
+
+[Más info: Plan y Build](https://opencode.ai/docs/go/)
+
+::: {.columns}
+
+::: {.column width="50%"}
+### Plan
+
+**El que piensa.**
+
+Le dices "quiero crear un informe" y te propone cómo hacerlo: estructura, secciones, contenido.
+
+Como un arquitecto que dibuja el plano.
+:::
+
+::: {.column width="50%"}
+### Build
+
+**El que ejecuta.**
+
+Toma el plan y lo convierte en un documento real en tu ordenador.
+
+Como un albañil que construye.
+:::
+
+:::
+
+---
+
+## Ejemplo 1: Algo simple
+
+**¿Qué necesitas?** Un resumen rápido de un texto largo.
+
+**¿Para qué?** Para deciding si merece la pena leerlo entero.
+
+**Prueba con esto:**
+
+> "Resume este texto en 3 oraciones: [pega un párrafo cualquiera]"
+
+¿Ves lo que sale? En 5 segundos tienes un resumen.
+
+**Ahora prueba tú:** Copia cualquier texto de un correo y pídele que lo resuma.
+
+No necesitas más. Empieza por lo simple.
+
+::: {.note}
+**¿Qué ha funcionado?** ¿El resumen captura la idea principal? ¿Qué cambiarías para la próxima vez?
+:::
+
+---
+
+## Ejemplo 2: Un poco más
+
+**¿Qué necesitas?** Un correo formal para convocar una reunión.
+
+**¿Para quién?** Tus compañeros de departamento.
+
+**Ahora otra cosa:**
+
+> "Escribe un correo de 3 líneas para convocar una reunión de departamento el próximo viernes a las 12:00"
+
+Diferente, mismo proceso. En 10 segundos tienes el correo listo para enviar.
+
+**Experimenta:** Cambia el tono ("más formal", "más cercano"). A ver qué pasa.
+
+::: {.note}
+**¿Qué ha funcionado?** ¿El correo tiene el tono adecuado? ¿Falta información importante?
+:::
+
+---
+
+## Ejemplo 3: Formato
+
+**¿Qué necesitas?** Convertir datos desordenados en una tabla clara.
+
+**¿Para qué?** Para un informe, una presentación, o simplemente para entender mejor los datos.
+
+**Y esto:**
+
+> "Convierte esta lista en una tabla con columnas: Nombre, Fecha, Estado"
+
+| Tarea | Fecha | Estado |
+|-------|-------|--------|
+| Informe Q3 | 15 jul | Pendiente |
+| Reunión equipo | 10 jul | Hecho |
+| Presupuesto 2027 | 30 ago | En curso |
+
+**La clave:** No es solo texto. OpenCode puede transformar, reestructurar, dar forma.
+
+::: {.note}
+**¿Qué ha funcionado?** ¿La tabla tiene las columnas adecuadas? ¿Los datos están bien organizados?
+:::
+
+---
+
+## El flujo de trabajo
+
+**Así funciona. Siempre.**
+
+1. **Idea** — Sabes qué quieres hacer
+2. **Petición** — Se lo dices a OpenCode en castellano
+3. **Revisión** — Miras el resultado
+4. **Ajuste** — Si no te gusta, le dices qué cambiar
+5. **Entrega** — Listo. Tu documento está en tu ordenador
+
+**Recuerda:** No intentes hacer todo perfecto a la primera. Experimenta. Prueba. Ajusta. Esa es la clave.
+
+---
+
+## Transición
+
+**Ahora veamos qué puedes hacer con esto en situaciones reales.**
+
+Hemos visto lo básico. Ahora vamos a probar cosas más completas.
+
+Pero Recuerda el principio: **empieza simple, ve añadiendo complejidad.**
+
+---
+
+::: {.highlight}
+**Parte 2 — Situaciones reales**
+:::
+
+## Modificar y compartir
+
+**Tomas un texto, lo mejoras, lo envías. Sin copiar y pegar.**
+
+Ejemplo:
+
+> "Toma este borrador del acta y mejora: la claridad, la coherencia, la estructura. Guarda el resultado como 'acta-final.md'"
+
+OpenCode lee tu archivo, lo mejora y lo guarda. Tú solo tienes que enviarlo.
+
+---
+
+## Agentes: tus asistentes especializados
+
+**Puedes crear asistentes que solo hagan una cosa.**
+
+[Más info: Agentes](https://opencode.ai/docs/agents/)
+
+- Uno que solo revise estilo (que no toque el contenido)
+- Otro que genere actas a partir de apuntes
+- Otro que normalice el formato de todos tus documentos
+
+Es como tener un equipo de secretarios virtuales, cada uno con su especialidad.
+
+::: {.highlight}
+**Ejemplo 1:** "Crea un agente llamado 'revisor' que solo revise la ortografía y el estilo, sin cambiar el contenido."
+
+**Ejemplo 2:** "Crea un agente llamado 'generador-actas' que convierta apuntes sueltos en un acta formal de reunión."
+:::
+
+---
+
+## Generación de formatos
+
+**¿HTML? ¿PDF? ¿Word? OpenCode genera lo que tú le pidas.**
+
+- **HTML** — Para web, rápido de compartir
+- **PDF** — Para imprimir, formal
+- **Word** — Para que otros editen
+- **Texto plano** — Para notas rápidas, sin formato
+
+Tú dices el formato, él lo genera. Sin instalar programas complicados.
+
+---
+
+## Ejemplo: Rúbrica
+
+**¿Qué necesitas?** Evaluar una presentación de forma objetiva.
+
+**¿Para qué?** Para que la evaluación sea justa y consistente.
+
+**Crea una rúbrica de evaluación en 2 minutos.**
+
+> "Crea una rúbrica para evaluar una presentación oral de 10 minutos. Incluye: contenido, claridad, dominio del tema, uso de tiempo. Con niveles: excelente, bueno, mejorable, insuficiente."
+
+¿Lista? Ahora úsala para evaluar algo. O pídele que la adapte a otro contexto.
+
+::: {.note}
+**¿Qué ha funcionado?** ¿Los criterios son claros? ¿Los niveles son distinguibles?
+:::
+
+---
+
+## Ejemplo: DAFO
+
+**¿Qué necesitas?** Un análisis estratégico de un proyecto.
+
+**¿Para qué?** Para presentar a dirección, buscar financiación, o planificar.
+
+**Le das datos, te devuelve un análisis DAFO listo para presentar.**
+
+> "Genera un análisis DAFO de este proyecto de investigación: [describe brevemente el proyecto]"
+
+OpenCode estructura fortalezas, debilidades, oportunidades y amenazas.
+
+**Empieza simple:** Primero con datos pocos. Luego amplía.
+
+::: {.note}
+**¿Qué ha funcionado?** ¿El DAFO refleja la realidad del proyecto? ¿Qué amenazas has olvidado?
+:::
+
+---
+
+## Corrección con rúbrica
+
+**Pásale la rúbrica y te corrige el trabajo.**
+
+> "Evalúa este trabajo según la rúbrica que te di. Señala los puntos que mejoran y los que necesitan mejorar."
+
+No es solo puntuar. Es explicar por qué y cómo mejorar.
+
+**La ventaja:** Lo puedes hacer 10 veces con diferentes borradores. Sin cansarte.
+
+---
+
+## Preparación de minicurso
+
+**Prepara materiales para un curso completo en una tarde.**
+
+> "Diseña un minicurso de 8 horas sobre [tema]. Incluye: objetivos, contenidos por sesiones, actividades, evaluación y bibliografía."
+
+**Consejo:** Empieza por un módulo, no por el curso entero. Prueba, ajusta, luego amplía.
+
+---
+
+## Lo local es tuyo
+
+**Esto está en tu ordenador. No en la nube. No dependes de nadie.**
+
+- Tus documentos son tuyos
+- Puedes editarlos con cualquier programa
+- No necesitas conexión a internet para trabajar
+- Nadie ve lo que haces excepto tú
+
+**OpenCode es una herramienta, no un servicio.** La diferencia importa.
+
+---
+
+## Resumen: Lo que has visto
+
+- **Lo básico:** Abrir, hablar, cerrar. Plan y Build.
+- **Ejemplos simples:** Resumir, redactar, transformar
+- **Casos reales:** Actas, informes, rúbricas, DAFOs
+- **Agentes:** Asistentes especializados
+- **Formatos:** HTML, PDF, Word, Markdown
+- **Lo local:** Tus archivos, tu control
+
+**Lo que viene ahora:** Personalizar OpenCode para que trabaje como tú.
+
+---
+
+## Transición
+
+**Ahora hablemos de cómo OpenCode se adapta a ti.**
+
+Hemos visto qué puede hacer. Ahora vamos a ver cómo se convierte en **tu** asistente.
+
+No es el mismo para todos. Se adapta a ti.
+
+---
+
+::: {.highlight}
+**Parte 3 — OpenCode se adapta a ti**
+:::
+
+## Memoria
+
+**Lo mejor de OpenCode es que te recuerda.**
+
+Si le dices una vez "prefiero textos formales", lo recuerda para siempre. Si indicas que tus informes siempre tienen que llevar introducción, desarrollo y conclusiones, lo aplicará sin que se lo pidas.
+
+Es como un colega que lleva años trabajando contigo y ya sabe cómo escribes.
+
+**Prueba:** Dale una preferencia ahora. Luego pídele algo y mira si la aplica.
+
+---
+
+## Configuración personal
+
+**Le dices qué te gusta y lo aplica siempre.**
+
+- "Prefiero textos formales"
+- "Usa siempre tono cercano"
+- "Mis informes llevan introducción, desarrollo y conclusiones"
+- "No uses jerga técnica"
+
+**No es configurar una vez.** Es un diálogo. Si algo no te gusta, le dices y lo cambia.
+
+---
+
+## Skills: habilidades a medida
+
+**Crea una habilidad nueva. La usas cuando quieras.**
+
+[Más info: Skills](https://opencode.ai/docs/skills/)
+
+Un skill es como una receta: Defines qué hacer, y OpenCode la ejecuta cuando se lo pides.
+
+Ejemplo: Un skill para generar actas. Cada vez que tengas una reunión, solo tienes que decir "genera el acta" y OpenCode ya sabe cómo hacerlo.
+
+**Empieza con uno simple.** Luego ya crearás otros más complejos.
+
+---
+
+## Modelos de IA
+
+**No todos los modelos son iguales. Hay uno para cada tarea.**
+
+[Más info: Proveedores y modelos](https://opencode.ai/docs/providers/)
+
+OpenCode puede usar diferentes modelos de IA:
+
+- **Para textos largos:** Más capaces, pero más lentos
+- **Para tareas rápidos:** Más baratos, suficientes para lo básico
+- **Para código:** Solo si programás (hoy no hace falta)
+
+**Consejo:** No te preocupes por los modelos ahora. Ya habrá tiempo de experimentar.
+
+---
+
+## Skill paso a paso
+
+**Mira cómo se crea un skill. Es más fácil de lo que crees.**
+
+> "Crea un skill llamado 'formato-informe' que aplique este formato a cualquier documento: título, fecha, autor, introducción, desarrollo, conclusiones. Guarda en .opencode/skills/"
+
+OpenCode crea el archivo. Tú lo usas cuando quieras.
+
+**Experimenta:** Prueba a crear uno simple primero. Luego amplía.
+
+---
+
+## Errores comunes
+
+**Si te sale mal, no es tu culpa. Es que la petición era vaga.**
+
+| Error | Solución |
+|-------|----------|
+| "Hazme un informe" | Sé más específico: "Hazme un informe de 2 páginas sobre..." |
+| No incluir contexto | Añade información: "Para el claustro del departamento..." |
+| Esperar perfección a la 1ª vez | Itera: "Ahora cambia esto por esto otro" |
+| No revisar el resultado | Siempre lee lo que OpenCode produce |
+
+**Recuerda:** No es un error, es información. Experimenta otra vez.
+
+---
+
+## Recursos
+
+**Para seguir aprendiendo, estos cursos son gratis:**
+
+- **OpenCode 101** — Lo básico, 12 pasos
+  [palazon.github.io/ocCursoIntro](https://palazon.github.io/ocCursoIntro/)
+
+- **OpenCode 102** — Lo avanzado, 8 pasos
+  [palazon.github.io/ocCursoAvanzado](https://palazon.github.io/ocCursoAvanzado/)
+
+No necesitas terminarlos hoy. Pero guárdalos para cuando quieras profundizar.
+
+---
+
+## Próximos pasos
+
+**Ahora te toca. Abre OpenCode y prueba algo.**
+
+Empieza por algo simple:
+
+- Resume un texto
+- Escribe un correo corto
+- Convierte una lista en tabla
+
+**No intentes hacer todo de golpe.** Empieza pequeño, ve añadiendo.
+
+¿Qué vas a probar primero?
+
+---
+
+## Cierre
+
+**Gracias por experimentar hoy.**
+
+Has visto lo que OpenCode puede hacer. Ahora depende de ti.
+
+Recuerda: no es una herramienta perfecta. Es una herramienta que se adapta a ti. Cuanto más pruebes, mejor funcionará.
+
+**¿Preguntas?**
+
+[OpenCode](https://opencode.ai)
+
+Curso 101: [palazon.github.io/ocCursoIntro](https://palazon.github.io/ocCursoIntro/)
+
+Curso 102: [palazon.github.io/ocCursoAvanzado](https://palazon.github.io/ocCursoAvanzado/)
