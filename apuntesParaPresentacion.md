@@ -213,6 +213,7 @@ la importacia de usar cada uno en su momento.
 La creación del contenido en local, y por tanto 
 la posibilidad de editar y manipular los ficheros y documentos.
 
+/init
 
 Mostrar como opencode resuelve distintas
 situaciones habituales.
