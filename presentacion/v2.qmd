@@ -506,7 +506,7 @@ Puedes cambiar los documentos directamente con el editor de texto y luego pedir 
 Revisa este documento. He cambiado la sección de introducción. ¿El resto sigue siendo coherente? ¿Hay algo que deba actualizar?
 :::
 
-Así trabajas tú el contenido fino y OpenCode se encarga de la visión全局.
+Así trabajas tú el contenido fino y OpenCode se encarga de la visión global.
 
 ## Incluir documentación e instrucciones
 
@@ -523,16 +523,33 @@ OpenCode puede leer archivos locales, páginas web o documentos que le proporcio
 
 ## Más allá de la documentación
 
-TODO: Opencode te ayuda con el análisis de errores de otros programas, mantenimiento del software de tu sistema, ayudarte a configurar opencode, ...
+OpenCode no solo sirve para crear documentos. También puede ayudarte con:
+
+- **Análisis de errores** — Pídele que revise logs o mensajes de error de otros programas
+- **Mantenimiento del sistema** — Actualizar paquetes, limpiar archivos temporales, organizar directorios
+- **Configuración de OpenCode** — Ajustar agentes, skills, modelos y permisos desde el propio asistente
+- **Automatización de tareas repetitivas** — Renombrar lotes de archivos, convertir formatos, generar índices
+
+::: {.callout-note}
+La clave está en pensar qué tareas haces a diario que son mecánicas. OpenCode puede encargarse de ellas.
+:::
 
 ## Agentes
 
 Los **agentes** son configuraciones predefinidas que le dicen a OpenCode cómo comportarse: qué modelo usar, qué instrucciones seguir, qué herramientas tiene disponibles.
 
-Puedes crear un agente especializado para cada tipo de tarea.
+TODO el siguiente texto es un prompt:  El agente después de revisar manualmente un fichero quiero que ser revisen los posibles errores y que la coherencia se mantengan y eviten las repeticiones. Además se resuelvan los TODO que haya incluido en el texto.
+
+## Agentes (y 2)
+
+Puedes crear un agente especializado para cada tipo de tarea, 
+
+Piensa bien los que son necesarios
+
+Los agentes pueden ser de proyectos o globales.
 
 ::: {.callout-note}
-Más información y ejemplos para copiar: [Agentes en OpenCode](https://github.com/palazon/ocCursoAvanzado/blob/main/contenidos/ampliando/ampliando-agentes.html)
+Más información y ejemplos para copiar: [Agentes en OpenCode](https://palazon.github.io/ocCursoAvanzado/ampliando/ampliando-agentes.html)
 :::
 
 ## Skills
@@ -542,7 +559,7 @@ Los **skills** son capacidades adicionales que puedes cargar para tareas especia
 OpenCode incluye skills por defecto, y puedes crear los tuyos.
 
 ::: {.callout-note}
-Más información y ejemplos para copiar: [Skills en OpenCode](https://github.com/palazon/ocCursoAvanzado/blob/main/contenidos/ampliando/ampliando-skills.html)
+Más información y ejemplos para copiar: [Skills en OpenCode](https://palazon.github.io/ocCursoAvanzado/ampliando/ampliando-skills.html)
 :::
 
 ## Git
