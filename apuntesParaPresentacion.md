@@ -84,6 +84,21 @@ Nuestros enemigos: el tiempo y los sesgos
 
 Más allá de un chateo pero con aspecto de chat vitaminado
 
+Vamos a utilizar la *Desktop App* (Beta)  
+(App nativa con GUI para macOS, Windows, Linux)
+
+1. Área de conversación (panel principal)
+1. *Input / prompt* (línea inferior):
+1. Barra de estado, abajo a la izquierda 
+Modo actual: Plan (solo planea, no edita) o Build (puede hacer cambios)
+Modelo activo (ej. deepseek-v4-flash-free)
+Proveedor configurado
+Indicador de sesión: Múltiples sesiones pueden coexistir; se ven en /sessions.
+
+* Ventana de respuesta
+* Ventana de petición
+* 
+* Barra lateral de *Revisión*
 
 
 ## Primera parte  

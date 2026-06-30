@@ -1,13 +1,15 @@
 ---
-title: "Tu asistente IA para el trabajo universitario"
+title: "Asistente IA para el trabajo universitario"
 subtitle: "Sesión práctica de introducción a OpenCode"
-author: "JA Palazón"
-date: "2 de julio de 2026"
+author: "JA Palazón; D Rivera"
+institute: "Facultad de Biología, Universidad de Murcia"
+date: "20260702"
 lang: es
 format:
   revealjs:
     theme: simple
     transition: slide
+    navigationMode: linear
     slide-number: true
     controls: true
     progress: true
@@ -17,12 +19,12 @@ format:
       text: |
         <style>
         :root {
-          --r-main-font-size: 24px;
+          --r-main-font-size: 27.6px;
           --r-main-font: 'Segoe UI', system-ui, sans-serif;
           --r-heading-font: 'Segoe UI', system-ui, sans-serif;
-          --r-heading1-size: 1.7em;
-          --r-heading2-size: 1.6em;
-          --r-heading3-size: 0.85em;
+          --r-heading1-size: 2.04em;
+          --r-heading2-size: 1.92em;
+          --r-heading3-size: 1.02em;
           --r-main-color: #ffffff;
           --r-heading-color: #52b788;
           --r-link-color: #95d5b2;
@@ -48,6 +50,9 @@ format:
         .reveal tr:hover td { background-color: #0a3d2e; }
         .reveal a { color: #95d5b2; }
         .reveal strong { color: #ffffff; }
+        .reveal .callout-title { display: none !important; }
+        .reveal div.callout { font-size: 1.01em !important; border-left-width: 0.9rem !important; }
+        .reveal .callout-body { font-style: italic; color: #d4a017; }
         </style>
 ---
 
@@ -57,25 +62,23 @@ format:
 
 **Hoy vas a descubrir algo que te va a cambiar la forma de trabajar.**
 
-No es una conferencia. Es una sesión para que **tú** pruebes, toques, equivocotes y aprendas.
+No es una conferencia. Es una sesión para que **tú** pruebes, toques, te equivoques y aprendas.
 
 Si quieres coger el portátil ahora, adelante. Nos va a hacer falta.
 
 [OpenCode](https://opencode.ai)
 
-
 ## ¿Por qué este curso?
 
-**Porque hay herramientas que pueden ayudarte, y nadie te las ha contado.**
+**Porque hay herramientas que pueden ayudarte, y todavía nadie te las ha contado.**
 
-La universidad está llena de personas que crean contenidos, reutilizan información, cambian formatos, organizan proyectos personales y grupales, revisan materiales, corrigen documentación...
+La universidad está llena de personas que crean contenidos, reutilizan información, cambian formatos, organizan proyectos personales y grupales, revisan materiales, corrigen documentación ... 
 
-**¿Y si encotrases la herramienta hacer todo eso mejor, más rápido?**
+**¿Y si encontrases la herramienta que te puede ayudar a hacer todo eso mejor, más rápido?**
 
-Este curso es un taller de 2 horas para que pruebes con una herramienta de IA que trabaja en tu ordenador.
+Este es un taller de 2 horas para que pruebes con una herramienta de IA que trabaja en tu ordenador.
 
-
-## Cursos disponibles
+<!-- ## Cursos disponibles
 
 **Este taller es la puerta de entrada a dos cursos completos y gratuitos.**
 
@@ -90,14 +93,13 @@ Son cursos COLA:
   [palazon.github.io/ocCursoIntro](https://palazon.github.io/ocCursoIntro/)
 
 - **OpenCode 102** — Lo avanzado, 8 pasos
-  [palazon.github.io/ocCursoAvanzado](https://palazon.github.io/ocCursoAvanzado/)
+  [palazon.github.io/ocCursoAvanzado](https://palazon.github.io/ocCursoAvanzado/) -->
 
-
-## Para quién es este curso
+## ¿Para quién es este curso?
 
 **Para ti, que pasas la vida creando y reorganizando contenidos.**
 
-No hace falta ser programador. No hace gusto técnico.
+No hace falta ser programador. No hace falta conocimiento técnico.
 
 Este curso es para quien:
 
@@ -109,52 +111,63 @@ Este curso es para quien:
 
 **Si creas contenido, esto es para ti.**
 
+## Enfrentando a nuestros enemigos
 
-## Nuestros enemigos
-
-**El tiempo y los sesgos nos complicated la vida.**
-
-No se trata de que no sepas hacer las cosas. Se trata de que:
+**El tiempo y los sesgos nos complican la vida.**
 
 - **El tiempo** siempre escasea. Hay más cosas que hacer que horas en el día.
-- **Los sesgos** nos hacen repetir patrones. Siempre el mismo formato,
-  siempre la misma estructura, porque "así se ha hecho siempre".
 
-**¿Qué pasaría si pudieras automatizar lo repetitivo y enfocarte en lo importante?**
+- **Los sesgos** nos hacen repetir patrones.
+  * Siempre el mismo formato, siempre la misma estructura,
+    porque "así se ha hecho siempre".
+  * Si aceptamos procedimientos, conceptos, supuestos
+    sin comprobarlos, sin experimentarlos, sin contextualizarlos,
+    tenemos décimos para la lotería del error, que siempre toca.
+  
 
+## Asistencia
+
+Sabes hacer las cosas, pero tienes necesidad de ayuda.
+
+**¿Qué pasaría si pudieras ...**
+
+* recordar reglas, normas y protocolos
+* recordar y aplicar tus preferencias a tu trabajo
+* automatizar lo repetitivo
+* enfocarte en lo importante
 
 ## ¿Qué es OpenCode?
 
 **OpenCode es tu asistente personal de IA. Trabaja en tu ordenador.**
 
 | Aspecto | Descripción |
-|---------|-------------|
-| ¿Qué es? | Agente de IA de código abierto para terminal, IDE o escritorio |
-| Licencia | Open source ([160K ★ en GitHub](https://github.com/anomalyco/opencode), 900+ contribuidores) |
-| Uso | 7.5M de desarrolladores/mes |
-| Modelos | Gratis incluidos, o conecta cualquier proveedor (Claude, GPT, Gemini, etc.) |
-| Formatos | CLI, app de escritorio (beta), extensión IDE |
-| Privacidad | No almacena código ni contexto del usuario |
-| Precio | Gratuito |
-
+|---|---|
+| ¿Qué es? | Agente de IA coding-first que corre en tu terminal. Le das una tarea y escribe/edita código por ti, multi-sesión, con LSP integrado |
+| Modelos | BYOK: usa tu API key de OpenAI, Anthropic, Google, o modelos locales vía Ollama. También ChatGPT Plus / GitHub Copilot |
+| Instalación | `npm i -g opencode-ai` o `curl -fsSL https://opencode.ai/install \| bash` |
+| Uso típico | `opencode "refactoriza este módulo a funciones puras"` — ve los cambios, los aceptas o los descartas |
+| Multi-sesión | Lanzas varios agentes en paralelo sobre el mismo repo, cada uno con su contexto |
+| LSP | Detecta automáticamente el lenguaje y carga el LSP correspondiente para dar mejor contexto al LLM |
+| Git | Integración básica (no auto-commit como Aider). Eres tú quien revisa y commitea |
+| Privacidad | No almacena código, no envía telemetría. Las requests van al LLM que elijas |
+| Precio | Gratuito. Modelos gratuitos incluidos (limitados). Zen = modelos validados de pago |
 
 ## Pero no soy programador
 
-**No necesitas serlo. OpenCode también sirve para crear documentos.**
-
-¿Qué es [Quarto](https://quarto.org/)? Un sistema de documentación científica y técnica basado en texto plano:
+**El contexto es relevante. Si recibimos información sin contexto puede no ser útil, o generarnos errores.
+OpenCode no es solo para programadores, pero por defecto no lo considera.
+Si no precisamos, entonces podemos generar un sesgo.**
 
 | Aspecto | Descripción |
-|---------|-------------|
-| ¿Qué es? | Sistema de documentación científica y técnica basado en Pandoc |
-| Licencia | Open source (MIT) |
-| Formatos de salida | HTML, PDF, DOCX, ePub, Reveal.js, Typst, más |
-| Características | Markdown ejecutable, cross-references, citas, diagramas (Mermaid), extensiones |
-| Privacidad | Sin telemetría. Renderizado 100% local |
-| Precio | Gratuito |
-
-**OpenCode + Quarto = puedes crear presentaciones, informes, libros... todo desde una petición en castellano.**
-
+|---|---|
+| ¿Qué es? | Asistente de IA que te ayuda a crear, editar y gestionar documentos y contenidos desde tu terminal |
+| ¿Para qué sirve? | Escribir, reestructurar, traducir o resumir documentos Markdown, Quarto, texto técnico, guías, informes |
+| Modelos | Gratis incluidos, o conecta tu cuenta de ChatGPT, Claude, Gemini, etc. |
+| Instalación | `npm i -g opencode-ai` o `curl -fsSL https://opencode.ai/install \| bash` |
+| Formas de uso | Terminal, app escritorio (beta) o extensión IDE — todo texto |
+| ¿Cómo ayuda? | Le pides "traduce esta guía al español", "reestructura este informe", "convierte estas notas a Quarto" y él edita los archivos |
+| Privacidad | No almacena tus documentos. Todo corre local o contra el LLM que elijas |
+| Precio | Gratuito. Modelos gratuitos incluidos. Opción Zen para modelos premium |
 
 ## ¿Y las alternativas?
 
@@ -171,84 +184,92 @@ Las alternativas más conocidas son chatbots web (ChatGPT, Claude, Gemini). Func
 
 [Más info: Privacidad](https://opencode.ai/docs/)
 
-
 ## Tipos de archivo
 
-**¿Qué tipo de archivos puedes manejar y cuándo usarlos?**
+**La utilidad y adecuación de los formatos de la información documental
+está sesgada. Muchos universitarios apenas conocen una forma de generar documentos.
+¿Qué tipo de archivos puedes manejar y cuándo usarlos?**
+
+¿Qué dice opencode sobre los formatos más habituales?
 
 | Formato | Cuándo usarlo |
 |---------|---------------|
-| **docx / odt** | Para compartir con otros que editan en Word/LibreOffice |
-| **html** | Para publicar en la red, rápido de compartir |
-| **pdf** | Para imprimir, para formal, para que no cambien nada |
-| **texto plano** | Para notas rápidas, para borradores, para que OpenCode lo procese bien |
+| **DOCX / ODT** | Para compartir con otros que editan en Word/LibreOffice |
+| **HTML** | Para publicar en la red, rápido de compartir |
+| **PDF** | Para imprimir, para formal, para que no cambien nada |
+| **Texto plano** | Para notas rápidas, para borradores, para que OpenCode lo procese bien |
 
-**Dato importante:** OpenCode entiende mejor el texto plano. Si te cuesta con markdown, no te preocupes: es solo texto sin adornos. Y lo puedes pedir en cualquier formato de salida.
+## Tipos archivos, corrigiendo sesgos
 
+* No son alternativos, son complementarios 
+* Es fácil a partir de texto plano generar PDF, HTML o ficheros para MSOffice o LibreOffice.
+* El texto plano se puede marcar, la *lengua franca* de las IA es *Markdown*, ficheros `.md`
+* Esa lengua tiene dialectos, te gustará quarto,  ficheros `.qmd`
+
+* **Importante**
+
+* OpenCode entiende mejor el texto plano.
+* Si te cuesta con markdown, no te preocupes: es solo texto sin adornos.
+* Desde él puedes generar cualquier formato de salida.
+
+TODO: pie de página, [`pandoc`](https://pandoc.org) la navaja suiza de los documentos.
 
 ## Manos a la obra
 
 **Más allá de un chateo con aspecto de chat vitaminado.**
 
-Vamos a probar. Empieza simple. Con partes. No con todo el material disponible.
+* Vamos a probar.
+* Empezaremos con pruebas sencillas.
+* Conoceremos el entorno de trabajo de OpenCode
+* Trabajaremos con partes, con el método de ensayo y error.
 
-¿Recuerdas la navaja suiza de 1000 herramientas?
+¿Recuerdas esas navaja suiza de 1000 herramientas? OpenCode es así.
 
 ::: {.callout-important}
-¿Qué quiero hacer **ahora**? No qué puedo hacer, sino qué **necesito** hacer.
+No nos preguntamos qué podemos hacer,
+sino qué **necesito** hacer **ahora**.
 :::
-
-**Primer paso:** Piensa en algo concreto que tengas que hacer esta semana. Un correo, un informe, una tabla, lo que sea.
-
-
 
 # Parte 1 — Primeros pasos
 
-
 ## Antes de empezar
-
-**Pensemos un momento.**
 
 ¿Conoces la entrada de [Biología](https://es.wikipedia.org/wiki/Biolog%C3%ADa) en la Wikipedia?
 
-¿Qué opinión te merece?
+¿Qué te parece?
 
 - ¿Algún inconveniente?
 - ¿Hay homogeneidad entre los diversos idiomas?
 - ¿Qué problemas ves para usarla como fuente?
 
-**¿Y si pudiéramos usarla para crear algo nuevo?**
-
-
 ## Ejemplo 1: Resumen
 
 **¿Qué necesitas?** Un resumen rápido de un artículo largo.
 
-**¿Para qué?** Para decidir si merece la pena leerlo entero, o para compartírselo a alguien que no tiene tiempo.
-
-**Prueba con esto:**
+Abrimos OpenCode y ... ¿pero qué es todo esto?
 
 ::: {.callout-tip}
-"Dame un resumen de la entrada en Wikipedia de *Biología*"
+Dame un resumen de la entrada en Wikipedia de *Biología*
 :::
 
-¿Ves lo que sale? En 5 segundos tienes un resumen.
+Lee la respuesta y evalúala.
 
-::: {.note}
-**¿Qué ha funcionado?** ¿El resumen captura la idea principal? ¿Qué cambiarías para la próxima vez?
+::: {.callout-note}
+**¿Qué ha funcionado?**
+¿El resumen captura la idea principal?
+¿Qué cambiarías para la próxima vez?
 :::
-
 
 ## Variaciones
 
 **La misma entrada, tres salidas distintas.**
 
 ::: {.callout-tip}
-"Dame un resumen conceptual."
+Dame un resumen conceptual.
 :::
 
 ::: {.callout-tip}
-"Dame breve texto divulgativo sobre el concepto."
+Dame breve texto divulgativo sobre el concepto.
 :::
 
 Mismo contenido de entrada. Tres productos diferentes.
@@ -257,93 +278,82 @@ Mismo contenido de entrada. Tres productos diferentes.
 
 **Ahora prueba tú:** Pide un resumen de cualquier texto que tengas a mano. Un correo, un informe, una noticia.
 
-::: {.note}
+::: {.callout-note}
 **¿Qué ha funcionado?** ¿Qué formato se ajusta mejor a lo que necesitas? ¿Para qué situación usarías cada uno?
 :::
-
 
 ## El flujo de trabajo
 
 **Así funciona. Siempre.**
 
-1. **Entrada** — Le das un archivo o un texto
-2. **Petición** — Le dices qué quieres en castellano
-3. **Resultado** — OpenCode produce el contenido
-4. **Revisión** — Miras si es lo que esperabas
-5. **Ajuste** — Si no te gusta, le dices qué cambiar
-6. **Salida** — El documento está en tu ordenador
+1. **Entrada**   — Si es pertinente, le das un texto, un enlace,  un archivo (hoja de cálculo, pdf, ...)
+2. **Petición**  — Le dices qué quieres en castellano, él realizará una traducción a su lengua materna.
+3. **Resultado** — OpenCode produce el contenido, según la petición.
+4. **Revisión**  — Compruebas si es lo que esperabas
+5. **Ajuste**    — Si no te gusta, le dices qué cambiar, retomando el paso 2.
+6. **Salida**    — El documento está en tu ordenador
 
 **Plan** → Piensa qué hacer. **Build** → Ejecuta y guarda.
 
-[Más info: Plan y Build](https://opencode.ai/docs/go/)
-
+[Más info: `Plan` y `Build`](https://opencode.ai/docs/go/)
 
 ## Ejemplo 2: Comparativa
 
-**¿Qué necesitas?** Comparar dos fuentes sobre el mismo tema.
-
-**¿Para qué?** Para detectar diferencias, enriquecer un documento, o ver qué dice cada versión.
+Vamos a comparar dos fuentes sobre el mismo tema.
 
 ::: {.callout-tip}
-"Compara la entrada de Biología en la Wikipedia en castellano con la inglesa"
+Compara la entrada de Biología en la Wikipedia en castellano con la inglesa
 :::
 
 OpenCode lee ambas entradas y te devuelve una comparación estructurada.
 
-**Experimenta:** Prueba con dos versiones de un mismo informe, dos borradores de un acta, dos artículos sobre el mismo tema.
-
-::: {.note}
-**¿Qué ha funcionado?** ¿Las diferencias son relevantes? ¿Qué información aporta cada versión?
-:::
+**Experimenta:** Prueba con dos versiones de un mismo informe, dos borradores de un acta, dos artículos sobre el mismo tema, los protocolos de laboratorio .
 
 
 ## Fusión de documentos
 
-**¿Qué necesitas?** Unificar información de varias fuentes.
-
-**¿Para qué?** Para crear un documento completo que combine lo mejor de cada parte.
+* Para unificar información de varias fuentes.
+* Para crear un documento completo que combine lo mejor de cada parte.
 
 ::: {.callout-tip}
-"Dame una nueva versión que incluya la entrada en castellano y en ingles"
+Dame una nueva versión que incluya la entrada en castellano y en inglés.
 :::
 
 OpenCode fusiona, reestructura y produce un documento nuevo.
 
-**Empieza simple:** Dos textos cortos. Luego amplía cuando veas que funciona.
-
+¿Qué te parece el resultado? ¿puede mejorarse? ¿Se te ocurre como hacerlo?
 
 ## Formatos de salida
 
 **Mismo contenido, diferentes productos.**
 
 ::: {.callout-tip}
-"Presentación para 30 minutos sobre Biología para divulgación, aula de mayores"
+Presentación para 30 minutos sobre Biología para divulgación, aula de mayores
 :::
 
 OpenCode puede generar:
 
-- **PowerPoint** (.pptx) — Listo para proyectar
-- **Quarto** (.qmd) — Editable, versionable, renderizable
-- **PDF** — Para imprimir y enviar
-- **HTML** — Para publicar en la web
+- **LibreOffice--Impress** **MSOffice--PowerPoint** (`.odp` / `.pptx`)
+- **Quarto** (`.qmd`) 
+    - **PDF**
+    - **HTML**
 
-Tú dices el formato, él lo genera. Sin instalar programas complicados.
+**No te preocupes.** Tú dices el formato, él lo genera.
 
-[Más info: Formatos de salida](https://quarto.org/docs/output-formats/all-formats.html)
-
-::: {.note}
-**¿Qué ha funcionado?** ¿Qué formato necesitas realmente? ¿Cuál es el más útil para tu audiencia?
+::: {.callout-note}
+**¿Qué ha funcionado?**
+¿Qué formato te parece más adecuado?
+¿Cuál es el más útil para tu audiencia?
 :::
-
 
 ## ¿Paso a paso o completo?
 
-**Dos estrategias para pedir. ¿Cuál usas?**
+**Dos estrategias para pedir. ¿Cuál usar?**
 
 | Estrategia | Ejemplo |
 |-----------|---------|
 | **Paso a paso** | "Resume esto" → "Ahora hazlo divulgativo" → "Ahora genera una presentación" |
-| **Completo** | "Hazme una presentación de 30 minutos sobre Biología, divulgativa, para aula de mayores" |
+| **Completo**    | "Hazme una presentación de 30 minutos sobre Biología, divulgativa, para aula de mayores" |
 
 **¿Pros? ¿Contra?**
 
@@ -351,7 +361,6 @@ Tú dices el formato, él lo genera. Sin instalar programas complicados.
 - Completo: más rápido, pero si falla, pierdes más tiempo
 
 **Consejo:** Empieza paso a paso. Cuando tengas claro qué funciona, ve a lo completo.
-
 
 ## Reflexión
 
@@ -367,7 +376,6 @@ Antes de abrir OpenCode, respóndete:
 **Esto es un documento de trabajo.** No es solo chatear. Es planificar, ejecutar, revisar.
 
 **OpenCode no es un chat.** Es una herramienta de trabajo que entiende castellano.
-
 
 ## Consejos para peticiones efectivas
 
@@ -386,10 +394,11 @@ Antes de abrir OpenCode, respóndete:
 4. **Ejemplos:** Si tienes algo similar, inclúyelo
    - "Al estilo de este otro documento..."
 
+No te olvides: en cada caso usa `Plan` o `Build`
 
 ## Errores comunes
 
-**Si te sale mal, no es tu culpa. Es que la petición era vaga.**
+**Si te sale mal: la petición era vaga.**
 
 | Error | Solución |
 |-------|----------|
