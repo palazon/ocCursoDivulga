@@ -240,7 +240,7 @@ Para trabajar en la sesión, y en adelante:
 
 - Explorador de archivos: para hacer el seguimiento de los ficheros y la estructura de directorios
 
-- Editor de texto (Acostumbrate a escribir aquí): Para cambiar/corregir los fichero creados por OpenCode
+- Editor de texto (Acostúmbrate a escribir aquí): Para cambiar/corregir los ficheros creados por OpenCode
 
 Para trabajar como un pro: quarto y git
 
@@ -271,7 +271,7 @@ Vamos a utilizar la *Desktop App* (Beta)
 | Clásicos | <kbd>Win</kbd> + <kbd>→</kbd> / <kbd>←</kbd> | Ajustar ventana a derecha/izquierda |
 | Clásicos | <kbd>Alt</kbd> + <kbd>Tab</kbd> | Cambiar entre sesiones |
 ||||
-| OpenCode | <kbd>Ctrl</kbd> + <kbd>.</kbd> | Intercambiar de *Plain* a *Build* |
+| OpenCode | <kbd>Ctrl</kbd> + <kbd>.</kbd> | Intercambiar de *Plan* a *Build* |
 | OpenCode | <kbd>Alt</kbd> + <kbd>\\</kbd> | Ver el árbol del directorio |
 
 : {tbl-colwidths="[12,38,50]"}
@@ -459,17 +459,25 @@ No te olvides: en cada caso usa `Plan` o `Build`
 
 ## Ejercicio: Tejidos al microscopio
 
-TODO: escribir esto como una tranparencia con un prompt
+Vamos a preparar un proyecto para generar unas sesiones prácticas para estudiar los tejidos animales, para estudiantes de primer curso del grado de Biología.
 
-Vamos a preparar un proyecto
-para generar unas sesiones prácticas
-para estudiar los tejidos animales.
-Para estudiantes de primer curso del grado de biología.
-¿Qué me propones?
+::: {.callout-tip}
+Eres un profesor de Biología. Necesito que diseñes un proyecto de 3 sesiones prácticas sobre tejidos animales para estudiantes de primer curso. Cada sesión debe incluir objetivos, preparaciones a observar, aumentos recomendados y actividades. Empieza por proponer la estructura general.
+:::
+
+::: {.callout-note}
+**¿Qué ha funcionado?** ¿La propuesta se ajusta al nivel del alumnado? ¿Qué cambiarías del planteamiento?
+:::
 
 ## Iniciando el proyecto
 
-TODO: Una vez hemos defininido el proyecto: /init, git init, crear un proyecto RStudio
+Una vez definido el proyecto, toca ponerlo en marcha. OpenCode ofrece varias formas:
+
+1. **`/init`** — Inicia una nueva sesión con contexto limpio
+2. **`git init`** — Crea un repositorio local para versionar el proyecto
+3. **Proyecto RStudio / VS Code** — Puedes abrir la carpeta como proyecto y trabajar desde el editor
+
+**Consejo:** Arrancar con `git init` desde el principio te permite ver el historial de cambios y deshacer si algo no funciona.
 
 ## Generando un primer borrador
 
@@ -480,38 +488,76 @@ TODO: Una vez hemos defininido el proyecto: /init, git init, crear un proyecto R
 
 <!-- usaremos una /sessions para la creación del catálogo de preparaciones histológicas -->
 
-## Analisis de los resultados
+## Análisis de los resultados
 
-TODO: incluir aquí que debemos mirar al haber generado un proyecto 
+OpenCode ha generado los documentos. ¿Y ahora?
+
+- **Lee** lo que ha creado. ¿Tiene sentido?
+- **Evalúa** si responde a lo que necesitabas
+- **Itera** si algo no encaja: ajusta la petición y vuelve a generar
+
+No esperes perfección a la primera. El flujo es: genera, revisa, ajusta, repite. 
 
 ## Modificación de contenidos
 
-TODO: Explicar que se pueden camiar los documentos directamente con el editor de texto y luego pedir a opencode que revise errores y consistencia.
+Puedes cambiar los documentos directamente con el editor de texto y luego pedir a OpenCode que revise la consistencia.
 
-## Inlcuir documentción e instrucciones
+::: {.callout-tip}
+Revisa este documento. He cambiado la sección de introducción. ¿El resto sigue siendo coherente? ¿Hay algo que deba actualizar?
+:::
 
-TODO: Añadir algún ejemplo de como usar documentación adicional, local o en red, para mejorar el proyecto.
-En la práctica uno, indica que preparaciones podrían utilizarse en cada caso y el aumento para la observación.
+Así trabajas tú el contenido fino y OpenCode se encarga de la visión全局.
+
+## Incluir documentación e instrucciones
+
+Puedes enriquecer el proyecto con documentación adicional, local o en red.
+
+::: {.callout-tip}
+En la práctica uno, indica qué preparaciones podrían utilizarse en cada caso y el aumento recomendado para la observación. Usa como referencia el catálogo de imágenes que tienes en la carpeta `material/`.
+:::
+
+OpenCode puede leer archivos locales, páginas web o documentos que le proporciones como contexto.
 
 
-# Parte II
+# Parte 3 — Más potencia ¡A toda máquina!
+
+## Más allá de la documentación
+
+TODO: Opencode te ayuda con el análisis de errores de otros programas, mantenimiento del software de tu sistema, ayudarte a configurar opencode, ...
 
 ## Agentes
 
-TODO: Una deficición compacta y simple, un ejemplo generado por el propio opencode.
+Los **agentes** son configuraciones predefinidas que le dicen a OpenCode cómo comportarse: qué modelo usar, qué instrucciones seguir, qué herramientas tiene disponibles.
 
-TODO: incluir como info este documento par copiar agentes:  https://github.com/palazon/ocCursoAvanzado/blob/main/contenidos/ampliando/ampliando-agentes.html
+Puedes crear un agente especializado para cada tipo de tarea.
+
+::: {.callout-note}
+Más información y ejemplos para copiar: [Agentes en OpenCode](https://github.com/palazon/ocCursoAvanzado/blob/main/contenidos/ampliando/ampliando-agentes.html)
+:::
 
 ## Skills
 
-TODO: Una deficición compacta y simple, un ejemplo generado por el propio opencode.
+Los **skills** son capacidades adicionales que puedes cargar para tareas especializadas: escribir tests, revisar código, crear documentación, etc.
 
-TODO: incluir como info este documento par copiar skill: html — https://github.com/palazon/ocCursoAvanzado/blob/main/contenidos/ampliando/ampliando-skills.html
+OpenCode incluye skills por defecto, y puedes crear los tuyos.
+
+::: {.callout-note}
+Más información y ejemplos para copiar: [Skills en OpenCode](https://github.com/palazon/ocCursoAvanzado/blob/main/contenidos/ampliando/ampliando-skills.html)
+:::
 
 ## Git
 
-TODO: Una deficición compacta y simple, un ejemplo generado por el propio opencode.
+**Git** es un sistema de control de versiones. OpenCode lo usa para gestionar los cambios en tus proyectos.
 
-TODO: Como iniciar un repositorio, ventajas, como ir haciendo commits, opcional un servidor, casi todo lo hace opencode
+Ventajas:
+
+- Historial completo de cambios: sabes qué cambió, cuándo y por qué
+- Puedes deshacer errores sin perder trabajo
+- Facilita el trabajo en equipo
+- OpenCode puede ayudarte a hacer commits y gestionar el repositorio
+
+::: {.callout-tip}
+Inicia un repositorio con `git init` al empezar cualquier proyecto. OpenCode hará el resto.
+:::
 
 
