@@ -538,19 +538,48 @@ La clave está en pensar qué tareas haces a diario que son mecánicas. OpenCode
 
 Los **agentes** son configuraciones predefinidas que le dicen a OpenCode cómo comportarse: qué modelo usar, qué instrucciones seguir, qué herramientas tiene disponibles.
 
-TODO el siguiente texto es un prompt:  El agente después de revisar manualmente un fichero quiero que ser revisen los posibles errores y que la coherencia se mantengan y eviten las repeticiones. Además se resuelvan los TODO que haya incluido en el texto.
+::: {.callout-tip}
+Crea un agente que después de revisar manualmente un fichero, revise los posibles errores, mantenga la coherencia, evite repeticiones y resuelva los TODOs que haya incluido en el texto.
+:::
 
-## Agentes (y 2)
+## Agentes (2)
 
-Puedes crear un agente especializado para cada tipo de tarea, 
+Puedes crear tantos agentes como necesites, cada uno especializado en una tarea: revisor, traductor, generador de actas, normalizador de formato...
 
-Piensa bien los que son necesarios
+**Consejos:**
+- Un agente, una función. No mezcles tareas en un mismo agente
+- Los agentes pueden ser **de proyecto** (`.opencode/agents/`) o **globales** (`~/.config/opencode/agents/`)
+- Los globales están disponibles en todos tus proyectos
+- Piensa bien cuáles son realmente necesarios antes de crearlos
 
-Los agentes pueden ser de proyectos o globales.
+## Agentes (y 3)
+
+El prompt anterior da como resultado un agente como este:
+
+```
+---
+description: Revisor de coherencia y resolución de TODOs
+mode: subagent
+permission:
+  edit: allow
+temperature: 0.3
+---
+
+Revisa el fichero después de edición manual:
+1. Corrige errores ortográficos y gramaticales
+2. Verifica coherencia interna (tono, terminología, estructura)
+3. Elimina repeticiones innecesarias
+4. Resuelve cualquier TODO pendiente según el contexto
+5. Preserva el significado original y el estilo del autor
+```
+
+Uso: `@revisor-coherencia Revisa este archivo`
 
 ::: {.callout-note}
 Más información y ejemplos para copiar: [Agentes en OpenCode](https://palazon.github.io/ocCursoAvanzado/ampliando/ampliando-agentes.html)
 :::
+
+
 
 ## Skills
 
