@@ -232,6 +232,36 @@ sino qué **necesito** hacer **ahora**.
 
 # Parte 1 — Primeros pasos
 
+## Abriendo OpenCode
+
+Vamos a utilizar la *Desktop App* (Beta)  
+(App nativa con GUI para macOS, Windows, Linux)
+
+1. La barra lateral izquierda () *Sidebar*
+1. Área de conversación (panel principal)
+1. *Input / prompt* (debajo)
+1. Barra lateral de *Revisión*
+1. Barra de estado (abajo a la izquierda)
+    * Modo actual: *Plan* o *Build* 
+    * Modelo activo 
+    * Proveedor configurado
+    * Indicador de sesión
+
+## Algunos atajos de teclado
+
+TODO: arreglar esta transparencia como una tabla y usar la forma de quarto para representar combinaciones de teclas.
+
+Clásicos
+
+ctrl + c
+ctrl + v
+win + felcha decha o izquierda
+
+De OpenCode
+
+ctrl + .
+alt + tab
+
 ## Antes de empezar
 
 ¿Conoces la entrada de [Biología](https://es.wikipedia.org/wiki/Biolog%C3%ADa) en la Wikipedia?
@@ -409,3 +439,5 @@ No te olvides: en cada caso usa `Plan` o `Build`
 | Copiar sin leer | Entiende lo que OpenCode produce |
 
 **Recuerda:** No es un error, es información. Experimenta otra vez.
+
+
