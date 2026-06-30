@@ -210,9 +210,9 @@ está sesgada. Muchos universitarios apenas conocen una forma de generar documen
 
 * OpenCode entiende mejor el texto plano.
 * Si te cuesta con markdown, no te preocupes: es solo texto sin adornos.
-* Desde él puedes generar cualquier formato de salida.
+* Desde él puedes generar cualquier formato de salida. [^pandoc]
 
-TODO: pie de página, [`pandoc`](https://pandoc.org) la navaja suiza de los documentos.
+[^pandoc]: [`pandoc`](https://pandoc.org) — la navaja suiza de la conversión de documentos.
 
 ## Manos a la obra
 
@@ -230,6 +230,21 @@ No nos preguntamos qué podemos hacer,
 sino qué **necesito** hacer **ahora**.
 :::
 
+## Qué otro software necesitamos
+
+Para trabajar en la sesión, y en adelante:
+
+- OpenCode (TUI o GUI)
+
+- Navegador (¿usas Brave?): para ver html, pdf, ... creados
+
+- Explorador de archivos: para hacer el seguimiento de los ficheros y la estructura de directorios
+
+- Editor de texto (Acostumbrate a escribir aquí): Para cambiar/corregir los fichero creados por OpenCode
+
+Para trabajar como un pro: quarto y git
+
+
 # Parte 1 — Primeros pasos
 
 ## Abriendo OpenCode
@@ -237,7 +252,7 @@ sino qué **necesito** hacer **ahora**.
 Vamos a utilizar la *Desktop App* (Beta)  
 (App nativa con GUI para macOS, Windows, Linux)
 
-1. La barra lateral izquierda () *Sidebar*
+1. La barra lateral izquierda (*Sidebar*)
 1. Área de conversación (panel principal)
 1. *Input / prompt* (debajo)
 1. Barra lateral de *Revisión*
@@ -249,18 +264,17 @@ Vamos a utilizar la *Desktop App* (Beta)
 
 ## Algunos atajos de teclado
 
-TODO: arreglar esta transparencia como una tabla y usar la forma de quarto para representar combinaciones de teclas.
+| Categoría | Atajo | Descripción |
+|-----------|-------|-------------|
+| Clásicos | <kbd>Ctrl</kbd> + <kbd>C</kbd> | Copiar |
+| Clásicos | <kbd>Ctrl</kbd> + <kbd>V</kbd> | Pegar |
+| Clásicos | <kbd>Win</kbd> + <kbd>→</kbd> / <kbd>←</kbd> | Ajustar ventana a derecha/izquierda |
+| Clásicos | <kbd>Alt</kbd> + <kbd>Tab</kbd> | Cambiar entre sesiones |
+||||
+| OpenCode | <kbd>Ctrl</kbd> + <kbd>.</kbd> | Intercambiar de *Plain* a *Build* |
+| OpenCode | <kbd>Alt</kbd> + <kbd>\\</kbd> | Ver el árbol del directorio |
 
-Clásicos
-
-ctrl + c
-ctrl + v
-win + felcha decha o izquierda
-
-De OpenCode
-
-ctrl + .
-alt + tab
+: {tbl-colwidths="[12,38,50]"}
 
 ## Antes de empezar
 
@@ -337,7 +351,7 @@ Compara la entrada de Biología en la Wikipedia en castellano con la inglesa
 
 OpenCode lee ambas entradas y te devuelve una comparación estructurada.
 
-**Experimenta:** Prueba con dos versiones de un mismo informe, dos borradores de un acta, dos artículos sobre el mismo tema, los protocolos de laboratorio .
+**Experimenta:** Prueba con dos versiones de un mismo informe, dos borradores de un acta, dos artículos sobre el mismo tema, los protocolos de laboratorio.
 
 
 ## Fusión de documentos
@@ -363,7 +377,7 @@ Presentación para 30 minutos sobre Biología para divulgación, aula de mayores
 
 OpenCode puede generar:
 
-- **LibreOffice--Impress** **MSOffice--PowerPoint** (`.odp` / `.pptx`)
+- **LibreOffice Impress** / **MSOffice PowerPoint** (`.odp` / `.pptx`)
 - **Quarto** (`.qmd`) 
     - **PDF**
     - **HTML**
@@ -439,5 +453,65 @@ No te olvides: en cada caso usa `Plan` o `Build`
 | Copiar sin leer | Entiende lo que OpenCode produce |
 
 **Recuerda:** No es un error, es información. Experimenta otra vez.
+
+
+# Parte 2 — Un proyecto
+
+## Ejercicio: Tejidos al microscopio
+
+TODO: escribir esto como una tranparencia con un prompt
+
+Vamos a preparar un proyecto
+para generar unas sesiones prácticas
+para estudiar los tejidos animales.
+Para estudiantes de primer curso del grado de biología.
+¿Qué me propones?
+
+## Iniciando el proyecto
+
+TODO: Una vez hemos defininido el proyecto: /init, git init, crear un proyecto RStudio
+
+## Generando un primer borrador
+
+* ¿Qué progamación queremos? Horas, sesiones
+* ¿Qué material tenemos? Preparaciones, microscopios, ...
+* ¿Tenemos un catálogo de imágenes? 
+* Solo generaremos la primera sesión
+
+<!-- usaremos una /sessions para la creación del catálogo de preparaciones histológicas -->
+
+## Analisis de los resultados
+
+TODO: incluir aquí que debemos mirar al haber generado un proyecto 
+
+## Modificación de contenidos
+
+TODO: Explicar que se pueden camiar los documentos directamente con el editor de texto y luego pedir a opencode que revise errores y consistencia.
+
+## Inlcuir documentción e instrucciones
+
+TODO: Añadir algún ejemplo de como usar documentación adicional, local o en red, para mejorar el proyecto.
+En la práctica uno, indica que preparaciones podrían utilizarse en cada caso y el aumento para la observación.
+
+
+# Parte II
+
+## Agentes
+
+TODO: Una deficición compacta y simple, un ejemplo generado por el propio opencode.
+
+TODO: incluir como info este documento par copiar agentes:  https://github.com/palazon/ocCursoAvanzado/blob/main/contenidos/ampliando/ampliando-agentes.html
+
+## Skills
+
+TODO: Una deficición compacta y simple, un ejemplo generado por el propio opencode.
+
+TODO: incluir como info este documento par copiar skill: html — https://github.com/palazon/ocCursoAvanzado/blob/main/contenidos/ampliando/ampliando-skills.html
+
+## Git
+
+TODO: Una deficición compacta y simple, un ejemplo generado por el propio opencode.
+
+TODO: Como iniciar un repositorio, ventajas, como ir haciendo commits, opcional un servidor, casi todo lo hace opencode
 
 
