@@ -92,7 +92,7 @@ format:
 
 * Las preguntas más tontas: las que no se hacen.
 
-* Más información sobre [OpenCode](https://opencode.ai){target="_blank"}
+* Más información sobre [OpenCode](https://opencode.ai)
 
 ## ¿Por qué este taller?
 
@@ -215,7 +215,7 @@ Funcionan, pero tienen limitaciones:
 
 **OpenCode es *una herramienta*, no *un servicio*.** La diferencia importa.
 
-[Más info: Privacidad](https://opencode.ai/docs/){target="_blank"}
+[Más info: Privacidad](https://opencode.ai/docs/)
 
 ## Tipos de archivo
 
@@ -246,11 +246,11 @@ están sesgadas, incluso en los LLM.
 
     * OpenCode entiende mejor el texto plano.
     * Si te cuesta con markdown, no te preocupes: es solo texto sin adornos.
-    * Desde él puedes generar cualquier formato de salida.
+    * Desde él puedes generar cualquier formato de salida.[^pandoc]
 
-<aside>
-[`pandoc`](https://pandoc.org){target="_blank"} — la navaja suiza de la conversión de documentos.
-</aside>
+***
+
+[^pandoc]: [`pandoc`](https://pandoc.org) — la navaja suiza de la conversión de documentos.
 
 ## Manos a la obra
 
@@ -316,7 +316,7 @@ Vamos a utilizar la *Desktop App* (Beta)
 
 ## Antes de empezar
 
-¿Conoces la entrada de [Biología](https://es.wikipedia.org/wiki/Biolog%C3%ADa){target="_blank"} en la Wikipedia?
+¿Conoces la entrada de [Biología](https://es.wikipedia.org/wiki/Biolog%C3%ADa) en la Wikipedia?
 
 ¿Qué te parece?
 
@@ -359,9 +359,11 @@ Dame un resumen conceptual.
 Dame un breve texto divulgativo sobre el concepto.
 :::
 
+Mismo contenido de entrada. Tres productos diferentes.
+
 **La clave:** No es solo copiar y pegar. Es transformar, adaptar, dar forma.
 
-**Ahora tú:** Pide un resumen de un texto: un correo, un informe, ...
+**Ahora prueba tú:** Pide un resumen de cualquier texto. Un correo, un informe, una noticia.
 
 ::: {.callout-note}
 **¿Qué ha funcionado?** ¿Qué formato se ajusta mejor a lo que necesitas? ¿Para qué situación usarías cada uno?
@@ -384,7 +386,7 @@ Dame un breve texto divulgativo sobre el concepto.
      - Sí  → Ya tienes el resultado
      - No  → Ajusta la petición y vuelve al paso 1 o 2
 
-[Más info: `Plan` y `Build`](https://opencode.ai/docs/go/){target="_blank"}
+[Más info: `Plan` y `Build`](https://opencode.ai/docs/go/)
 
 ## Ejemplo 2: Comparativa
 
@@ -584,8 +586,10 @@ OpenCode no solo sirve para crear documentos. También puede ayudarte con:
 - **Mantenimiento del sistema** — Actualizar paquetes, limpiar archivos temporales, organizar directorios
 - **Configuración de OpenCode** — Ajustar agentes, skills, modelos y permisos desde el propio asistente
 - **Automatización de tareas repetitivas** — Renombrar lotes de archivos, convertir formatos, generar índices
-<>
-- ... Piensa en que puedes delegar a OpenCode ...
+
+::: {.callout-note}
+La clave está en pensar qué tareas haces a diario que son mecánicas. OpenCode puede encargarse de ellas.
+:::
 
 ## Agentes
 
@@ -631,7 +635,7 @@ Revisa el fichero después de edición manual:
 Uso: `@revisor-coherencia Revisa este archivo`
 
 ::: {.callout-note}
-Más información y ejemplos para copiar: [Agentes en OpenCode](https://palazon.github.io/ocCursoAvanzado/ampliando/ampliando-agentes.html){target="_blank"}.
+Más información y ejemplos para copiar: [Agentes en OpenCode](https://palazon.github.io/ocCursoAvanzado/ampliando/ampliando-agentes.html).
 :::
 
 
@@ -643,7 +647,7 @@ Los *skills* son capacidades adicionales que puedes cargar para tareas especiali
 OpenCode incluye skills por defecto, y puedes crear los tuyos.
 
 ::: {.callout-note}
-Más información y ejemplos para copiar: [Skills en OpenCode](https://palazon.github.io/ocCursoAvanzado/ampliando/ampliando-skills.html){target="_blank"}.
+Más información y ejemplos para copiar: [Skills en OpenCode](https://palazon.github.io/ocCursoAvanzado/ampliando/ampliando-skills.html).
 :::
 
 ## Conectar sistemas externos (MCP)
@@ -706,10 +710,10 @@ La documentación y los enlaces de hoy están en las **Referencias** que vienen 
 
 ## Referencias
 
-- **[OpenCode](https://opencode.ai){target="_blank"}** — Web oficial
+- **[OpenCode](https://opencode.ai)** — Web oficial
 
-- **[OpenCode 101](https://palazon.github.io/ocCursoIntro/){target="_blank"}** — *Curso básico para creadores de contenido* (12 pasos): interfaz, comandos básicos, edición de documentos y proyectos
+- **[OpenCode 101](https://palazon.github.io/ocCursoIntro/)** — *Curso básico para creadores de contenido* (12 pasos): interfaz, comandos básicos, edición de documentos y proyectos
 
-- **[OpenCode 102](https://palazon.github.io/ocCursoAvanzado/){target="_blank"}** — *Automatización y personalización* (8 pasos): agentes, skills, MCP, automatización y trabajo colaborativo
+- **[OpenCode 102](https://palazon.github.io/ocCursoAvanzado/)** — *Automatización y personalización* (8 pasos): agentes, skills, MCP, automatización y trabajo colaborativo
 
 

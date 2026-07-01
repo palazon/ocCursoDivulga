@@ -1074,7 +1074,8 @@ margin-right: 0; }
 .reveal .note { background-color: #1a3a4a; padding: 10px; border-radius: 5px; font-size: 0.9em; border: 1px solid #52b788; }
 .reveal blockquote { border-left: 4px solid #52b788; padding-left: 15px; color: #b7e4c7; font-style: italic; background: #0a3d2e; }
 .reveal .subtitle { color: #95d5b2; font-size: 1.0em; margin-top: -10px; }
-.reveal .slides section { overflow-y: auto; max-height: 100vh; }
+.reveal .slides section { overflow-y: auto; max-height: 100vh; scrollbar-width: none; -ms-overflow-style: none; }
+.reveal .slides section::-webkit-scrollbar { display: none; }
 .reveal table { color: #ffffff; margin-top: 0.8em; margin-bottom: 0.8em; }
 .reveal th { background-color: #52b788; color: #002028; }
 .reveal td { border-bottom: 1px solid #0a3d2e; }
@@ -1139,7 +1140,7 @@ JA Palazón; D Rivera
 <li><p>Durante la sesión haremos pausas para comprobar lo que vamos viendo y discutiendo.</p></li>
 <li><p>Pregunta, no te cortes. Si no es pertinente u oportuna, dejaremos la respuesta para el momento adecuado.</p></li>
 <li><p>Las preguntas más tontas: las que no se hacen.</p></li>
-<li><p>Más información sobre <a href="https://opencode.ai">OpenCode</a></p></li>
+<li><p>Más información sobre <a href="https://opencode.ai" target="_blank">OpenCode</a></p></li>
 </ul>
 </section>
 <section id="por-qué-este-taller" class="slide level2">
@@ -1324,7 +1325,7 @@ Si no precisamos, entonces podemos generar sesgos.</strong></p>
 <li>Dependen de conexión a internet</li>
 </ul>
 <p><strong>OpenCode es <em>una herramienta</em>, no <em>un servicio</em>.</strong> La diferencia importa.</p>
-<p><a href="https://opencode.ai/docs/">Más info: Privacidad</a></p>
+<p><a href="https://opencode.ai/docs/" target="_blank">Más info: Privacidad</a></p>
 </section>
 <section id="tipos-de-archivo" class="slide level2">
 <h2>Tipos de archivo</h2>
@@ -1376,10 +1377,13 @@ Si no precisamos, entonces podemos generar sesgos.</strong></p>
 <ul>
 <li>OpenCode entiende mejor el texto plano.</li>
 <li>Si te cuesta con markdown, no te preocupes: es solo texto sin adornos.</li>
-<li>Desde él puedes generar cualquier formato de salida.<sup>1</sup></li>
+<li>Desde él puedes generar cualquier formato de salida.</li>
 </ul></li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn1"><p><a href="https://pandoc.org"><code>pandoc</code></a> — la navaja suiza de la conversión de documentos.</p></li></ol></aside></section>
+
+<aside><div>
+<a href="https://pandoc.org" target="_blank"><code>pandoc</code></a> — la navaja suiza de la conversión de documentos.
+</div></aside></section>
 <section id="manos-a-la-obra" class="slide level2">
 <h2>Manos a la obra</h2>
 <p><strong>Más allá de un chateo con aspecto de chat vitaminado.</strong></p>
@@ -1494,7 +1498,7 @@ Si no precisamos, entonces podemos generar sesgos.</strong></p>
 </section>
 <section id="antes-de-empezar" class="slide level2">
 <h2>Antes de empezar</h2>
-<p>¿Conoces la entrada de <a href="https://es.wikipedia.org/wiki/Biolog%C3%ADa">Biología</a> en la Wikipedia?</p>
+<p>¿Conoces la entrada de <a href="https://es.wikipedia.org/wiki/Biolog%C3%ADa" target="_blank">Biología</a> en la Wikipedia?</p>
 <p>¿Qué te parece?</p>
 <ul>
 <li>¿Algún inconveniente?</li>
@@ -1568,9 +1572,8 @@ Si no precisamos, entonces podemos generar sesgos.</strong></p>
 </div>
 </div>
 </div>
-<p>Mismo contenido de entrada. Tres productos diferentes.</p>
 <p><strong>La clave:</strong> No es solo copiar y pegar. Es transformar, adaptar, dar forma.</p>
-<p><strong>Ahora prueba tú:</strong> Pide un resumen de cualquier texto que tengas a mano. Un correo, un informe, una noticia.</p>
+<p><strong>Ahora tú:</strong> Pide un resumen de un texto: un correo, un informe, …</p>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1590,7 +1593,7 @@ Si no precisamos, entonces podemos generar sesgos.</strong></p>
 <p><strong>Plan</strong> → Piensa</p>
 <ol type="1">
 <li>¿Qué entrada tienes? (texto, archivo, enlace)</li>
-<li>¿Qué quieres hacer? (resumir, traducir, comparar…)</li>
+<li>¿Qué quieres hacer? (resumir, traducir, comparar …)</li>
 </ol>
 <p><strong>Build</strong> → Ejecuta</p>
 <ol start="3" type="1">
@@ -1604,7 +1607,7 @@ Si no precisamos, entonces podemos generar sesgos.</strong></p>
 <li>No → Ajusta la petición y vuelve al paso 1 o 2</li>
 </ul></li>
 </ol>
-<p><a href="https://opencode.ai/docs/go/">Más info: <code>Plan</code> y <code>Build</code></a></p>
+<p><a href="https://opencode.ai/docs/go/" target="_blank">Más info: <code>Plan</code> y <code>Build</code></a></p>
 </section>
 <section id="ejemplo-2-comparativa" class="slide level2">
 <h2>Ejemplo 2: Comparativa</h2>
@@ -1676,12 +1679,11 @@ Si no precisamos, entonces podemos generar sesgos.</strong></p>
 </div>
 </div>
 </div>
-<p>OpenCode puede generar:</p>
+<p>OpenCode puede generar (<em>tú dices el formato, él lo genera</em>):</p>
 <ul>
 <li><strong>LibreOffice Impress</strong> / <strong>MSOffice PowerPoint</strong> (<code>.odp</code> / <code>.pptx</code>)</li>
 <li><strong>Pandoc / Quarto</strong> (<code>.qmd</code>): <strong>PDF</strong>, <strong>HTML</strong>, <strong>ODP</strong>, <strong>DOCX</strong></li>
 </ul>
-<p><strong>No te preocupes.</strong> Tú dices el formato, él lo genera.</p>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1764,7 +1766,6 @@ Si no precisamos, entonces podemos generar sesgos.</strong></p>
 <li>En la red, en otro directorio de tu ordenador.</li>
 </ul></li>
 </ol>
-<p>No te olvides: en cada caso usa <code>Plan</code> o <code>Build</code>.</p>
 </section>
 <section id="errores-comunes" class="slide level2">
 <h2>Errores comunes</h2>
@@ -1812,7 +1813,7 @@ Si no precisamos, entonces podemos generar sesgos.</strong></p>
 </section>
 <section id="ejemplo-3-tejidos-al-microscopio" class="slide level2">
 <h2>Ejemplo 3: Tejidos al microscopio</h2>
-<p>Vamos a preparar un proyecto para generar unas sesiones prácticas para estudiar los tejidos animales, para estudiantes de primer curso del grado de Biología.</p>
+<p><strong>Vamos a preparar un proyecto desde cero</strong>.</p>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1942,21 +1943,9 @@ Empieza por proponer la estructura general.</p>
 <li><strong>Análisis de errores</strong> — Pídele que revise logs o mensajes de error de otros programas</li>
 <li><strong>Mantenimiento del sistema</strong> — Actualizar paquetes, limpiar archivos temporales, organizar directorios</li>
 <li><strong>Configuración de OpenCode</strong> — Ajustar agentes, skills, modelos y permisos desde el propio asistente</li>
-<li><strong>Automatización de tareas repetitivas</strong> — Renombrar lotes de archivos, convertir formatos, generar índices</li>
+<li><strong>Automatización de tareas repetitivas</strong> — Renombrar lotes de archivos, convertir formatos, generar índices &lt;&gt;</li>
+<li>… Piensa en que puedes delegar a OpenCode …</li>
 </ul>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Nota</strong></p>
-</div>
-<div class="callout-content">
-<p>La clave está en pensar qué tareas haces a diario que son mecánicas. OpenCode puede encargarse de ellas.</p>
-</div>
-</div>
-</div>
 </section>
 <section id="agentes" class="slide level2">
 <h2>Agentes</h2>
@@ -2014,7 +2003,7 @@ Empieza por proponer la estructura general.</p>
 <p><strong>Nota</strong></p>
 </div>
 <div class="callout-content">
-<p>Más información y ejemplos para copiar: <a href="https://palazon.github.io/ocCursoAvanzado/ampliando/ampliando-agentes.html">Agentes en OpenCode</a>.</p>
+<p>Más información y ejemplos para copiar: <a href="https://palazon.github.io/ocCursoAvanzado/ampliando/ampliando-agentes.html" target="_blank">Agentes en OpenCode</a>.</p>
 </div>
 </div>
 </div>
@@ -2032,7 +2021,7 @@ Empieza por proponer la estructura general.</p>
 <p><strong>Nota</strong></p>
 </div>
 <div class="callout-content">
-<p>Más información y ejemplos para copiar: <a href="https://palazon.github.io/ocCursoAvanzado/ampliando/ampliando-skills.html">Skills en OpenCode</a>.</p>
+<p>Más información y ejemplos para copiar: <a href="https://palazon.github.io/ocCursoAvanzado/ampliando/ampliando-skills.html" target="_blank">Skills en OpenCode</a>.</p>
 </div>
 </div>
 </div>
@@ -2090,7 +2079,7 @@ Empieza por proponer la estructura general.</p>
 <li>OpenCode no es un chat. Es una herramienta que entiende castellano y trabaja con tus archivos.</li>
 <li><strong>Plan</strong> → Piensa qué necesitas. <strong>Build</strong> → Ejecuta. <strong>Tú</strong> → Revisa.</li>
 <li>El texto plano y Markdown son la lengua franca de la IA. Desde ellos generas cualquier formato.</li>
-<li>Un mismo contenido puede producir múltiples salidas (resumen, divulgación, presentación…).</li>
+<li>Un mismo contenido puede producir múltiples salidas (resumen, divulgación, presentación …).</li>
 <li>Los agentes y skills son tus asistentes especializados. Créalos para lo que repites a menudo.</li>
 <li>Git te da seguridad: historial de cambios y vuelta atrás.</li>
 <li><strong>Difunde y comparte.</strong> Lo que aprendes no sirve si se queda en tu ordenador. Aplícalo, enséñalo, cuéntalo.</li>
@@ -2137,13 +2126,12 @@ Empieza por proponer la estructura general.</p>
 <section id="referencias" class="slide level2">
 <h2>Referencias</h2>
 <ul>
-<li><p><strong><a href="https://opencode.ai">OpenCode</a></strong> — Web oficial</p></li>
-<li><p><strong><a href="https://palazon.github.io/ocCursoIntro/">OpenCode 101</a></strong> — <em>Curso básico para creadores de contenido</em> (12 pasos): interfaz, comandos básicos, edición de documentos y proyectos</p></li>
-<li><p><strong><a href="https://palazon.github.io/ocCursoAvanzado/">OpenCode 102</a></strong> — <em>Automatización y personalización</em> (8 pasos): agentes, skills, MCP, automatización y trabajo colaborativo</p></li>
+<li><p><strong><a href="https://opencode.ai" target="_blank">OpenCode</a></strong> — Web oficial</p></li>
+<li><p><strong><a href="https://palazon.github.io/ocCursoIntro/" target="_blank">OpenCode 101</a></strong> — <em>Curso básico para creadores de contenido</em> (12 pasos): interfaz, comandos básicos, edición de documentos y proyectos</p></li>
+<li><p><strong><a href="https://palazon.github.io/ocCursoAvanzado/" target="_blank">OpenCode 102</a></strong> — <em>Automatización y personalización</em> (8 pasos): agentes, skills, MCP, automatización y trabajo colaborativo</p></li>
 </ul>
 
 </section></section>
-
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

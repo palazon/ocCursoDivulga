@@ -7,7 +7,7 @@
 Presentación y materiales del taller *Asistente IA para el trabajo universitario*,
 impartido en la Facultad de Biología de la Universidad de Murcia.
 
-**Versión:** 0.9
+**Versión:** 1.0
 
 ## Contenido
 
