@@ -23,6 +23,8 @@ No hay build system, tests, linter ni typecheck. Solo Quarto.
 - **Ejemplos:** Añadir planteamiento antes (¿qué necesitas? ¿para qué?) y reflexión después (¿qué ha funcionado?)
 - **Tema visual:** Fondo oscuro `#002028`, texto blanco, acentos `#52b788` — definido inline en cabecera YAML del `.qmd`
 - **Fuentes:** `--r-heading1-size: 2.04em`, `--r-heading2-size: 1.92em`, `--r-main-font-size: 29px`
+- **Enlaces externos:** Todos usan `{target="_blank"}` para abrir en nueva pestaña
+- **Notas al margen:** Preferir `<aside>` frente a footnotes `[^...]` para anotaciones
 - **Renderizado:** `self-contained: true` — todo el output va a un HTML autocontenido
 
 ## Notas
