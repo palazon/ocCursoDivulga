@@ -65,7 +65,8 @@ format:
           -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-3.5 13.07A5 5 0 0 1 11 19.9V21a1 1 0 0 0 1 1h0a1 1 0 0 0 1-1v-1.1a5 5 0 0 1 2.5-4.83A7 7 0 0 0 12 2zm0 2a5 5 0 0 1 2.5 9.34A7 7 0 0 0 13 17.9V19h-2v-1.1a7 7 0 0 0-1.5-4.56A5 5 0 0 1 12 4z"/><path d="M9 21h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-1z"/></svg>') no-repeat center;
           vertical-align: middle;
         }
-        .reveal .slide-number { font-size: 2em; }
+        .reveal .footnotes { font-size: 0.75em; }
+        .reveal .slide-number { font-size: 2em; color: #95d5b2; }
         .reveal code { color: #f48fb1; }
         .reveal kbd { font-size: 0.75em; padding: 0.1em 0.4em; border-radius: 4px; background: #1a3a4a; border: 1px solid #0a3d2e; color: #ffffff; }
         .reveal .callout-tip { margin-bottom: 1.0em; }
@@ -80,11 +81,11 @@ format:
 
 * Es una sesión para que **tú** pruebes, toques, te equivoques y aprendas.
 
-* Si quieres coger el portátil ahora, ya has instalado OpenCode: inicialo. 
+* Si quieres coger el portátil ahora, ya has instalado OpenCode: inícialo. 
 
 * Durante la sesión haremos pausas para comprobar lo que vamos viendo y discutiendo.
 
-* Pregunta, no te cortes, si no es pertinente u oportuna dejaremos la respuesta para el momento adecuado.
+* Pregunta, no te cortes. Si no es pertinente u oportuna, dejaremos la respuesta para el momento adecuado.
 
 * Las preguntas más tontas: las que no se hacen.
 
@@ -216,7 +217,7 @@ Funcionan, pero tienen limitaciones:
 ## Tipos de archivo
 
 * La utilidad y adecuación de los formatos de la información documental
-está sesgada, incluso en los LLM.
+están sesgadas, incluso en los LLM.
 * Muchos universitarios apenas conocen una forma de generar documentos.
 * ¿Qué tipo de archivos puedes manejar y cuándo usarlos?
 
@@ -236,7 +237,7 @@ está sesgada, incluso en los LLM.
 * No son alternativos, son complementarios 
 * Es fácil a partir de texto plano generar PDF, HTML o ficheros para MSOffice o LibreOffice.
 * El texto plano se puede marcar, la *lengua franca* de las IA es *Markdown*, ficheros `.md`
-* Esa lengua tiene dialectos, te gustará quarto,  ficheros `.qmd`
+* Esa lengua tiene dialectos, te gustará Quarto,  ficheros `.qmd`
 
 * **Importante**
 
@@ -252,10 +253,10 @@ está sesgada, incluso en los LLM.
 
 * Vamos a probar.
 * Empezaremos con pruebas sencillas.
-* Conoceremos el entorno de trabajo de OpenCode
+* Conoceremos el entorno de trabajo de OpenCode.
 * Trabajaremos con partes, con el método de ensayo y error.
 
-¿Recuerdas esas navaja suiza de 1000 herramientas? OpenCode es así.
+¿Recuerdas esa navaja suiza de 1000 herramientas? OpenCode es así.
 
 ::: {.callout-important}
 No nos preguntamos qué podemos hacer,
@@ -274,7 +275,7 @@ Para trabajar en la sesión, y en adelante:
 
 - Editor de texto (Acostúmbrate a escribir en él): Para cambiar/corregir los ficheros creados por OpenCode, los ficheros de instrucciones, las notas para el proyecto, ...
 
-Para trabajar como un pro: quarto y git
+Para trabajar como un pro: Quarto y Git
 
 
 # Parte 1 — Primeros pasos
@@ -321,7 +322,7 @@ Vamos a utilizar la *Desktop App* (Beta)
 **Crea un directorio llamado proyectoBio**
 
 * Usa el navegador de fichero o la terminal, a tu gusto.
-* Pónlo donde quieras, pero no olvides dónde lo haces.
+* Pónlo donde quieras, pero no olvides dónde lo pusiste.
 
 ## Ejemplo 1: Resumen
 
@@ -350,7 +351,7 @@ Dame un resumen conceptual.
 :::
 
 ::: {.callout-tip}
-Dame breve texto divulgativo sobre el concepto.
+Dame un breve texto divulgativo sobre el concepto.
 :::
 
 Mismo contenido de entrada. Tres productos diferentes.
@@ -365,16 +366,20 @@ Mismo contenido de entrada. Tres productos diferentes.
 
 ## El flujo de trabajo
 
-**Así funciona. Siempre.**
+**Plan** → Piensa
 
-1. **Entrada**   — Puedes darle un texto, un enlace,  un archivo (hoja de cálculo, PDF, ...)
-2. **Petición**  — Le dices qué quieres en castellano, él realizará una traducción a su lengua materna.
-3. **Resultado** — OpenCode produce el contenido, puede ser un fichero o muchos.
-4. **Revisión**  — Compruebas si es lo que esperabas.
-5. **Ajuste**    — Si no te gusta, le dices qué cambiar, retomando el paso 2.
-6. **Salida**    — El resultado tal como has discutido está en el directorio de tu proyecto.
+  1. ¿Qué entrada tienes? (texto, archivo, enlace)
+  2. ¿Qué quieres hacer? (resumir, traducir, comparar...)
 
-**Plan** → Piensa qué hacer. **Build** → Ejecuta y guarda.
+**Build** → Ejecuta
+
+3. OpenCode genera el resultado y lo guarda en tu proyecto
+
+**Tú** → Revisa
+
+4. ¿Es lo que esperabas?
+     - Sí  → Ya tienes el resultado
+     - No  → Ajusta la petición y vuelve al paso 1 o 2
 
 [Más info: `Plan` y `Build`](https://opencode.ai/docs/go/)
 
@@ -388,7 +393,7 @@ Compara la entrada de Biología en la Wikipedia en castellano con la inglesa
 
 OpenCode lee ambas entradas y te devuelve una comparación estructurada.
 
-**Experimenta:** Prueba con dos versiones de un mismo informe, dos borradores de un acta, dos artículos sobre el mismo tema, los protocolos de laboratorio.
+**Experimenta:** Prueba con dos versiones de un mismo informe, dos borradores de un acta, dos artículos sobre el mismo tema, dos protocolos de laboratorio.
 
 
 ## Fusión de documentos
@@ -413,13 +418,13 @@ OpenCode fusiona, reestructura y produce un documento nuevo.
 **Mismo contenido, diferentes productos.**
 
 ::: {.callout-tip}
-Presentación para 30 minutos sobre Biología para divulgación, aula de mayores
+Genera una presentación para 30 minutos sobre Biología para divulgación, aula de mayores
 :::
 
 OpenCode puede generar:
 
 - **LibreOffice Impress** / **MSOffice PowerPoint** (`.odp` / `.pptx`)
-- **pandoc / quarto** (`.qmd`): **PDF**, **HTML**, **ODP**, **DOCX** 
+- **Pandoc / Quarto** (`.qmd`): **PDF**, **HTML**, **ODP**, **DOCX** 
 
 **No te preocupes.** Tú dices el formato, él lo genera.
 
@@ -445,7 +450,7 @@ OpenCode puede generar:
 - Paso a paso: más control, ves qué funciona, puedes corregir
 - Completo: más rápido, pero si falla, pierdes más tiempo
 
-**Consejo:** Empieza paso a paso. Cuando tengas claro qué funciona, ve a lo completo.
+**Consejo:** Empieza paso a paso. Cuando tengas claro qué funciona, ve completando.
 
 ## Reflexión
 
@@ -480,7 +485,7 @@ Antes de abrir OpenCode, respóndete:
    - "Al estilo de este otro documento ..."
    - En la red, en otro directorio de tu ordenador.
 
-No te olvides: en cada caso usa `Plan` o `Build`
+No te olvides: en cada caso usa `Plan` o `Build`.
 
 ## Errores comunes
 
@@ -494,7 +499,7 @@ No te olvides: en cada caso usa `Plan` o `Build`
 | No revisar el resultado | Siempre lee y verifica lo generado |
 | Copiar sin leer | Entiende lo que OpenCode produce |
 
-: {tbl-colwidths="[40,60]"}
+: {tbl-colwidths="[45,55]"}
 
 **Recuerda:** No es un error, es información. Experimenta otra vez.
 
@@ -557,7 +562,7 @@ Puedes cambiar los documentos directamente con el editor de texto y luego pedir 
 Revisa este documento. He cambiado la sección de introducción. ¿El resto sigue siendo coherente? ¿Hay algo que deba actualizar?
 :::
 
-Así trabajas tú el contenido fino y OpenCode se encarga de la visión global.
+Tú afinas el contenido y OpenCode se encarga de la visión global.
 
 ## Incluir documentación e instrucciones
 
@@ -567,7 +572,7 @@ Puedes enriquecer el proyecto con documentación adicional, local o en red.
 En la práctica uno, indica qué preparaciones podrían utilizarse en cada caso y el aumento recomendado para la observación. Usa como referencia el catálogo de imágenes que tienes en el fichero de la relación de preparaciones.
 :::
 
-OpenCode puede leer archivos locales, páginas web o documentos, bases de datos que le proporciones como contexto.
+OpenCode puede leer archivos locales, páginas web, documentos o bases de datos que le proporciones como contexto.
 
 
 # Parte 3 — Más potencia ¡A toda máquina!
@@ -629,19 +634,19 @@ Revisa el fichero después de edición manual:
 Uso: `@revisor-coherencia Revisa este archivo`
 
 ::: {.callout-note}
-Más información y ejemplos para copiar: [Agentes en OpenCode](https://palazon.github.io/ocCursoAvanzado/ampliando/ampliando-agentes.html)
+Más información y ejemplos para copiar: [Agentes en OpenCode](https://palazon.github.io/ocCursoAvanzado/ampliando/ampliando-agentes.html).
 :::
 
 
 
 ## *Skills*
 
-Los ***skills*** son capacidades adicionales que puedes cargar para tareas especializadas: escribir tests, revisar código, crear documentación, etc.
+Los *skills* son capacidades adicionales que puedes cargar para tareas especializadas: escribir tests, revisar código, crear documentación, etc.
 
 OpenCode incluye skills por defecto, y puedes crear los tuyos.
 
 ::: {.callout-note}
-Más información y ejemplos para copiar: [Skills en OpenCode](https://palazon.github.io/ocCursoAvanzado/ampliando/ampliando-skills.html)
+Más información y ejemplos para copiar: [Skills en OpenCode](https://palazon.github.io/ocCursoAvanzado/ampliando/ampliando-skills.html).
 :::
 
 ## Conectar sistemas externos (MCP)
@@ -669,6 +674,37 @@ Ventajas:
 
 ::: {.callout-tip}
 Inicia un repositorio con `git init` al empezar cualquier proyecto. OpenCode hará el resto.
+:::
+
+## Conclusiones
+
+**Si algo te llevas de hoy, que sea esto:**
+
+- OpenCode no es un chat. Es una herramienta que entiende castellano y trabaja con tus archivos.
+- **Plan** → Piensa qué necesitas. **Build** → Ejecuta. **Tú** → Revisa.
+- El texto plano y Markdown son la lengua franca de la IA. Desde ellos generas cualquier formato.
+- Un mismo contenido puede producir múltiples salidas (resumen, divulgación, presentación...).
+- Los agentes y skills son tus asistentes especializados. Créalos para lo que repites a menudo.
+- Git te da seguridad: historial de cambios y vuelta atrás.
+- **Difunde y comparte.** Lo que aprendes no sirve si se queda en tu ordenador. Aplícalo, enséñalo, cuéntalo.
+
+::: {.callout-note}
+**No se trata de hacerlo todo con IA. Se trata de hacer mejor lo que ya sabes hacer.**
+:::
+
+## Para seguir
+
+**Esto no termina aquí. Esto empieza aquí.**
+
+- **Practica con tus proyectos** — Empieza por algo pequeño: un resumen, una tabla, una traducción
+- **Haz el OpenCode 101** — Curso básico en 12 pasos: interfaz, edición, proyectos
+- **Haz el OpenCode 102** — Automatización, agentes, skills, MCP, trabajo colaborativo
+- **Crea tu primer agente** — Un corrector de estilo, un generador de actas, lo que más uses
+- **Conecta fuentes externas** — Prueba MCP con un glosario o normativa de tu departamento
+- **Comparte** — Cuéntale a un compañero lo que has aprendido. Enseñar es la mejor forma de aprender
+
+::: {.callout-note}
+La documentación y los enlaces de hoy están en las **Referencias** que vienen a continuación.
 :::
 
 ## Referencias
