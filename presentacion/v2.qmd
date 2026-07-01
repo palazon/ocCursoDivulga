@@ -65,11 +65,13 @@ format:
           -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-3.5 13.07A5 5 0 0 1 11 19.9V21a1 1 0 0 0 1 1h0a1 1 0 0 0 1-1v-1.1a5 5 0 0 1 2.5-4.83A7 7 0 0 0 12 2zm0 2a5 5 0 0 1 2.5 9.34A7 7 0 0 0 13 17.9V19h-2v-1.1a7 7 0 0 0-1.5-4.56A5 5 0 0 1 12 4z"/><path d="M9 21h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-1z"/></svg>') no-repeat center;
           vertical-align: middle;
         }
-        .reveal .footnotes { font-size: 0.75em; }
+        .reveal .aside-footnotes { font-size: 1.5em; }
         .reveal .slide-number { font-size: 2em; color: #95d5b2; }
         .reveal code { color: #f48fb1; }
         .reveal kbd { font-size: 0.75em; padding: 0.1em 0.4em; border-radius: 4px; background: #1a3a4a; border: 1px solid #0a3d2e; color: #ffffff; }
         .reveal .callout-tip { margin-bottom: 1.0em; }
+        .reveal ul, .reveal ol { padding-left: 1.5em; }
+        .reveal ul ul { padding-left: 1.5em; }
         </style>
 ---
 

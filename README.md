@@ -16,35 +16,60 @@
 
 ## Objetivo
 
-Dar a conocer el potencial de OpenCode como asistente para tareas
-académicas y de gestión universitaria, usando programación con
-lenguaje natural.
+Taller práctico de 2 horas para que creadores de contenido universitario
+descubran OpenCode como asistente de IA que trabaja en su ordenador:
+resumir, comparar, fusionar documentos, generar presentaciones, crear
+proyectos, automatizar tareas repetitivas.
 
 ## Estructura de la sesión
 
-### Bloque 1 — Presentación teórica (60 min)
+### Intro y contexto
 
-1. Introducción y contexto (10 min)
-2. Casos de uso en gestión universitaria (20 min)
-3. Demostración en vivo (20 min)
-4. Recursos disponibles (10 min)
+- Bienvenida, objetivos, barreras al cambio, qué es OpenCode, alternativas, formatos de archivo
 
-### Bloque 2 — Ejercicios prácticos (60 min)
+### Parte 1 — Primeros pasos
 
-1. Preparación del entorno (10 min)
-2. Ejercicio guiado 1 (15 min)
-3. Ejercicio guiado 2 (15 min)
-4. Ejercicio libre (15 min)
-5. Cierre y próximos pasos (5 min)
+- Abriendo OpenCode, atajos de teclado, ejemplos prácticos (resumen, comparativa, fusión, formatos de salida), flujo de trabajo (Plan → Build → Tú), consejos y errores comunes
+
+### Parte 2 — Un proyecto
+
+- Ejemplo completo: proyecto de prácticas sobre tejidos animales (generación, borrador, modificación, inclusión de documentación)
+
+### Parte 3 — Más potencia
+
+- Más allá de la documentación, agentes, skills, MCP, Git
+
+### Cierre
+
+- Conclusiones, próximos pasos, referencias
 
 ## Contenido del proyecto
 
-### Presentación
+### Presentación activa
 
-Archivo: `presentacion/index.qmd`
+Archivo: `presentacion/v2.qmd`
 
-Diapositivas para la parte teórica de la sesión. Formato Quarto
-revealjs, compatible con navegadores web.
+~35 diapositivas en Quarto revealjs, autocontenidas. Tema oscuro institucional (#002028), tres partes + extras.
+
+> La versión inicial (`presentacion/index.qmd`) se mantiene como referencia histórica.
+
+### Análisis DAFO
+
+Archivo: `dafo-presentacion.html`
+
+Análisis de debilidades, amenazas, fortalezas y oportunidades de la presentación. Actualizado tras cada ronda de cambios.
+
+### Notas de diseño
+
+Archivo: `apuntesParaPresentacion.md`
+
+Directrices de estilo visual, tono, audiencia y estructura para la presentación.
+
+### Instrucciones del proyecto
+
+Archivo: `AGENTS.md`
+
+Comandos, estructura y convenciones para el desarrollo de la sesión con OpenCode.
 
 ### Guía de ejercicios
 
@@ -73,7 +98,7 @@ Esta sesión se apoya en dos cursos existentes:
 ## Requisitos para asistentes
 
 - Portátil propio con batería cargada
-- OpenCode instalado (versión GUI)
+- OpenCode instalado (TUI o Desktop App)
 - Conexión a internet (wifi del aulario)
 
 ## Generar materiales
@@ -84,8 +109,8 @@ Para generar los materiales en formato HTML:
 # Instalar Quarto (si no está instalado)
 # https://quarto.org/docs/get-started/
 
-# Generar presentación
-quarto render presentacion/index.qmd
+# Generar presentación (activa)
+quarto render presentacion/v2.qmd
 
 # Generar guía de ejercicios
 quarto render ejercicios/guia-ejercicios.qmd
