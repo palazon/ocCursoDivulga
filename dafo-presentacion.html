@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DAFO — Presentación OpenCode</title>
+<style>
+  :root {
+    --bg: #002028;
+    --fg: #ffffff;
+    --accent: #52b788;
+    --accent2: #95d5b2;
+    --gold: #d4a017;
+    --card-bg: #0a2a35;
+    --border: #1a4a5a;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.6;
+    padding: 2rem;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  h1 {
+    color: var(--accent);
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 0.5rem;
+  }
+  .subtitle {
+    color: var(--accent2);
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+  @media (max-width: 640px) {
+    .grid { grid-template-columns: 1fr; }
+    body { padding: 1rem; }
+  }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+  }
+  .card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid;
+  }
+  .card ul { list-style: none; padding-left: 0; }
+  .card li {
+    padding: 0.35rem 0 0.35rem 1.25rem;
+    position: relative;
+  }
+  .card li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.7rem;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+  .deb h2 { color: #e76f51; border-color: #e76f51; }
+  .deb li::before { background: #e76f51; }
+  .ame h2 { color: #f4a261; border-color: #f4a261; }
+  .ame li::before { background: #f4a261; }
+  .for h2 { color: var(--accent); border-color: var(--accent); }
+  .for li::before { background: var(--accent); }
+  .opo h2 { color: var(--accent2); border-color: var(--accent2); }
+  .opo li::before { background: var(--accent2); }
+  .note {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #0a3d2e;
+    border-left: 4px solid var(--gold);
+    border-radius: 6px;
+    font-style: italic;
+    color: var(--gold);
+    font-size: 0.92rem;
+  }
+  .footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #5a8a8a;
+  }
+</style>
+</head>
+<body>
+
+<h1>DAFO — Presentación OpenCode</h1>
+<p class="subtitle">Taller 2h · Facultad de Biología, Universidad de Murcia · 2026-07-02</p>
+
+<div class="grid">
+
+  <div class="card deb">
+    <h2>Debilidades</h2>
+    <ul>
+      <li>Parte 2 más esquemática que Parte 1: slides como "Análisis de resultados" o "Incluir documentación" con menos desarrollo</li>
+      <li>Parte 3 casi duplicada (MCP añadida) pero Skills y Git siguen siendo una slide cada uno</li>
+      <li>Tabla inicial "¿Qué es OpenCode?" usa jerga técnica (LSP, BYOK, multi-sesión) para público no programador</li>
+      <li>Sin indicación visual de profundidad con <code>navigationMode: linear</code></li>
+      <li>~35 slides para 2h — riesgo de sobrecarga, sobre todo si se abren debates</li>
+    </ul>
+  </div>
+
+  <div class="card ame">
+    <h2>Amenazas</h2>
+    <ul>
+      <li>Evolución rápida de OpenCode: UI, beta Desktop App, modelos pueden quedar obsoletos</li>
+      <li>Enlaces externos (<code>opencode.ai/docs/</code>, <code>palazon.github.io/…</code>) pueden cambiar o caer</li>
+      <li>Tiempo limitado (2h) vs ~35 slides — riesgo de no cubrir Partes 2 y 3</li>
+      <li>Dependencia de conexión para ejemplos con Wikipedia y enlaces</li>
+    </ul>
+  </div>
+
+  <div class="card for">
+    <h2>Fortalezas</h2>
+    <ul>
+      <li>Diseño visual cuidado y coherente: fondo oscuro, verde institucional, callouts dorados, hover en tablas</li>
+      <li>Estructura pedagógica sólida: cada ejemplo sigue planteamiento + reflexión, patrón extendido a Parte 2</li>
+      <li>Tono cercano y eficaz: "tú", coloquial pero preciso, sin jerga innecesaria en ejemplos prácticos</li>
+      <li>Gradación de complejidad: Parte 1 (básico) → Parte 2 (proyecto) → Parte 3 (agentes/skills/git)</li>
+      <li>Ejemplo de agente contextualizado (<code>revisor-coherencia</code>) con YAML colapsable</li>
+      <li>Flujo de trabajo reescrito en tres fases (Plan → Build → Tú), más pedagógico que la versión anterior</li>
+      <li>Nuevas slides contextuales: barreras al cambio, MCP, referencias — amplían el alcance sin perder foco</li>
+      <li>CSS refinado: footnotes visibles, slide-number legible, código rosa, kbd estilizado</li>
+      <li>Corrección lingüística general: concordancias, mayúsculas, puntuación, ortografía</li>
+      <li>Tablas con <code>tbl-colwidths</code> en todas las tablas clave</li>
+      <li>Callouts sin título ni icono, con estilo propio que unifica la presentación</li>
+    </ul>
+  </div>
+
+  <div class="card opo">
+    <h2>Oportunidades</h2>
+    <ul>
+      <li>OpenCode es gratuito y open source — sin barrera económica</li>
+      <li>Tendencia IA: el público ya tiene curiosidad, necesita ver aplicaciones concretas</li>
+      <li>Potencial de adaptación: ejemplos Wikipedia/Biología conectan con la facultad; extender a casos reales</li>
+      <li>Documentación GitHub Pages ya desplegada — enlaces directos a ampliación de Agentes y Skills</li>
+      <li>Slide MCP abre la puerta a conectar fuentes institucionales (glosarios, normativas, catálogos)</li>
+      <li>Público repetidor de tareas (guías, informes, actas cada curso) — alta probabilidad de adopción</li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="note">
+<strong>Nota:</strong> DAFO actualizado tras segunda ronda de cambios: 3 slides nuevas (barreras al cambio, MCP, referencias), flujo de trabajo reescrito, CSS refinado (footnotes, slide-number, código rosa, kbd), corrección lingüística general (concordancias, mayúsculas, puntuación) y ajustes de redacción. Versión del documento: <strong>v2.qmd</strong> (687 líneas, 3 partes + extras, ~35 slides). Renombrado a <strong>100-oc-divulga.qmd</strong> en el repositorio de publicación.
+</div>
+
+<div class="footer">
+Generado el 2026-07-02 · <a href="100-oc-divulga.qmd" style="color:var(--accent2)">100-oc-divulga.qmd</a>
+</div>
+
+</body>
+</html>
