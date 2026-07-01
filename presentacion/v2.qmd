@@ -15,11 +15,12 @@ format:
     progress: true
     hash: true
     self-contained: true
+    code-copy: true
     include-in-header:
       text: |
         <style>
         :root {
-          --r-main-font-size: 27.6px;
+          --r-main-font-size: 29px;
           --r-main-font: 'Segoe UI', system-ui, sans-serif;
           --r-heading-font: 'Segoe UI', system-ui, sans-serif;
           --r-heading1-size: 2.04em;
@@ -42,17 +43,32 @@ format:
         .reveal .highlight { background-color: #0a3d2e; padding: 15px; border-radius: 8px; margin: 10px 0; border: 1px solid #52b788; }
         .reveal .note { background-color: #1a3a4a; padding: 10px; border-radius: 5px; font-size: 0.9em; border: 1px solid #52b788; }
         .reveal blockquote { border-left: 4px solid #52b788; padding-left: 15px; color: #b7e4c7; font-style: italic; background: #0a3d2e; }
-        .reveal .subtitle { color: #95d5b2; font-size: 0.8em; margin-top: -10px; }
+        .reveal .subtitle { color: #95d5b2; font-size: 1.0em; margin-top: -10px; }
         .reveal .slides section { overflow-y: auto; max-height: 100vh; }
-        .reveal table { color: #ffffff; }
+        .reveal table { color: #ffffff; margin-top: 0.8em; margin-bottom: 0.8em; }
         .reveal th { background-color: #52b788; color: #002028; }
         .reveal td { border-bottom: 1px solid #0a3d2e; }
         .reveal tr:hover td { background-color: #0a3d2e; }
         .reveal a { color: #95d5b2; }
         .reveal strong { color: #ffffff; }
         .reveal .callout-title { display: none !important; }
-        .reveal div.callout { font-size: 1.01em !important; border-left-width: 0.9rem !important; }
+        .reveal div.callout { margin-top: 1.4em; font-size: 1.01em !important; border-left-width: 0.9rem !important; }
         .reveal .callout-body { font-style: italic; color: #d4a017; }
+        .reveal .callout-note .callout-body::before {
+          content: "";
+          display: inline-block;
+          width: 1.15em;
+          height: 1.15em;
+          margin-right: 0.35em;
+          background: #d4a017;
+          mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-3.5 13.07A5 5 0 0 1 11 19.9V21a1 1 0 0 0 1 1h0a1 1 0 0 0 1-1v-1.1a5 5 0 0 1 2.5-4.83A7 7 0 0 0 12 2zm0 2a5 5 0 0 1 2.5 9.34A7 7 0 0 0 13 17.9V19h-2v-1.1a7 7 0 0 0-1.5-4.56A5 5 0 0 1 12 4z"/><path d="M9 21h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-1z"/></svg>') no-repeat center;
+          -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-3.5 13.07A5 5 0 0 1 11 19.9V21a1 1 0 0 0 1 1h0a1 1 0 0 0 1-1v-1.1a5 5 0 0 1 2.5-4.83A7 7 0 0 0 12 2zm0 2a5 5 0 0 1 2.5 9.34A7 7 0 0 0 13 17.9V19h-2v-1.1a7 7 0 0 0-1.5-4.56A5 5 0 0 1 12 4z"/><path d="M9 21h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-1z"/></svg>') no-repeat center;
+          vertical-align: middle;
+        }
+        .reveal .slide-number { font-size: 2em; }
+        .reveal code { color: #f48fb1; }
+        .reveal kbd { font-size: 0.75em; padding: 0.1em 0.4em; border-radius: 4px; background: #1a3a4a; border: 1px solid #0a3d2e; color: #ffffff; }
+        .reveal .callout-tip { margin-bottom: 1.0em; }
         </style>
 ---
 
@@ -62,13 +78,19 @@ format:
 
 **Hoy vas a descubrir algo que te va a cambiar la forma de trabajar.**
 
-No es una conferencia. Es una sesión para que **tú** pruebes, toques, te equivoques y aprendas.
+* Es una sesión para que **tú** pruebes, toques, te equivoques y aprendas.
 
-Si quieres coger el portátil ahora, adelante. Nos va a hacer falta.
+* Si quieres coger el portátil ahora, ya has instalado OpenCode: inicialo. 
 
-[OpenCode](https://opencode.ai)
+* Durante la sesión haremos pausas para comprobar lo que vamos viendo y discutiendo.
 
-## ¿Por qué este curso?
+* Pregunta, no te cortes, si no es pertinente u oportuna dejaremos la respuesta para el momento adecuado.
+
+* Las preguntas más tontas: las que no se hacen.
+
+* Más información sobre [OpenCode](https://opencode.ai)
+
+## ¿Por qué este taller?
 
 **Porque hay herramientas que pueden ayudarte, y todavía nadie te las ha contado.**
 
@@ -78,36 +100,37 @@ La universidad está llena de personas que crean contenidos, reutilizan informac
 
 Este es un taller de 2 horas para que pruebes con una herramienta de IA que trabaja en tu ordenador.
 
-<!-- ## Cursos disponibles
+## ¿Por qué nos cuesta cambiar?
 
-**Este taller es la puerta de entrada a dos cursos completos y gratuitos.**
+**Personales**
 
-Son cursos COLA:
+- **Zona de confort** — lo conocido no exige esfuerzo
+- **Pereza cognitiva** — aprender algo nuevo cansa
+- **Aversión al riesgo** — ¿y si no funciona?
+- **Anclaje** — nos aferramos a la primera opción que conocemos
 
-- **C**urso **O**n **L**ine **A**utónomo
-- (Sí, también funciona como apéndice posterior... y como pegamento)
+**Culturales**
 
-¿Refrescante? Aprendizaje Básico Online.
+- **Inercia** — seguimos haciendo lo mismo porque siempre se hizo así
+- **Conservadurismo** — apego a lo establecido
+- **Resistencia al cambio** — en personas y organizaciones
+- **"Siempre lo hemos hecho así"** — fijación funcional / mentalidad de silos
 
-- **OpenCode 101** — Lo básico, 12 pasos
-  [palazon.github.io/ocCursoIntro](https://palazon.github.io/ocCursoIntro/)
-
-- **OpenCode 102** — Lo avanzado, 8 pasos
-  [palazon.github.io/ocCursoAvanzado](https://palazon.github.io/ocCursoAvanzado/) -->
-
-## ¿Para quién es este curso?
+## ¿Para quién es este taller?
 
 **Para ti, que pasas la vida creando y reorganizando contenidos.**
 
 No hace falta ser programador. No hace falta conocimiento técnico.
 
-Este curso es para quien:
+Este taller es para quien:
 
 - Redacta informes, actas, correos
 - Reorganiza documentos y formatos
 - Prepara materiales para clases o reuniones
 - Revisa y corrige textos ajenos
 - Crea presentaciones y documentos varios
+
+<div style="text-align:right; margin-top:1.5em;">… y si no tienes miedo al cambio.</div>
 
 **Si creas contenido, esto es para ti.**
 
@@ -117,19 +140,19 @@ Este curso es para quien:
 
 - **El tiempo** siempre escasea. Hay más cosas que hacer que horas en el día.
 
-- **Los sesgos** nos hacen repetir patrones.
-  * Siempre el mismo formato, siempre la misma estructura,
+- **Los sesgos** sin reevaluar conceptos/contextos/innovaciones nos hacen repetir patrones.
+  * Siempre el mismo formato, siempre la misma estructura, siempre las mismas definiciones,
     porque "así se ha hecho siempre".
   * Si aceptamos procedimientos, conceptos, supuestos
     sin comprobarlos, sin experimentarlos, sin contextualizarlos,
-    tenemos décimos para la lotería del error, que siempre toca.
+    tenemos décimos para la lotería del error, que *siempre* toca.
   
 
 ## Asistencia
 
 Sabes hacer las cosas, pero tienes necesidad de ayuda.
 
-**¿Qué pasaría si pudieras ...**
+**¿Qué pasaría si pudieras contar con un asistente para ...**
 
 * recordar reglas, normas y protocolos
 * recordar y aplicar tus preferencias a tu trabajo
@@ -152,11 +175,14 @@ Sabes hacer las cosas, pero tienes necesidad de ayuda.
 | Privacidad | No almacena código, no envía telemetría. Las requests van al LLM que elijas |
 | Precio | Gratuito. Modelos gratuitos incluidos (limitados). Zen = modelos validados de pago |
 
+: {tbl-colwidths="[20,80]"}
+
 ## Pero no soy programador
 
-**El contexto es relevante. Si recibimos información sin contexto puede no ser útil, o generarnos errores.
-OpenCode no es solo para programadores, pero por defecto no lo considera.
-Si no precisamos, entonces podemos generar un sesgo.**
+**El contexto es relevante.  
+Si recibimos información sin contexto puede no ser útil, o generarnos errores.  
+OpenCode no es solo para programadores, pero por defecto no lo considera.  
+Si no precisamos, entonces podemos generar sesgos.**
 
 | Aspecto | Descripción |
 |---|---|
@@ -169,26 +195,30 @@ Si no precisamos, entonces podemos generar un sesgo.**
 | Privacidad | No almacena tus documentos. Todo corre local o contra el LLM que elijas |
 | Precio | Gratuito. Modelos gratuitos incluidos. Opción Zen para modelos premium |
 
+: {tbl-colwidths="[20,80]"}
+
 ## ¿Y las alternativas?
 
 **¿Qué otras herramientas de IA existen? ¿Por qué OpenCode?**
 
-Las alternativas más conocidas son chatbots web (ChatGPT, Claude, Gemini). Funcionan, pero tienen limitaciones:
+Las alternativas más conocidas son chatbots web (ChatGPT, Claude, Gemini).
+Funcionan, pero tienen limitaciones:
 
 - Trabajan en la nube (tus datos se van)
 - No tienen acceso directo a tus archivos
 - No pueden guardar resultados en tu ordenador
 - Dependen de conexión a internet
 
-**OpenCode es una herramienta, no un servicio.** La diferencia importa.
+**OpenCode es *una herramienta*, no *un servicio*.** La diferencia importa.
 
 [Más info: Privacidad](https://opencode.ai/docs/)
 
 ## Tipos de archivo
 
-**La utilidad y adecuación de los formatos de la información documental
-está sesgada. Muchos universitarios apenas conocen una forma de generar documentos.
-¿Qué tipo de archivos puedes manejar y cuándo usarlos?**
+* La utilidad y adecuación de los formatos de la información documental
+está sesgada, incluso en los LLM.
+* Muchos universitarios apenas conocen una forma de generar documentos.
+* ¿Qué tipo de archivos puedes manejar y cuándo usarlos?
 
 ¿Qué dice opencode sobre los formatos más habituales?
 
@@ -199,6 +229,8 @@ está sesgada. Muchos universitarios apenas conocen una forma de generar documen
 | **PDF** | Para imprimir, para formal, para que no cambien nada |
 | **Texto plano** | Para notas rápidas, para borradores, para que OpenCode lo procese bien |
 
+: {tbl-colwidths="[20,80]"}
+
 ## Tipos archivos, corrigiendo sesgos
 
 * No son alternativos, son complementarios 
@@ -208,9 +240,9 @@ está sesgada. Muchos universitarios apenas conocen una forma de generar documen
 
 * **Importante**
 
-* OpenCode entiende mejor el texto plano.
-* Si te cuesta con markdown, no te preocupes: es solo texto sin adornos.
-* Desde él puedes generar cualquier formato de salida. [^pandoc]
+    * OpenCode entiende mejor el texto plano.
+    * Si te cuesta con markdown, no te preocupes: es solo texto sin adornos.
+    * Desde él puedes generar cualquier formato de salida.[^pandoc]
 
 [^pandoc]: [`pandoc`](https://pandoc.org) — la navaja suiza de la conversión de documentos.
 
@@ -236,11 +268,11 @@ Para trabajar en la sesión, y en adelante:
 
 - OpenCode (TUI o GUI)
 
-- Navegador (¿usas Brave?): para ver html, pdf, ... creados
+- Navegador (¿usas Brave?): para ver los HTML, PDF, ... creados
 
 - Explorador de archivos: para hacer el seguimiento de los ficheros y la estructura de directorios
 
-- Editor de texto (Acostúmbrate a escribir aquí): Para cambiar/corregir los ficheros creados por OpenCode
+- Editor de texto (Acostúmbrate a escribir en él): Para cambiar/corregir los ficheros creados por OpenCode, los ficheros de instrucciones, las notas para el proyecto, ...
 
 Para trabajar como un pro: quarto y git
 
@@ -274,7 +306,7 @@ Vamos a utilizar la *Desktop App* (Beta)
 | OpenCode | <kbd>Ctrl</kbd> + <kbd>.</kbd> | Intercambiar de *Plan* a *Build* |
 | OpenCode | <kbd>Alt</kbd> + <kbd>\\</kbd> | Ver el árbol del directorio |
 
-: {tbl-colwidths="[12,38,50]"}
+: {tbl-colwidths="[20,30,50]"}
 
 ## Antes de empezar
 
@@ -285,6 +317,11 @@ Vamos a utilizar la *Desktop App* (Beta)
 - ¿Algún inconveniente?
 - ¿Hay homogeneidad entre los diversos idiomas?
 - ¿Qué problemas ves para usarla como fuente?
+
+**Crea un directorio llamado proyectoBio**
+
+* Usa el navegador de fichero o la terminal, a tu gusto.
+* Pónlo donde quieras, pero no olvides dónde lo haces.
 
 ## Ejemplo 1: Resumen
 
@@ -330,12 +367,12 @@ Mismo contenido de entrada. Tres productos diferentes.
 
 **Así funciona. Siempre.**
 
-1. **Entrada**   — Si es pertinente, le das un texto, un enlace,  un archivo (hoja de cálculo, pdf, ...)
+1. **Entrada**   — Puedes darle un texto, un enlace,  un archivo (hoja de cálculo, PDF, ...)
 2. **Petición**  — Le dices qué quieres en castellano, él realizará una traducción a su lengua materna.
-3. **Resultado** — OpenCode produce el contenido, según la petición.
-4. **Revisión**  — Compruebas si es lo que esperabas
+3. **Resultado** — OpenCode produce el contenido, puede ser un fichero o muchos.
+4. **Revisión**  — Compruebas si es lo que esperabas.
 5. **Ajuste**    — Si no te gusta, le dices qué cambiar, retomando el paso 2.
-6. **Salida**    — El documento está en tu ordenador
+6. **Salida**    — El resultado tal como has discutido está en el directorio de tu proyecto.
 
 **Plan** → Piensa qué hacer. **Build** → Ejecuta y guarda.
 
@@ -367,6 +404,10 @@ OpenCode fusiona, reestructura y produce un documento nuevo.
 
 ¿Qué te parece el resultado? ¿puede mejorarse? ¿Se te ocurre como hacerlo?
 
+::: {.callout-note}
+**¿Qué ha funcionado?** ¿La fusión respeta las ideas principales de ambas fuentes? ¿Se nota que hay dos documentos de origen o está bien integrado?
+:::
+
 ## Formatos de salida
 
 **Mismo contenido, diferentes productos.**
@@ -378,9 +419,7 @@ Presentación para 30 minutos sobre Biología para divulgación, aula de mayores
 OpenCode puede generar:
 
 - **LibreOffice Impress** / **MSOffice PowerPoint** (`.odp` / `.pptx`)
-- **Quarto** (`.qmd`) 
-    - **PDF**
-    - **HTML**
+- **pandoc / quarto** (`.qmd`): **PDF**, **HTML**, **ODP**, **DOCX** 
 
 **No te preocupes.** Tú dices el formato, él lo genera.
 
@@ -398,6 +437,8 @@ OpenCode puede generar:
 |-----------|---------|
 | **Paso a paso** | "Resume esto" → "Ahora hazlo divulgativo" → "Ahora genera una presentación" |
 | **Completo**    | "Hazme una presentación de 30 minutos sobre Biología, divulgativa, para aula de mayores" |
+
+: {tbl-colwidths="[20,70]"}
 
 **¿Pros? ¿Contra?**
 
@@ -436,7 +477,8 @@ Antes de abrir OpenCode, respóndete:
    - "En formato de tabla"
 
 4. **Ejemplos:** Si tienes algo similar, inclúyelo
-   - "Al estilo de este otro documento..."
+   - "Al estilo de este otro documento ..."
+   - En la red, en otro directorio de tu ordenador.
 
 No te olvides: en cada caso usa `Plan` o `Build`
 
@@ -452,17 +494,23 @@ No te olvides: en cada caso usa `Plan` o `Build`
 | No revisar el resultado | Siempre lee y verifica lo generado |
 | Copiar sin leer | Entiende lo que OpenCode produce |
 
+: {tbl-colwidths="[40,60]"}
+
 **Recuerda:** No es un error, es información. Experimenta otra vez.
 
 
 # Parte 2 — Un proyecto
 
-## Ejercicio: Tejidos al microscopio
+## Ejemplo 3: Tejidos al microscopio
 
 Vamos a preparar un proyecto para generar unas sesiones prácticas para estudiar los tejidos animales, para estudiantes de primer curso del grado de Biología.
 
 ::: {.callout-tip}
-Eres un profesor de Biología. Necesito que diseñes un proyecto de 3 sesiones prácticas sobre tejidos animales para estudiantes de primer curso. Cada sesión debe incluir objetivos, preparaciones a observar, aumentos recomendados y actividades. Empieza por proponer la estructura general.
+Eres un profesor de Biología.  
+Necesito que diseñes un proyecto de 3 sesiones prácticas sobre tejidos animales.  
+Para estudiantes de primer curso del Grado en Biología, en España.  
+Cada sesión debe incluir objetivos, preparaciones a observar, aumentos recomendados y actividades.   
+Empieza por proponer la estructura general.
 :::
 
 ::: {.callout-note}
@@ -475,18 +523,21 @@ Una vez definido el proyecto, toca ponerlo en marcha. OpenCode ofrece varias for
 
 1. **`/init`** — Inicia una nueva sesión con contexto limpio
 2. **`git init`** — Crea un repositorio local para versionar el proyecto
-3. **Proyecto RStudio / VS Code** — Puedes abrir la carpeta como proyecto y trabajar desde el editor
+3. **Proyecto RStudio / VS Code** — Puedes abrir directorio como proyecto y trabajar desde el editor
 
 **Consejo:** Arrancar con `git init` desde el principio te permite ver el historial de cambios y deshacer si algo no funciona.
 
 ## Generando un primer borrador
 
-* ¿Qué progamación queremos? Horas, sesiones
-* ¿Qué material tenemos? Preparaciones, microscopios, ...
-* ¿Tenemos un catálogo de imágenes? 
-* Solo generaremos la primera sesión
+Antes de pedir, piensa qué necesitas: ¿sesiones?, ¿horas?, ¿material disponible?
 
-<!-- usaremos una /sessions para la creación del catálogo de preparaciones histológicas -->
+::: {.callout-tip}
+Vamos a generar el guion detallado de la primera sesión práctica sobre tejido epitelial: objetivos, preparaciones a observar, aumentos recomendados y actividades para 2 horas, con introducción teórica breve y evaluación final.
+:::
+
+::: {.callout-note}
+**¿Qué ha funcionado?** ¿El borrador respeta lo que habías definido como proyecto? ¿Ajustarías objetivos, materiales o tiempos?
+:::
 
 ## Análisis de los resultados
 
@@ -513,10 +564,10 @@ Así trabajas tú el contenido fino y OpenCode se encarga de la visión global.
 Puedes enriquecer el proyecto con documentación adicional, local o en red.
 
 ::: {.callout-tip}
-En la práctica uno, indica qué preparaciones podrían utilizarse en cada caso y el aumento recomendado para la observación. Usa como referencia el catálogo de imágenes que tienes en la carpeta `material/`.
+En la práctica uno, indica qué preparaciones podrían utilizarse en cada caso y el aumento recomendado para la observación. Usa como referencia el catálogo de imágenes que tienes en el fichero de la relación de preparaciones.
 :::
 
-OpenCode puede leer archivos locales, páginas web o documentos que le proporciones como contexto.
+OpenCode puede leer archivos locales, páginas web o documentos, bases de datos que le proporciones como contexto.
 
 
 # Parte 3 — Más potencia ¡A toda máquina!
@@ -544,9 +595,10 @@ Crea un agente que después de revisar manualmente un fichero, revise los posibl
 
 ## Agentes (2)
 
-Puedes crear tantos agentes como necesites, cada uno especializado en una tarea: revisor, traductor, generador de actas, normalizador de formato...
+Puedes crear tantos agentes como necesites, cada uno especializado en una tarea: revisor, traductor, generador de actas, normalizador de formato ...
 
 **Consejos:**
+
 - Un agente, una función. No mezcles tareas en un mismo agente
 - Los agentes pueden ser **de proyecto** (`.opencode/agents/`) o **globales** (`~/.config/opencode/agents/`)
 - Los globales están disponibles en todos tus proyectos
@@ -556,7 +608,7 @@ Puedes crear tantos agentes como necesites, cada uno especializado en una tarea:
 
 El prompt anterior da como resultado un agente como este:
 
-```
+```{.code-fold code-fold-summary="Ver agente revisor-coherencia"}
 ---
 description: Revisor de coherencia y resolución de TODOs
 mode: subagent
@@ -566,6 +618,7 @@ temperature: 0.3
 ---
 
 Revisa el fichero después de edición manual:
+
 1. Corrige errores ortográficos y gramaticales
 2. Verifica coherencia interna (tono, terminología, estructura)
 3. Elimina repeticiones innecesarias
@@ -581,14 +634,26 @@ Más información y ejemplos para copiar: [Agentes en OpenCode](https://palazon.
 
 
 
-## Skills
+## *Skills*
 
-Los **skills** son capacidades adicionales que puedes cargar para tareas especializadas: escribir tests, revisar código, crear documentación, etc.
+Los ***skills*** son capacidades adicionales que puedes cargar para tareas especializadas: escribir tests, revisar código, crear documentación, etc.
 
 OpenCode incluye skills por defecto, y puedes crear los tuyos.
 
 ::: {.callout-note}
 Más información y ejemplos para copiar: [Skills en OpenCode](https://palazon.github.io/ocCursoAvanzado/ampliando/ampliando-skills.html)
+:::
+
+## Conectar sistemas externos (MCP)
+
+OpenCode puede conectarse con sistemas externos mediante **MCP** (Model Context Protocol):
+
+- **Glosarios** — Consulta definiciones y términos sin salir de la conversación
+- **Bases de conocimiento** — Vincula documentación institucional, guías, normativas
+- **APIs externas** — Accede a catálogos, repositorios, servicios web
+
+::: {.callout-note}
+**MCP** permite que OpenCode consulte información actualizada de tus fuentes habituales sin tener que copiar y pegar manualmente.
 :::
 
 ## Git
@@ -605,5 +670,13 @@ Ventajas:
 ::: {.callout-tip}
 Inicia un repositorio con `git init` al empezar cualquier proyecto. OpenCode hará el resto.
 :::
+
+## Referencias
+
+- **[OpenCode](https://opencode.ai)** — Web oficial
+
+- **[OpenCode 101](https://palazon.github.io/ocCursoIntro/)** — *Curso básico para creadores de contenido* (12 pasos): interfaz, comandos básicos, edición de documentos y proyectos
+
+- **[OpenCode 102](https://palazon.github.io/ocCursoAvanzado/)** — *Automatización y personalización* (8 pasos): agentes, skills, MCP, automatización y trabajo colaborativo
 
 
