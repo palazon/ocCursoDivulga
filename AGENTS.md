@@ -12,7 +12,8 @@ No hay build system, tests, linter ni typecheck. Solo Quarto.
 
 ## Estructura
 
-- `100-oc-divulga.qmd` — Único fuente de la presentación (~35 slides, revealjs)
+- `100-oc-divulga.qmd` — Fuente de la presentación (~42 slides, revealjs)
+- `diagnostico-usuario.qmd` — Documento de diagnóstico del perfil de usuario y sus dificultades
 - `100-oc-divulga.html` / `dafo-presentacion.html` — Salida renderizada (trackeada en git)
 - `AGENTS.md`, `README.md`, `LICENSE`, `VERSION` — Metadatos del proyecto
 

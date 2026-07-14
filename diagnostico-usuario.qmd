@@ -1,0 +1,153 @@
+---
+title: "Diagnóstico del perfil de usuario"
+subtitle: "Dificultades, barreras y oportunidades del creador de contenidos académico"
+author: "JA Palazón; D Rivera"
+date: "20260703"
+lang: es
+format:
+  html:
+    theme: simple
+    self-contained: true
+    embed-resources: true
+    include-in-header:
+      text: |
+        <style>
+        :root {
+          --main-font: 'Segoe UI', system-ui, sans-serif;
+          --heading-font: 'Segoe UI', system-ui, sans-serif;
+          --main-font-size: 17px;
+          --main-color: #ffffff;
+          --heading-color: #52b788;
+          --link-color: #95d5b2;
+          --background-color: #002028;
+        }
+        body { background-color: #002028; color: #ffffff; font-family: var(--main-font); font-size: var(--main-font-size); line-height: 1.6; max-width: 48em; margin: 0 auto; padding: 2em 1.5em; }
+        h1, h2, h3 { color: #52b788; }
+        h1 { font-size: 1.8em; margin-top: 1.2em; }
+        h2 { font-size: 1.3em; margin-top: 1.5em; border-bottom: 1px solid #0a3d2e; padding-bottom: 0.3em; }
+        h3 { font-size: 1.05em; margin-top: 1.2em; }
+        a { color: #95d5b2; }
+        a:hover { color: #b7e4c7; }
+        strong { color: #ffffff; }
+        blockquote { border-left: 4px solid #52b788; padding-left: 15px; color: #b7e4c7; font-style: italic; background: #0a3d2e; padding: 10px 15px; border-radius: 0 5px 5px 0; }
+        table { width: 100%; border-collapse: collapse; margin: 1em 0; }
+        th { background-color: #52b788; color: #002028; padding: 8px 12px; text-align: left; }
+        td { border-bottom: 1px solid #0a3d2e; padding: 8px 12px; }
+        tr:hover td { background-color: #0a3d2e; }
+        code { background-color: #1a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.9em; }
+        .highlight { background-color: #0a3d2e; padding: 15px; border-radius: 8px; margin: 10px 0; border: 1px solid #52b788; }
+        .note { background-color: #1a3a4a; padding: 10px; border-radius: 5px; font-size: 0.9em; border: 1px solid #52b788; }
+        .subtitle { color: #95d5b2; font-size: 1.1em; margin-top: -0.5em; }
+        </style>
+---
+
+<div class="subtitle">
+Este documento describe el perfil de quienes trabajamos en la universidad y nos acercamos por primera vez a herramientas de IA como OpenCode. Identifica nuestras dificultades reales, las barreras que frenan su adopción y las oportunidades que estas herramientas ofrecen. Pensado tanto para el formador como para el asistente al taller.
+</div>
+
+## Perfil del usuario
+
+**¿De quién hablamos?**
+
+Quienes venimos a este taller no somos informáticos, ni desarrolladores, ni técnicos especializados. Somos profesionales universitarios —docencia, investigación, gestión— que pasamos buena parte de la jornada creando, editando y reorganizando contenido.
+
+**Rasgos que compartimos:**
+
+- Manejamos un puñado de programas: procesador de textos, lector de correo, navegador web, canvas de diapositivas.
+- Nuestra relación con los archivos se limita a abrir, guardar, adjuntar. La estructura de directorios, las extensiones, los formatos de intercambio rara vez nos preocupan… hasta que algo no funciona.
+- Tenemos rutinas consolidadas: un mismo flujo de trabajo para generar documentos, repetido durante años.
+- No nos consideramos «persona técnica», aunque nuestro trabajo diario exija manejar información técnica constantemente.
+
+<div class="note">
+No se trata de falta de capacidad. Se trata de que nadie nos mostró una alternativa. El taller no enseña a programar; enseña a trabajar con texto plano y a pedir lo que necesitamos en castellano.
+</div>
+
+## Barreras personales
+
+Nuestro principal obstáculo no es técnico: es psicológico. Estas son las barreras que aparecen una y otra vez cuando nos planteamos cambiar:
+
+- **Zona de confort.** Lo conocido no exige esfuerzo. Abrir Word y escribir es un gesto automático. Cambiar la herramienta implica reaprender gestos básicos, y eso cansa antes de empezar.
+- **Pereza cognitiva.** Aprender algo nuevo tiene un coste mental. Nuestro cerebro prefiere la ruta conocida, aunque sea más larga.
+- **Aversión al riesgo.** «¿Y si no funciona? ¿Y si pierdo el trabajo que ya tengo hecho? ¿Y si el formato no es el adecuado?» El miedo al fallo nos paraliza más que la falta de interés.
+- **Anclaje.** La primera herramienta que aprendimos marca la referencia. Todo lo demás lo comparamos con ella, y casi siempre pierde.
+
+<aside class="highlight">
+No son excusas. Son mecanismos conocidos de la psicología del cambio. Reconocerlos es el primer paso para superarlos.
+</aside>
+
+## Barreras culturales
+
+Nuestro entorno académico tiene sus propias inercias:
+
+- **Inercia institucional.** Nuestro departamento usa Word. La revista pide PDF. El acta se firma en papel. El entorno nos empuja a mantener lo establecido.
+- **Conservadurismo profesional.** En la universidad, lo nuevo se mira con escepticismo. «Si ha funcionado treinta años, ¿por qué cambiar ahora?»
+- **Mentalidad de silos.** Cada área tiene sus formatos, sus plantillas, sus costumbres. El diálogo entre disciplinas es raro; el intercambio de herramientas, también.
+- **«Siempre lo hemos hecho así.»** La frase más temida entre quienes trabajamos en la universidad. No es resistencia por pereza, sino fijación funcional: nos cuesta imaginar que una misma tarea se pueda hacer de otra forma.
+
+<div class="note">
+La cultura organizacional pesa más que cualquier tutorial. Por eso el taller no empieza con comandos: empieza preguntando <em>¿por qué te cuesta cambiar?</em>
+</div>
+
+## Dificultades con formatos de archivo
+
+El problema más concreto y menos reconocido:
+
+- **Conocemos un solo formato de salida.** Para muchos de nosotros, «documento» es sinónimo de `.docx` o `.pdf`. No distinguimos entre un formato de edición, uno de impresión y uno de intercambio.
+- **No sabemos cuándo usar cada formato.** ¿Cuándo conviene HTML y cuándo PDF? ¿Qué ventaja tiene el texto plano frente a un documento con estilos? ¿Por qué alguien usaría Markdown?
+- **Los formatos están sesgados.** Incluso los modelos de IA asumen que el formato natural de un documento es el que más circula. Romper ese sesgo requiere mostrar alternativas.
+- **El formato condiciona el contenido.** Quien solo usa Word tiende a pensar en documentos lineales. Quien descubre Markdown empieza a estructurar mejor la información. El formato no es neutro.
+
+**Tabla de usos recomendados:**
+
+| Formato | Para qué usarlo |
+|---------|-----------------|
+| **DOCX / ODT** | Compartir con quienes editan en Word o LibreOffice |
+| **HTML** | Publicar en la web, compartir al instante |
+| **PDF** | Imprimir, entregas formales, versiones inmodificables |
+| **Texto plano / Markdown** | Notas rápidas, borradores, entrada para IA, máxima portabilidad |
+
+<div class="highlight">
+La clave: no son alternativos, son complementarios. El texto plano es la materia prima; los demás formatos son destinos. OpenCode y herramientas como Pandoc permiten ir de uno a otros sin esfuerzo.
+</div>
+
+## Relación con la tecnología
+
+- **Pocas herramientas instaladas.** Solemos tener lo justo: navegador, ofimática, lector de PDF. Instalar un programa nuevo es una decisión, no un gesto automático.
+- **Desconfianza del terminal.** La línea de comandos nos intimida. Se asocia a hackers, a pantallas verdes, a algo que «no es para nosotros». Superar esa imagen es parte del taller.
+- **Dependencia de servicios web.** ChatGPT, Gemini, Claude… los usamos en el navegador. La idea de que una herramienta funcione local, sobre nuestros propios archivos, sin enviarlos a la nube, es nueva para muchos de nosotros.
+- **Miedo a romper algo.** «¿Y si borro un archivo sin querer?» El terminal da miedo porque no hay interfaz gráfica que proteja. Mostrar que OpenCode opera sobre archivos de texto plano —que se pueden versionar, recuperar, duplicar— reduce ese miedo.
+
+## Errores típicos al empezar
+
+Cuando quienes tenemos este perfil nos asomamos a una herramienta como OpenCode, solemos cometer estos errores:
+
+| Error | Por qué ocurre |
+|-------|----------------|
+| Pedimos de forma demasiado vaga | Estamos acostumbrados a chats abiertos, no a órdenes precisas |
+| No damos contexto | Asumimos que la IA sabe lo que necesitamos |
+| Esperamos perfección al primer intento | Tratamos la IA como un oráculo, no como un borrador colaborativo |
+| No revisamos el resultado | Confiamos ciegamente en la salida |
+| Copiamos sin leer | Usamos la IA como atajo, no como herramienta de trabajo |
+
+<div class="highlight">
+<strong>No es un error. Es información.</strong> Cada intento fallido enseña algo sobre cómo formular mejor la siguiente petición. El taller insiste en esto: falla pronto, falla barato, aprende rápido.
+</div>
+
+## Oportunidades
+
+Cada una de nuestras dificultades tiene una respuesta:
+
+| Dificultad | Cómo la aborda OpenCode |
+|------------|------------------------|
+| Pocos programas | Solo necesitamos terminal + navegador. Nada que instalar más que OpenCode |
+| Miedo al terminal | La interacción es en castellano natural, no en lenguajes de programación |
+| Un solo formato | OpenCode trabaja con texto plano y genera cualquier formato de salida |
+| Rutinas fijas | El flujo Plan → Build → Tú revisas rompe la inercia sin sustituirnos |
+| Falta de contexto | Las peticiones estructuradas (acción, contexto, formato, ejemplos) mejoran el resultado |
+| Desconfianza en la nube | OpenCode corre local. Nuestros archivos no salen de nuestro ordenador |
+
+## Conclusión
+
+Nuestro perfil no es el de rezagados tecnológicos. Es el de profesionales que hemos optimizado nuestro flujo de trabajo dentro de las herramientas que conocemos. El salto no es a la programación, sino a la comprensión de que el texto plano, las peticiones estructuradas y una herramienta local pueden multiplicar nuestra productividad sin exigirnos que nos convirtamos en informáticos.
+
+El taller no vende una herramienta. Vende un cambio de enfoque: **pensemos primero qué necesitamos, después pidámoselo a la máquina, y siempre revisemos lo que genera.**

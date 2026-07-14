@@ -1,0 +1,186 @@
+---
+title: "FAQ: Preguntas frecuentes sobre el cambio de modelo"
+subtitle: "Dudas típicas al pasar de trabajar con aplicaciones a trabajar con agentes"
+author: "JA Palazón; D Rivera"
+date: "20260705"
+lang: es
+toc: true
+toc-title: "Contenido"
+format:
+  html:
+    theme: simple
+    self-contained: true
+    embed-resources: true
+    include-in-header:
+      text: |
+        <style>
+        :root {
+          --main-font: 'Segoe UI', system-ui, sans-serif;
+          --heading-font: 'Segoe UI', system-ui, sans-serif;
+          --main-font-size: 17px;
+          --main-color: #ffffff;
+          --heading-color: #52b788;
+          --link-color: #95d5b2;
+          --background-color: #002028;
+        }
+        body { background-color: #002028; color: #ffffff; font-family: var(--main-font); font-size: var(--main-font-size); line-height: 1.6; max-width: 48em; margin: 0 auto; padding: 2em 1.5em; }
+        h1, h2, h3 { color: #52b788; }
+        h1 { font-size: 1.8em; margin-top: 1.2em; }
+        h2 { font-size: 1.3em; margin-top: 1.5em; border-bottom: 1px solid #0a3d2e; padding-bottom: 0.3em; }
+        h3 { font-size: 1.05em; margin-top: 1.2em; }
+        a { color: #95d5b2; }
+        a:hover { color: #b7e4c7; }
+        strong { color: #ffffff; }
+        blockquote { border-left: 4px solid #52b788; padding-left: 15px; color: #b7e4c7; font-style: italic; background: #0a3d2e; padding: 10px 15px; border-radius: 0 5px 5px 0; }
+        code { background-color: #1a3a4a; padding: 2px 5px; border-radius: 3px; font-size: 0.9em; }
+        .faq-q { color: #52b788; font-weight: bold; margin-top: 1.2em; margin-bottom: 0.3em; }
+        .faq-a { margin-top: 0.3em; margin-bottom: 0.8em; }
+        .subtitle { color: #95d5b2; font-size: 1.1em; margin-top: -0.5em; }
+        </style>
+  pdf:
+    documentclass: article
+    papersize: a4
+    fontsize: 11pt
+    geometry:
+      - top=2.5cm
+      - bottom=2.5cm
+      - left=2.5cm
+      - right=2.5cm
+    colorlinks: true
+    linkcolor: teal
+    number-sections: true
+---
+
+<div class="subtitle">
+
+Este documento recoge las dudas más habituales que surgen al plantearse el cambio de modelo de trabajo: dejar de depender de aplicaciones ofimáticas y pasar a trabajar con contenido en texto plano asistido por un agente de inteligencia artificial (OpenCode). Está pensado para quien ha leído *Bases para un cambio de modelo* y quiere resolver las preguntas prácticas antes de lanzarse a probar.
+
+</div>
+
+# ¿Esto es para informáticos?
+
+## No sé programar. ¿Esto es para mí?
+
+No necesitas saber programar. Escribir en Markdown es como escribir un correo electrónico con algunas marcas sencillas: un `#` delante para título, un `*` para negrita, un guion para lista. Se aprende en cinco minutos. El resto del trabajo lo hace el agente cuando le dices qué formato quieres obtener.
+
+Si sabes escribir un WhatsApp, sabes escribir en Markdown. Es así de llano.
+
+## ¿Tengo que aprender comandos de terminal?
+
+Para usar OpenCode necesitas abrir una terminal y escribir instrucciones como `opencode "pasa esto a PDF"`. Es una línea de texto, no un lenguaje de programación. Pero si la terminal te da respeto, puedes empezar con herramientas gráficas que también trabajan con Markdown (como RStudio, Obsidian o cualquier editor de texto). La terminal no es obligatoria; es una vía más eficiente cuando ya te sientes cómodo.
+
+## ¿Qué es Markdown? ¿Otro formato más que aprender?
+
+Markdown es una forma de escribir texto plano con marcas mínimas. No es un formato nuevo: es anterior a la mayoría de los procesadores modernos. Y a diferencia de los formatos de Word o PowerPoint, no caduca ni depende de un programa concreto.
+
+Además, solo necesitas conocer cinco o seis marcas para cubrir el 90% de lo que haces. El resto lo pides al agente.
+
+## ¿Necesito instalar muchas cosas?
+
+Dos pasos: instalar OpenCode y tener un editor de texto (el bloc de notas vale, aunque hay opciones más cómodas). Todo es gratuito y de código abierto. No necesitas licencias, cuentas ni suscripciones.
+
+# ¿Y si trabajo con gente que usa Word?
+
+## ¿Comparto archivos .md con mi jefe?
+
+No hace falta. El agente convierte tu Markdown a .docx, .pptx o PDF con una instrucción. Entregas el mismo formato de siempre. La diferencia es que tú trabajas desde el texto plano y generas el archivo final solo cuando toca compartir.
+
+El jefe recibe un Word exactamente igual que si lo hubieras escrito en Word.
+
+## ¿Qué pasa con los documentos que ya tengo?
+
+Los conservas. Nadie te pide que borres nada. Puedes migrar gradualmente: empiezas con un documento nuevo en Markdown, y los antiguos siguen donde están. Cuando necesites actualizar uno, lo conviertes a Markdown o se lo pides al agente y sigues desde ahí.
+
+No hay una fecha de corte. Vas probando, y cuando veas que funciona, lo usas más.
+
+## ¿Puedo abrir el resultado en Word o PowerPoint si hace falta?
+
+Sí. El agente genera archivos .docx y .pptx perfectamente abribles en Office. Si alguien necesita editar el resultado, lo abre y lo retoca como siempre. El texto plano sigue siendo tu fuente; el .docx es una copia de salida.
+
+Esto significa que puedes colaborar con quien use Word sin problemas. Tú trabajas a tu manera y entregas en el formato que toque.
+
+# ¿Esto es como ChatGPT?
+
+## ¿OpenCode es otro ChatGPT?
+
+Se parecen en que ambos usan inteligencia artificial para entender lo que pides. Pero OpenCode está diseñado para trabajar con tus archivos locales: le dices «coge este documento, conviértelo a presentación y pon los títulos en verde», y lo hace sobre tu contenido. No es un chat genérico: es un agente orientado a tareas concretas con tus propios documentos.
+
+## ¿Funciona sin internet?
+
+Sí. OpenCode se ejecuta en tu ordenador y usa modelos de IA locales o remotos según configures. Puedes trabajar completamente desconectado si usas un modelo local. No necesitas estar pendiente de la conexión.
+
+## ¿Sube mis documentos a la nube?
+
+No. OpenCode trabaja sobre los archivos de tu ordenador. No los envía a ningún servidor externo a menos que tú configures un modelo remoto (y en ese caso puedes elegir qué modelo y qué servicio). Tus datos de investigación, tus guías docentes, tus informes de gestión no salen de tu máquina si no quieres.
+
+## ¿Puede inventarse cosas?
+
+Como cualquier modelo de lenguaje, a veces genera respuestas incorrectas o inventadas (lo que se llama alucinaciones). Pero OpenCode trabaja sobre tu contenido: tú le pasas el texto y él lo transforma. No está generando información nueva desde cero. El riesgo de alucinación es mucho menor que cuando pides a un chatbot que te redacte algo. Además, al ver el resultado, decides si te sirve o pides cambios.
+
+La responsabilidad de la revisión final sigue siendo tuya. El agente acelera, no sustituye.
+
+# ¿Queda profesional?
+
+## ¿Tiene portada, índice, encabezados y pies?
+
+Sí. El agente puede generar documentos con portada, tabla de contenidos, encabezados, pies de página, numeración, estilos y todo lo que esperas de un documento formal. La diferencia es que no pierdes tiempo ajustándolo manualmente: se lo pides y él lo aplica.
+
+Si el resultado no te convence, le dices «cambia la portada a algo más sobrio» o «reduce el tamaño de los títulos», y lo ajusta en segundos.
+
+## ¿Puedo personalizar el diseño?
+
+Puedes definir plantillas CSS para HTML o plantillas LaTeX para PDF, y el agente las aplica. También puedes darle instrucciones de estilo: «quiero títulos en azul, tablas con bordes finos y márgenes de 2.5 cm». Él lo aplica.
+
+No tienes que ser diseñador. Le explicas con palabras lo que quieres y él lo ejecuta.
+
+## ¿Y si necesito algo muy específico que Markdown no cubre?
+
+Markdown tiene límites, pero puedes combinarlo con HTML, LaTeX o código directamente en el documento. Y si hay algo que no sabes cómo expresar, se lo pides al agente: «aquí necesito una tabla que ocupe todo el ancho con celdas combinadas en la primera fila». Él lo genera por ti.
+
+No estás limitado por lo que tú sepas hacer en Markdown. Estás limitado por lo que sepas pedir. Y pedir se aprende rápido.
+
+# ¿Merece la pena?
+
+## ¿Cuánto se tarda en pillarle el tranquillo?
+
+Un par de tardes para sentirte cómodo con lo básico: escribir en Markdown, pedir al agente que convierta a Word o PDF, ajustar el resultado. Una semana para que empieces a notar que es más rápido que el método tradicional. Un mes para que volver a Word te parezca engorroso.
+
+La curva es mucho más suave de lo que parece porque no tienes que aprender un programa: aprendes una manera de trabajar.
+
+## Llevo veinte años con Office. ¿No es tarde para cambiar?
+
+Nunca es tarde. De hecho, tu experiencia con Office es una ventaja: sabes exactamente qué necesitas y cómo debería quedar. El agente no parte de cero contigo; entiende las referencias que le das («como los estilos de Word pero con los títulos más discretos»).
+
+La gente que más rápido progresa con este modelo es la que tiene claro lo que quiere. El agente solo ejecuta.
+
+## ¿Qué pasa si lo pruebo y no me convence?
+
+Nada. Sigues con tu forma de siempre. El texto plano no te ata a nada: lo abres con cualquier editor, lo conviertes a cualquier formato, lo imprimes, lo borras. No pierdes nada por probar con un documento pequeño —un informe de una página, una presentación de tres diapositivas— y decidir después.
+
+No hay instalación irreversible ni compromiso. Es una herramienta más, no una religión.
+
+# ¿Y mi departamento?
+
+## Me piden entregar en .docx. ¿Puedo?
+
+Sí. El agente genera .docx, .pptx, .pdf, .html y otros formatos. Entregas exactamente lo que te piden. La diferencia es que tú no trabajas dentro del .docx: trabajas en Markdown y exportas.
+
+El departamento recibe el formato que necesita y tú conservas una fuente limpia que puedes reutilizar para otros fines.
+
+## ¿Sirve para gestión o solo para docencia e investigación?
+
+Sirve para cualquier tarea que implique manejar contenido textual: informes, actas, memorias, convocatorias, circulares, solicitudes, guías, planes, normativas. La gestión universitaria está llena de documentos repetitivos que se redactan una y otra vez con pequeñas variaciones. Ahí es donde este modelo más rentabilidad da.
+
+## ¿Puedo usarlo con Moodle o el aula virtual?
+
+Sí. Puedes generar materiales en HTML o PDF y subirlos a Moodle. También puedes pedir al agente que adapte un texto para una página web, un foro o un cuestionario. Moodle no distingue cómo se ha creado el contenido; solo lo muestra.
+
+# Cierre
+
+Las dudas de esta FAQ son normales. Reflejan que el modelo actual está muy arraigado y que cualquier cambio genera preguntas razonables. Pero no hace falta responderlas todas antes de probar. Con una sola respuesta basta:
+
+Haz una prueba pequeña. Coge un texto que tengas que entregar la semana que viene, escríbelo en Markdown y pide al agente que lo convierta al formato que necesitas. Compara el tiempo que has tardado con lo que tardabas antes. Compara el resultado. Y decide.
+
+Si te funciona, genial. Si no, no has perdido nada.
+
+El resto de preguntas se responden solas cuando lo pruebas.

@@ -1,0 +1,529 @@
+---
+title: "Bases para un cambio de modelo"
+subtitle: "De llevar el contenido a la aplicación a trabajar con agentes"
+author: "JA Palazón"
+date: "2026-07-03"
+lang: es
+toc: true
+toc-title: "Contenido"
+format:
+  html:
+    theme: cosmo
+    css: custom.css
+    self-contained: true
+  pdf:
+    documentclass: scrbook
+    papersize: a4
+    fontsize: 11pt
+    geometry:
+      - top=2cm
+      - bottom=2cm
+      - left=2cm
+      - right=2cm
+    colorlinks: true
+    linkcolor: Maroon
+    citecolor: Maroon
+    urlcolor: Maroon
+    number-sections: true
+    include-in-header:
+      text: |
+        \usepackage[automark]{scrlayer-scrpage}
+        \clearpairofpagestyles
+        \cfoot*{\pagemark}
+        \pagestyle{plain}
+        \renewcommand{\contentsname}{Contenidos}
+        \usepackage[scaled=0.85]{beramono}
+        \renewcommand{\ttdefault}{lmtt}
+        \renewcommand{\sfdefault}{lmss}
+        \usepackage{titlesec}
+        \setkomafont{chapter}{\sffamily\bfseries\huge}
+        \titleformat{\section}{\sffamily\Large\bfseries}{\thesection}{1em}{}
+        \titleformat{\subsection}{\sffamily\large\bfseries}{\thesubsection}{1em}{}
+        \titleformat{\subsubsection}{\sffamily\normalsize\bfseries}{\thesubsubsection}{1em}{}
+        \titlespacing*{\chapter}{0pt}{10pt}{8pt}
+        \titlespacing*{\section}{0pt}{8pt}{4pt}
+        \titlespacing*{\subsection}{0pt}{6pt}{3pt}
+        \titlespacing*{\subsubsection}{0pt}{4pt}{2pt}
+        \usepackage{indentfirst}
+        \setlength{\parindent}{2em}
+        \usepackage{changepage}
+        \usepackage{etoolbox}
+        \newbool{inshaded}
+        \AtBeginDocument{%
+          \BeforeBeginEnvironment{Shaded}{\booltrue{inshaded}\begin{adjustwidth}{0.1\textwidth}{0cm}}%
+          \AfterEndEnvironment{Shaded}{\end{adjustwidth}\boolfalse{inshaded}}%
+          \BeforeBeginEnvironment{tcolorbox}{\ifbool{inshaded}{}{\begin{adjustwidth}{0.1\textwidth}{0cm}}}%
+          \AfterEndEnvironment{tcolorbox}{\ifbool{inshaded}{}{\end{adjustwidth}}}%
+        }
+        \renewcommand{\arraystretch}{1.4}
+---
+
+# Antes de empezar {-}
+
+Este documento describe el modelo de trabajo actual del personal universitario con los contenidos digitales, identifica las deficiencias que arrastra y propone un cambio de enfoque: pasar de depender de aplicaciones concretas a trabajar con contenido en texto plano asistido por agentes de inteligencia artificial. Está pensado como base conceptual para quien se acerca por primera vez a herramientas como OpenCode.
+
+Este documento se dirige principalmente al personal universitario, pero el modelo de trabajo que describe —texto plano como materia prima, agente como transformador— es aplicable a cualquier persona que cree y gestione contenido en su día a día. Estudiantes que preparan trabajos fin de grado, memorias de prácticas o informes de laboratorio. Profesionales en empresas que redactan propuestas, documentan procesos o elaboran presentaciones. Gestores que organizan información, rellenan formularios o mantienen actas. Todos, en la universidad y fuera de ella, compartimos el mismo patrón: el contenido nace, se transforma y se distribuye. Y todos arrastramos los mismos problemas cuando ese contenido depende de la aplicación que lo creó. Si te reconoces en esta descripción —estés donde estés—, este documento también es para ti.
+
+# Introducción
+
+Si trabajas en la universidad —docencia, investigación o gestión—, una parte enorme de tu jornada consiste en crear, transformar y reorganizar contenido. Redactas informes, preparas presentaciones, organizas datos en tablas, escribes correos, rellenas solicitudes, elaboras guías docentes, publicas materiales en el aula virtual …
+
+Para todo eso abres un programa.
+
+Word para el informe. PowerPoint para la clase. Excel para las notas. Google Drive para compartir. Y así, uno tras otro. Cada tarea tiene su herramienta, y cada herramienta tiene su forma de trabajar, sus formatos, sus limitaciones. Te has acostumbrado. Funciona. Pero tiene un coste que apenas notas porque siempre fue así.
+
+**El problema de fondo es este: el contenido vive dentro de la aplicación.** Lo que escribes en Word se queda en Word. Lo que diseñas en PowerPoint se queda en PowerPoint. Si necesitas la misma información en otro formato, tienes que rehacerla, copiarla a mano o pegar y reajustar. El contenido no es tuyo del todo: es del programa que lo guarda.
+
+Este documento mira ese modelo con ojos nuevos. Identifica qué necesitas hacer realmente, con qué lo haces ahora y qué problemas trae esa dependencia. Y luego propone una forma distinta de trabajar: una donde **el contenido va primero y la aplicación va después**. Donde no necesitas ser experto en cada programa para obtener el resultado que buscas.
+
+No se trata de que dejes de usar Word o PowerPoint. Se trata de que entiendas que hay otra manera, y que esa manera te da más libertad, más calidad y menos pérdidas de tiempo.
+
+
+# ¿Qué necesitas hacer?
+
+Antes de hablar de herramientas, hablemos de tareas. En tu día a día universitario, ¿qué tipo de cosas haces con contenido digital? La lista no es corta:
+
+| Necesitas … | ¿Para qué? |
+|---|---|
+| Redactar documentos extensos | Informes, artículos, guías docentes, memorias, actas |
+| Preparar presentaciones | Clases, seminarios, congresos, defensas de trabajos |
+| Organizar datos en tablas | Calificaciones, presupuestos, resultados de experimentos |
+| Analizar información y crear gráficos | Datos de investigación, encuestas, indicadores |
+| Guardar y recuperar archivos | Tus documentos, tus imágenes, tus borradores |
+| Compartir documentos con otros | Con compañeros, estudiantes, departamentos, revistas |
+| Gestionar referencias y citas | Artículos, libros, fuentes para tus publicaciones |
+| Publicar contenido en web | Asignaturas en Moodle, blogs, sitios de proyecto |
+| Tomar notas rápidas | Ideas, apuntes de reuniones, borradores |
+| Editar imágenes, esquemas o figuras | Para clases, publicaciones, carteles |
+| Comunicarte por escrito | Correos electrónicos, circulares, avisos |
+| Planificar tareas y plazos | Proyectos, entregas, hitos de investigación |
+
+Cada una de estas tareas implica manejar información. Y cada una, en el modelo tradicional, requiere una herramienta distinta. El problema no es que haya muchas herramientas: es que **cada herramienta guarda la información en su propio formato**, y esas informaciones no se hablan entre sí.
+
+
+# ¿Con qué lo haces ahora?
+
+Si miramos las herramientas que la mayoría de la gente usa realmente para cubrir esas necesidades, el panorama es muy parecido en casi cualquier departamento universitario:
+
+| Necesidad | Lo que la mayoría usa |
+|---|---|
+| Redactar documentos | Microsoft Word, Google Docs |
+| Preparar presentaciones | Microsoft PowerPoint, Google Slides, Canva |
+| Organizar datos en tablas | Microsoft Excel, Google Sheets |
+| Analizar datos y crear gráficos | Excel, a veces SPSS o programas específicos |
+| Guardar y recuperar archivos | Google Drive, OneDrive, Dropbox, el disco duro o un USB |
+| Compartir documentos | El correo electrónico con archivos adjuntos, Google Drive, Moodle |
+| Gestionar referencias | Zotero, Mendeley … o una lista a mano, artículo por artículo |
+| Publicar contenido en web | Moodle, WordPress, o no se publica |
+| Tomar notas | El bloc de notas del sistema, Google Keep, una libreta de papel |
+| Editar imágenes | PowerPoint (sí, también para eso), Canva, Photoshop si se tiene |
+| Comunicarse por escrito | Gmail, Outlook |
+| Planificar tareas | El correo, una lista en papel, a veces Trello o similares |
+
+Fíjate en un detalle: **casi todas las herramientas son ofimáticas o servicios web**. No hay una estrategia, hay un repertorio. Y cada programa tiene su forma de trabajar, sus menús, sus atajos, sus plantillas. Conoces unas pocas funciones de cada uno —las justas para sobrevivir— y cuando necesitas algo más avanzado, pierdes tiempo buscando cómo se hace o pides ayuda.
+
+No es que estas herramientas sean malas. Es que el modelo de trabajo que imponen **te obliga a saltar de una a otra constantemente**, llevando la información de un lado a otro con copias manuales, pérdidas de formato y trabajo duplicado.
+
+
+# ¿Qué problemas arrastra ese modelo?
+
+Este modelo —escribe en Word, pasa a PowerPoint, copia a Excel, adjunta en el correo— es tan común que ni lo cuestionamos. Pero tiene consecuencias concretas que afectan a tu tiempo, a la calidad de tu trabajo y a tu tranquilidad:
+
+| El problema | Cómo se nota en tu día a día |
+|---|---|
+| **Cada programa tiene su formato** | Lo que escribes en Word no sirve directamente para una web, una presentación o un PDF. Tienes que rehacerlo o copiarlo y ajustar el formato, siempre con pérdidas. |
+| **Los formatos cambian con las versiones** | Un documento hecho con Word 2010 no se ve igual en Word 2024. O peor: alguien no puede abrirlo. Tu contenido envejece con el programa. |
+| **Las aplicaciones no se hablan entre sí** | Copiar una tabla de Excel a PowerPoint parece fácil, hasta que cambias los datos y la diapositiva se queda desactualizada. No hay un hilo que conecte las piezas. |
+| **Tu información está secuestrada en la nube** | Tus documentos están en Google Drive, OneDrive o Dropbox. Sin conexión no accedes a ellos. Y si la empresa cierra el servicio o cambia las condiciones, tus archivos dependen de su decisión. |
+| **Repites la misma tarea una y otra vez** | Poner el mismo título en un informe, en la presentación y en el resumen. Ajustar márgenes, numeración, estilos. Son tareas mecánicas que haces a mano cada vez. |
+| **La misma información, reescrita para cada destino** | Tienes que redactar lo mismo para un artículo, para un informe de departamento, para una comunicación breve y para una entrada en la web. Cuatro veces el mismo contenido, cada vez con su formato. |
+| **Pagas por funciones que casi no usas** | Las suites ofimáticas cuestan dinero, y la mayoría de la gente usa una fracción muy pequeña de lo que ofrecen. Pagas por tenerlo todo, pero usas muy poco. |
+| **Tus datos están en manos de empresas** | Cuando usas un servicio web, tus documentos se almacenan en servidores que no controlas. La privacidad de los datos —especialmente los de investigación o gestión— no está garantizada. |
+| **Cada actualización te obliga a reaprender** | Las interfaces cambian, los menús se reorganizan, las funciones se mueven. Lo que sabías hacer, de repente tienes que volver a buscarlo. |
+| **Aprender funciones avanzadas cuesta mucho** | Para hacer algo más complejo que lo básico —combinar correspondencia, crear estilos personalizados, automatizar una tarea— necesitas buscar tutoriales, perder tiempo y, a menudo, rendirte. |
+
+::: {.callout-caution}
+
+**Perder el hilo.** Abres un programa para escribir, pero antes de poner la primera frase ya estás ajustando márgenes, cambiando el tipo de letra, alineando elementos. Cambios casi siempre estéticos, que aportan poco al contenido. Pero te han sacado del flujo. La idea que tenías se desvaneció mientras navegabas menús (es el equivalente digital del «doorway effect»[^1]: al cruzar una puerta, el cerebro segmenta la memoria en episodios y el objetivo anterior se vuelve más difícil de recuperar). Esa interrupción constante —pensar, parar, formatear, retomar— es uno de los costes más invisibles y más altos del modelo actual.
+
+:::
+
+[^1]: Radvansky, G. A., Krawietz, S. A., & Tamplin, A. K. (2011). Walking through doorways causes forgetting. *Quarterly Journal of Experimental Psychology*, 64(8), 1638–1645.
+
+¿Te suena? Son problemas que cualquier universitario reconoce. Pero como siempre fueron así, los asumimos como normales. **No lo son.** Son consecuencia de un modelo de trabajo que ata el contenido a la aplicación. Y ese modelo se puede cambiar.
+
+
+# Un modelo diferente
+
+El modelo alternativo parte de una idea muy sencilla: **separa el contenido de la forma**.
+
+En lugar de escribir directamente en Word o PowerPoint, trabajas con tu contenido en un formato que no depende de ningún programa concreto: el texto plano. En concreto, Markdown, una forma de escribir texto con marcas mínimas para indicar títulos, listas, negritas o enlaces. Es tan sencillo que se aprende en cinco minutos.
+
+::: {.callout-tip}
+
+No necesitas empezar escribiendo en Markdown desde cero. Puedes dar tus primeras instrucciones a OpenCode sobre documentos .docx o .pdf que ya tengas. Con el uso irás viendo que producir el material directamente en texto plano te da más control, menos pasos intermedios y una estructura que las herramientas ofimáticas no facilitan.
+
+:::
+
+Una vez que tienes tu contenido en texto plano, un **agente** —un programa de inteligencia artificial como OpenCode— se encarga de transformarlo al formato que necesites: un documento de Word, una presentación, una página web, un PDF, un correo … todo desde el mismo texto original.
+
+El cambio es sutil pero profundo:
+
+::: {.callout-important}
+
+**Modelo actual:** Abres el programa → creas el contenido dentro de él → el formato es parte del programa → para otro formato, rehaces.
+
+**Modelo nuevo:** Escribes en texto plano → le pides al agente que lo transforme → obtienes el formato que necesitas → para otro formato, vuelves a transformar, no a reescribir.
+
+:::
+
+```{dot}
+//| label: fig-modelos
+//| fig-cap: "Comparación entre el modelo actual, la transición y el modelo nuevo"
+digraph {
+    rankdir=TB;
+    newrank=true;
+    bgcolor="transparent";
+    fontcolor="#333333";
+    nodesep="0.3";
+    ranksep="0.3";
+    compound=true;
+
+    node [shape=box, style="rounded,filled", fontname="Segoe UI", fontsize=9, fontcolor="#333333"];
+    edge [color="#666666"];
+
+    subgraph cluster_actual {
+        label="Modelo actual";
+        style=dashed;
+        color="#999999";
+        fontcolor="#333333";
+        node [fillcolor="#f0f0f0", color="#cccccc"];
+        a1 [label="Escribes en\nWord · PPT · Excel"];
+        a2 [label="Cada formato\n= rehacer"];
+        a3 [label="Trabajo\nduplicado", fillcolor="#f5e6e6", color="#cc9999"];
+        a1 -> a2 -> a3;
+    }
+
+    subgraph cluster_transicion {
+        label="Transición";
+        style=dashed;
+        color="#669966";
+        fontcolor="#333333";
+        node [fillcolor="#e8f5e9", color="#81c784"];
+        t1 [label="Tus documentos\nactuales\n(.docx · .pdf · …)"];
+        t2 [label="OpenCode los\nconvierte a\nMarkdown", shape=diamond, fillcolor="#c8e6c9", color="#4caf50"];
+        t3 [label="Fuente en\nMarkdown"];
+        t1 -> t2 -> t3;
+    }
+
+    subgraph cluster_nuevo {
+        label="Modelo nuevo";
+        style=dashed;
+        color="#4caf50";
+        fontcolor="#333333";
+        node [fillcolor="#e8f5e9", color="#81c784"];
+        n1 [label="Escribes en\nMarkdown"];
+        n2 [label="OpenCode", shape=diamond, fillcolor="#c8e6c9", color="#4caf50"];
+        n3 [label="Formatos de salida\n.docx · .pptx · PDF · HTML"];
+        n4 [label="Un mismo origen,\ntodas las salidas", fillcolor="#e0f2f1", color="#4db6ac"];
+        n1 -> n2 -> n3 -> n4;
+    }
+
+    t3 -> n1 [style=dashed, color="#66bb6a", label="sigues\ndesde\naquí", fontcolor="#333333", fontsize=7];
+
+    { rank=same; a1; t1; n1 }
+    { rank=same; a2; t2; n2 }
+    { rank=same; a3; t3; n3 }
+}
+```
+
+La clave está en que **el contenido y la presentación ya no van ligados**. Tu texto original es la fuente de verdad. A partir de él generas las versiones que hagan falta. Y no necesitas saber cómo se usa PowerPoint para obtener una presentación: se la pides al agente.
+
+Esto no significa que nunca más toques Word o PowerPoint. Significa que dejas de depender de ellos. Los usas cuando toca, pero ya no eres su prisionero.
+
+Hay un matiz importante que a menudo se pasa por alto. El formato en el que tú trabajas y el formato que necesita quien recibe el documento no tienen por qué ser el mismo. De hecho, no deberían serlo.
+
+Como autor, te interesa un formato que sea fácil de escribir, fácil de corregir, fácil de versionar. Eso es el texto plano: lo abres con cualquier editor, cambias lo que quieras y guardas. Sin menús, sin estilos que se corrompen, sin esperar a que cargue el programa.
+
+Como lector, lo que necesitas es un documento bien presentado, en el formato que exige tu contexto: el PDF para la revista, el .docx para el departamento, la presentación para el seminario. Eso no lo discute nadie.
+
+OpenCode es el puente entre ambos mundos. Tú trabajas en el formato que te va bien a ti. OpenCode se encarga de generar el formato que le va bien a quien lo recibe. Y lo hace sin perderse: combinando fuentes si hace falta, aplicando plantillas, garantizando que el resultado final es exactamente lo que pediste. Revisas, confirmas, entregas.
+
+
+# Qué ganas con el cambio
+
+Pasar a este modelo no es solo una cuestión de principios. Tiene beneficios muy concretos:
+
+## Calidad
+
+- **Menos errores de formato.** No se te va un título porque lo escribiste en el estilo equivocado. El agente aplica las plantillas correctamente.
+
+- **Consistencia.** Si cambias algo en el texto original, puedes regenerar todos los formatos de salida con una sola instrucción. No se te queda una versión antigua colgando.
+
+- **Contenido mejor estructurado.** Markdown te obliga a pensar en jerarquías: qué es un título, qué es un subtítulo, qué es una lista. Eso mejora la claridad de lo que escribes.
+
+## Tiempo
+
+- **No pierdes horas maquetando.** El agente se encarga de los ajustes finos de formato. Tú te centras en lo que quieres decir.
+
+- **No reescribes lo mismo.** Una vez que tienes el texto, generas todos los formatos que necesites desde el mismo origen.
+
+- **Tareas repetitivas delegadas.** Cambiar el formato de cien títulos, ajustar la numeración de las páginas, convertir tablas … se lo pides al agente y lo hace en segundos.
+
+::: {.callout-tip}
+
+El cambio no es binario. Puedes mantener Word para los documentos que ya tienes en marcha y, para los nuevos, probar a escribirlos en Markdown. Pronto descubres que las herramientas ofimáticas no te ayudan a estructurar bien la información; el texto plano, en cambio, te obliga a pensar en jerarquías limpias. Y eso se nota en la claridad del resultado final.
+
+:::
+
+## Aprendizaje
+
+- **Piensas mejor lo que pides.** Al tener que formular tus peticiones con claridad —acción, contexto, formato—, aprendes a ser más preciso. Eso mejora tus habilidades de comunicación en general.
+
+- **Ves cómo lo hace.** OpenCode te muestra lo que está haciendo. Puedes aprender de sus estrategias y aplicarlas tú mismo más adelante.
+
+- **Reutilizas lo que funciona.** Cuando encuentras una forma de pedir que da buenos resultados, la guardas y la usas de nuevo. Creas tu propio repertorio de instrucciones efectivas.
+
+## Independencia
+
+- **No dependes de una suite concreta.** Tus documentos no caducan con el programa. El texto plano se lee siempre, en cualquier ordenador, ahora y dentro de veinte años.
+
+- **Puedes cambiar de herramienta.** Si mañana dejas de usar Word y pasas a otra cosa, tu contenido sigue siendo el mismo. No pierdes nada.
+
+- **Tus datos están en tu ordenador.** No necesitas enviarlos a la nube para que los procese el agente. OpenCode funciona local, sobre tus archivos.
+
+::: {.callout-note}
+
+**Tus versiones, siempre a salvo.** Como trabajas con texto plano, cada cambio que haces queda registrado: no se pierde nada. OpenCode se encarga de gestionar el proyecto y de mantener el historial de versiones que dejas con cada paso. Puedes volver atrás, comparar, retomar una idea anterior. Sin tener que guardar «informe_v3_final_definitivo.docx».
+
+:::
+
+El cambio no es solo tecnológico: es un cambio de mentalidad. Pasas de ser **usuario de programas** a ser **creador de contenido asistido**.
+
+
+# De la teoría a la práctica
+
+Este documento es la base conceptual. Describe el problema y dibuja la dirección del cambio. Pero el cambio se aprende haciendo.
+
+Los talleres prácticos —como la sesión *Asistente IA para el trabajo universitario*— te guían paso a paso para que experimentes este modelo con tus propios proyectos. Ahí verás cómo se escribe en Markdown, cómo se le pide a OpenCode que transforme contenido, cómo se revisa el resultado y cómo se itera hasta obtener lo que buscas.
+
+Dos documentos complementarios te ayudarán a situarte:
+
+- **[Diagnóstico del perfil de usuario](diagnostico-usuario.qmd)** — Describe quién es el creador de contenidos universitario, sus barreras personales y culturales, su relación con la tecnología y los errores típicos al empezar.
+
+- **[Presentación del taller](100-oc-divulga.qmd)** — Material de la sesión práctica con ejemplos, ejercicios y referencias para seguir aprendiendo.
+
+
+# Conclusión
+
+El modelo de trabajo que la mayoría de la universidad da por sentado —abrir un programa, escribir, formatear, guardar— no es el único posible. Y tiene un coste que apenas percibimos porque lo heredamos sin cuestionarlo.
+
+Hay otra forma de trabajar. Una donde el contenido no depende de la aplicación que lo creó. Donde un agente de inteligencia artificial se encarga de las transformaciones. Donde no necesitas ser experto en cada herramienta para obtener buenos resultados.
+
+No se trata de tecnología por la tecnología. Se trata de **recuperar el control sobre tu propio contenido**. Dejar de preguntarte «¿cómo se hace esto en Word?» y empezar a preguntarte «¿qué necesito comunicar y a quién?».
+
+El cambio empieza por entender el modelo. Sigue por probarlo con algo pequeño. Y se consolida cuando ves que funciona y no quieres volver atrás.
+
+
+# Referencias {-}
+
+* **[Escritura sostenible en texto plano usando Pandoc y Markdown](https://programminghistorian.org/es/lecciones/escritura-sostenible-usando-pandoc-y-markdown){target="_blank"}**  
+    Dennis Tenen y Grant Wythoff — *Programming Historian* (trad. al español)
+
+    *Guía académica de referencia sobre el modelo de trabajo con texto plano. Explica por qué escribir en texto plano libera al investigador de formatos propietarios y frágiles, y cómo Pandoc permite generar cualquier formato de salida desde un mismo origen. Escrita por académicos y para académicos, es la lectura complementaria ideal para quien quiera entender la filosofía que hay detrás de este taller.*
+
+* **[Blog de Cibercliografía — escritura académica sostenible](https://cibercliografia.org/tag/escritura-academica-sostenible/){target="_blank"}**  
+    Varios autores
+
+    *Recopilación de artículos, reseñas y ampliaciones en torno a la escritura académica en texto plano. Incluye comentarios y aplicaciones prácticas del artículo de Tenen, así como experiencias de otros investigadores que han adoptado el modelo.*
+
+* **[The Art of UNIX Programming](https://en.wikipedia.org/wiki/The_Art_of_UNIX_Programming){target="_blank"}**  
+    Eric S. Raymond — Addison-Wesley, 2003
+
+    *Clásico de la filosofía Unix que explica los principios de hacer una sola cosa bien, conectar programas mediante tuberías de texto y mantener la simplicidad. Esas ideas —texto plano como interfaz universal, composición de herramientas simples— son el sustrato conceptual del modelo que este documento propone.*
+
+* **[Reading Machines: Toward an Algorithmic Criticism](https://www.press.uillinois.edu/books/?id=p084599){target="_blank"}**  
+    Stephen Ramsay — University of Illinois Press, 2011
+
+    *Reflexión sobre cómo la computación cambia la forma de leer y escribir. Ramsay defiende que el ordenador no solo procesa texto, sino que abre nuevas formas de interpretación. Directamente conectado con la idea de usar agentes como transformadores de contenido.*
+
+* **[Write the Docs](https://www.writethedocs.org){target="_blank"}**  
+    Comunidad global
+
+    *Comunidad de referencia en el mundo de la documentación técnica. Su filosofía —documentación como código, separación de contenido y presentación, uso de texto plano y control de versiones— es paralela al modelo de trabajo que aquí se presenta.*
+
+* **[What Is Code?](https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/){target="_blank"}**  
+    Paul Ford — Bloomberg Businessweek, 2015
+
+    *Ensayo divulgativo y visualmente brillante que explica qué es el código y cómo el texto plano se convierte en programas. Una lectura complementaria excelente para entender por qué separar contenido de forma es una idea tan potente.*
+
+
+# Anexo A: Ejemplo de uso ineficiente de un procesador de textos {-}
+
+Este anexo ilustra con un caso real el «modelo actual» descrito en la sección *¿Qué problemas arrastra ese modelo?* y sirve como contrapunto práctico al modelo con texto plano que propone el documento.
+
+## Presentación del caso
+
+Se dispone de dos archivos concebidos para guiar a quienes han de preparar un artículo académico con un formato editorial determinado:
+
+- **`Plantilla...docx`** — documento con la estructura del artículo (título, resumen, apartados, referencias) y texto explicativo sobre qué debe incluirse en cada sección.
+
+- **`Consideraciones...docx`** — documento independiente que enumera las normas de formato obligatorias: tipografías, tamaños, interlineado, tratamiento de tablas y figuras, extensión máxima.
+
+Ambos archivos fueron generados con un procesador de textos tradicional y se entregan por separado a la persona que escribe el artículo.
+
+## Problemas detectados
+
+| Problema | Manifestación |
+|---|---|
+| **Información duplicada y dispersa** | Las normas de formato viven en un documento distinto a la plantilla. El usuario debe tener dos archivos abiertos y aplicar las reglas manualmente, sección por sección. |
+| **Estilos desvinculados de las normas** | Las normas exigen «Palatino Linotype 10 pt para el cuerpo, Gill Sans MT 10 pt para epígrafes», pero los estilos predefinidos en la plantilla no coinciden: `Ttulo1` está configurado a 20 pt y `Normal` carece de formato base. El usuario debe formatear cada párrafo a mano o, peor, ignorar los estilos y aplicar formato directo. |
+| **Instrucciones y contenido mezclados** | El texto explicativo («Se deberá incluir el estado de la cuestión…») ocupa el mismo espacio que el contenido real. Nada impide que el usuario arrastre frases de ejemplo al artículo final, o que borre accidentalmente las indicaciones y pierda la guía estructural. |
+| **Sin automatización** | No hay tabla de contenidos automática, ni numeración de títulos, ni campo de recuento de palabras, ni validación del formato. Todo debe hacerse manualmente, artículo tras artículo. |
+| **Sin trazabilidad** | Los metadatos de ambos archivos carecen de autor, organización y título. El tiempo de edición registrado es cero y hay una sola revisión. No es posible saber quién creó los documentos, cuándo se actualizaron ni qué cambió entre versiones. |
+| **Sin control de versiones** | Al ser archivos `.docx` tradicionales, no existe un historial de cambios, ni ramas de trabajo, ni posibilidad de colaboración concurrente limpia. Cualquier modificación de las normas o la plantilla sobreescribe la versión anterior sin dejar rastro. |
+
+## Relación con el modelo actual
+
+En estos dos archivos se cumplen varios de los problemas descritos en el diagnóstico del documento principal:
+
+- **«Cada programa tiene su formato»** — las normas de formato existen solo como texto legible dentro de un `.docx`. No son reglas procesables que el programa pueda verificar o aplicar automáticamente.
+
+- **«Los formatos cambian con las versiones»** — al no haber control de versiones, no queda registro de cuándo ni en qué consistieron los cambios en las normas o la plantilla.
+
+- **«Las aplicaciones no se hablan entre sí»** — la plantilla y las consideraciones son dos archivos independientes que el usuario debe reconciliar mentalmente, comprobando una y otra vez que cumple ambas.
+
+- **«Repites la misma tarea una y otra vez»** — el formato debe aplicarse manualmente en cada sección, cada tabla, cada figura, en cada artículo y cada envío.
+
+## Contraste con el modelo propuesto
+
+| Modelo tradicional (procesador de textos) | Modelo propuesto (texto plano + agente) |
+|---|---|
+| Dos documentos que el usuario debe sincronizar manualmente | Una sola fuente en Markdown |
+| Normas enunciadas como texto, aplicables solo a mano | Reglas de formato en la configuración (YAML, plantilla, CSS) que el agente aplica al transformar |
+| Sin trazabilidad: se desconoce el origen y la evolución de los archivos | Git + control de versiones: cada cambio queda registrado con autor, fecha y motivo |
+| El usuario dedica tiempo a maquetar en lugar de a escribir | El usuario escribe contenido; el agente se encarga de la presentación |
+
+## Conclusión
+
+Este caso ilustra exactamente las ineficiencias que el documento principal denuncia. Los dos archivos, creados con la intención de ayudar, reproducen el patrón que se quiere superar: duplicidad de fuentes, trabajo manual repetitivo, falta de trazabilidad y dependencia total de la herramienta de procesamiento. El contraste con el modelo basado en texto plano y agente muestra que el problema no es la herramienta en sí, sino el flujo de trabajo que impone.
+
+# Anexo B: Características compartidas en el uso del procesador de textos {-}
+
+Este anexo amplía el diagnóstico del Anexo A mediante el análisis comparativo de diez documentos universitarios. Se identifican patrones transversales de uso del procesador que explican por qué muchas plantillas, pese a su utilidad inicial, arrastran las ineficiencias descritas en el documento principal, y por qué otras consiguen evitarlas parcial o totalmente.
+
+## Corpus analizado
+
+Los documentos se etiquetan con identificadores descriptivos para preservar el anonimato de sus instituciones de origen.
+
+| Etiqueta | Descripción |
+|----------|-------------|
+| **Plantilla artículo APA** | Plantilla de artículo científico con normas APA 7.ª ed. y controles de contenido |
+| **Plantilla artículo revista** | Plantilla de artículo para revista científica con instrucciones tipográficas integradas |
+| **Plantilla normas técnicas** | Plantilla de trabajo académico según normas técnicas nacionales, con estilos al 99 % |
+| **Plantilla APA EaD** | Plantilla de trabajo académico en APA 7.ª ed. para educación a distancia |
+| **Plantilla tesis IEEE** | Plantilla de tesis con normas IEEE y controles de contenido desplegables |
+| **Plantilla tesis Chicago** | Plantilla de tesis con sistema Chicago-Deusto (notas y bibliografía) |
+| **Formulario movilidad entrante** | Solicitud de movilidad académica entrante con controles de contenido |
+| **Formulario movilidad saliente** | Solicitud de movilidad académica saliente con controles de contenido |
+| **Plantilla artículo ineficiente** | Plantilla de artículo de revista con formato directo y nulo uso de estilos |
+| **Guía formato institucional** | Documento de instrucciones de formato con marcado manual |
+
+Las dos últimas etiquetas corresponden a los mismos archivos analizados en el Anexo A. Se incluyen aquí como línea base del «modelo tradicional».
+
+## Ejes de análisis
+
+Se han examinado los diez documentos en cinco dimensiones medibles dentro del formato `.docx`:
+
+1. **Estilos de párrafo vs. formato directo** — porcentaje de párrafos que heredan su formato de un estilo definido. Cuanto más alto, menos formateo manual necesita el usuario.
+
+2. **Campos automáticos** — presencia de campos TOC (tabla de contenidos), TOA (tabla de autoridades) o similares que se actualizan solos al modificar el contenido.
+
+3. **Controles de contenido** — uso de SDT (*structured document tags*) que delimitan zonas editables y protegen la estructura, frente a simples marcadores de posición `[entre corchetes]` que el usuario puede borrar o modificar accidentalmente.
+
+4. **Estructura de secciones** — uso de saltos de sección con paginación diferenciada (romana para preliminares, arábiga para el cuerpo) y encabezados distintos por sección.
+
+5. **Referencias cruzadas e hipervínculos** — uso de vínculos internos (tabla de contenidos que enlaza a secciones, referencias a figuras) y externos (URLs).
+
+## Resultados
+
+| Documento | Párrafos totales | % con estilo | TOC | Controles contenido | Marcadores `[...]` | Hipervínculos |
+|---|---|---|---|---|---|---|
+|Plantilla artículo APA|639|34%|No|60|28|56|
+|Plantilla artículo revista|122|0%|No|0|2|6|
+|Plantilla normas técnicas|825|99%|Sí|4|0|54|
+|Plantilla APA EaD|367|56%|Sí|0|11|40|
+|Plantilla tesis IEEE|667|29%|Sí|62|59|44|
+|Plantilla tesis Chicago|127|23%|No|0|25|0|
+|Formulario movilidad entrante|121|0%|No|72|0|2|
+|Formulario movilidad saliente|126|2%|No|76|0|2|
+|Plantilla artículo ineficiente|49|18%|No|0|0|0|
+|Guía formato institucional|48|23%|No|0|0|0|
+
+## Patrones transversales
+
+Del cruce de los datos cuantitativos con los problemas descritos en el Anexo A emergen cuatro patrones recurrentes.
+
+### Patrón A: Formato directo dominante
+
+Lo presentan la **Plantilla artículo revista** (0 %), la **Plantilla artículo ineficiente** (18 %) y la **Guía formato institucional** (23 %). En estos documentos el formato se aplica párrafo a párrafo mediante botones de la barra de herramientas (negrita, tamaño, color, alineación). Los estilos están definidos en la galería pero no se utilizan.
+
+**Consecuencias:**
+
+- Si el usuario cambia de opinión sobre el interlineado, debe recorrer todo el documento y actualizar cada párrafo manualmente.
+
+- No existe tabla de contenidos automática porque no hay estilos de título a los que el TOC pueda enlazarse.
+
+- El aspecto visual depende de la versión de Word y de la configuración regional: al abrir el documento en otro equipo, el formato puede variar.
+
+### Patrón B: Estilos declarados pero infrautilizados
+
+Lo presentan la **Plantilla artículo APA** (34 %), la **Plantilla tesis IEEE** (29 %) y la **Plantilla tesis Chicago** (23 %). Definen estilos de título (Título 1, 2, 3) y algunos párrafos los usan, pero la mayoría del documento emplea formato directo «por encima» del estilo.
+
+**Consecuencias:**
+
+- La tabla de contenidos, si existe, se genera solo a partir de los párrafos con estilo. Los títulos formateados a mano quedan fuera, produciendo un índice incompleto.
+
+- El mantenimiento es engorroso: modificar el estilo no actualiza los párrafos con formato directo, creando inconsistencias visuales.
+
+- El número elevado de controles de contenido (60 y 62 respectivamente) y de marcadores `[...]` (28 y 59) indica que estas plantillas intentan guiar al usuario combinando ambas técnicas, pero la mezcla añade complejidad sin resolver el problema de base.
+
+### Patrón C: Estilos como base sólida
+
+Lo presentan la **Plantilla normas técnicas** (99 %) y la **Plantilla APA EaD** (56 %). En el primer caso, casi la totalidad de los párrafos usan estilos; en el segundo, algo más de la mitad. Ambos incluyen tabla de contenidos automática y una estructura de estilos jerarquizada (Título 1 → 2 → 3).
+
+**Consecuencias positivas:**
+
+- La tabla de contenidos se actualiza con un clic y siempre refleja la estructura real del documento.
+
+- Cambiar el formato de toda una categoría (p. ej., todos los títulos de nivel 2) requiere modificar un único estilo.
+
+- El documento es más portable entre versiones de Word y entre plataformas (Windows, Mac, web).
+
+La **Plantilla normas técnicas**, con un 99 % de cobertura de estilos, es el ejemplo más próximo al modelo ideal. Su único talón de Aquiles es que los estilos se definen dentro del propio archivo `.docx` y no son procesables externamente.
+
+### Patrón D: Controles de contenido como mecanismo de protección
+
+Lo presentan los dos **Formularios movilidad** (72 y 76 controles). Estos documentos emplean *structured document tags* para delimitar campos de relleno (nombre, fecha, selecciones desplegables), lo que impide que el usuario altere la estructura del formulario. Sin embargo, ningún párrafo usa estilos de párrafo: todo el formato es directo.
+
+**Consecuencias:**
+
+- Los controles de contenido protegen la integridad estructural, pero el formato sigue siendo frágil: un usuario que copie y pegue texto desde otro documento puede arrastrar formatos extraños.
+
+- Sin estilos de párrafo, no es viable generar una tabla de contenidos ni aplicar cambios masivos de formato.
+
+## Lecciones para la confección de plantillas
+
+Del cruce de los cuatro patrones se derivan varias conclusiones aplicables al diseño de plantillas universitarias:
+
+1. **Los estilos de párrafo son la columna vertebral.** Sin ellos no hay automatización posible (TOC, numeración, listas de figuras). El objetivo debería ser el 100 % de cobertura, como demuestra la Plantilla normas técnicas.
+
+2. **Los controles de contenido protegen, pero no formatean.** Son excelentes para delimitar zonas editables en formularios, pero no sustituyen a los estilos. La combinación ideal sería: estilos de párrafo para el formato general + controles de contenido para los campos variables.
+
+3. **Los marcadores `[entre corchetes]` son frágiles.** El usuario puede borrarlos, modificarlos o confundirlos con contenido real. Los controles de contenido o, mejor aún, los metadatos externos (YAML, variables de plantilla) son preferibles.
+
+4. **El formato directo es el enemigo de la consistencia.** Cada párrafo formateado a mano es un punto potencial de divergencia. En los documentos analizados, la correlación entre bajo uso de estilos y ausencia de automatización es perfecta.
+
+5. **Las plantillas más logradas combinan estilos y campos automáticos.** La Plantilla normas técnicas (99 % estilos, TOC, listas automáticas) y la Plantilla APA EaD (56 % estilos, TOC, estilos jerarquizados) muestran que la inversión en una estructura de estilos bien diseñada se amortiza en mantenimiento y usabilidad.
+
+6. **El procesador de textos condiciona pero no determina la calidad del resultado.** Un mismo programa (Microsoft Word) alberga desde documentos con formato 100 % directo hasta documentos con cobertura casi total de estilos. La diferencia no es la herramienta, sino el flujo de trabajo y la formación de quien diseña la plantilla.
