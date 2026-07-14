@@ -8,13 +8,14 @@ toc: true
 toc-title: "Contenido"
 format:
   html:
-    theme: cosmo
+    theme: cosmo-custom.scss
     css: custom.css
     self-contained: true
   pdf:
     documentclass: scrbook
+    classoption: openany
     papersize: a4
-    fontsize: 11pt
+    fontsize: 12pt
     geometry:
       - top=2cm
       - bottom=2cm
@@ -36,10 +37,10 @@ format:
         \renewcommand{\ttdefault}{lmtt}
         \renewcommand{\sfdefault}{lmss}
         \usepackage{titlesec}
-        \setkomafont{chapter}{\sffamily\bfseries\huge}
-        \titleformat{\section}{\sffamily\Large\bfseries}{\thesection}{1em}{}
-        \titleformat{\subsection}{\sffamily\large\bfseries}{\thesubsection}{1em}{}
-        \titleformat{\subsubsection}{\sffamily\normalsize\bfseries}{\thesubsubsection}{1em}{}
+        \setkomafont{chapter}{\sffamily\bfseries\Large}
+        \titleformat{\section}{\sffamily\large\bfseries}{\thesection}{1em}{}
+        \titleformat{\subsection}{\sffamily\normalsize\bfseries}{\thesubsection}{1em}{}
+        \titleformat{\subsubsection}{\sffamily\small\bfseries}{\thesubsubsection}{1em}{}
         \titlespacing*{\chapter}{0pt}{10pt}{8pt}
         \titlespacing*{\section}{0pt}{8pt}{4pt}
         \titlespacing*{\subsection}{0pt}{6pt}{3pt}
@@ -48,6 +49,16 @@ format:
         \setlength{\parindent}{2em}
         \usepackage{changepage}
         \usepackage{etoolbox}
+        \usepackage{booktabs}
+        \setlength{\itemsep}{0.3em}
+        \makeatletter
+        \AtBeginDocument{%
+          \let\orig@longtable\longtable
+          \let\orig@endlongtable\endlongtable
+          \def\longtable{\begingroup\footnotesize\orig@longtable}%
+          \def\endlongtable{\orig@endlongtable\endgroup}%
+        }
+        \makeatother
         \newbool{inshaded}
         \AtBeginDocument{%
           \BeforeBeginEnvironment{Shaded}{\booltrue{inshaded}\begin{adjustwidth}{0.1\textwidth}{0cm}}%
@@ -68,7 +79,7 @@ Este documento se dirige principalmente al personal universitario, pero el model
 
 Si es la primera vez que te acercas a este modelo de trabajo, estos recursos te ayudarán a situarte antes de continuar:
 
-- **[Presentación del taller](100-oc-divulga.qmd)** — Material visual con ejemplos y ejercicios guiados de la sesión práctica.
+- **[Presentación del taller](100-oc-divulga.html)** — Material visual con ejemplos y ejercicios guiados de la sesión práctica.
 - **[Vídeo de la sesión explicativa](https://umurcia.zoom.us/rec/play/ta3zzdOjkFywo35Vv7wnFcdCrcN9RDUWLQMlHe7XisW5Rnngz-crhdENH_zNkkzCWIkwoxmZPVppYldd.RBA5dxmy19eX7_wq?accessLevel=meeting&canPlayFromShare=true&from=share_recording_detail&continueMode=true&oldStyle=true&componentName=rec-play&originRequestUrl=https%3A%2F%2Fumurcia.zoom.us%2Frec%2Fshare%2FYKZsu4UUeSnneT9xbQyFCPgkImjaFQqMxLQRyeQXsDsFGurxpD9E7fZjkoxVkavK.1wf4sZyQa88k4NH0){target="_blank"}** — Grabación de una sesión en la que se explica el modelo y se demuestra el flujo de trabajo con OpenCode.
 - **Marcando Palabras** — Libro en desarrollo que amplía estos conceptos con ejercicios prácticos de Markdown y Quarto. Próximamente disponible.
 
@@ -223,7 +234,7 @@ Antes de continuar, conviene saber con qué vamos a trabajar. OpenCode es un **a
 | ¿Funciona en Windows, Mac, Linux? | En los tres |
 | ¿Sube mis archivos a la nube? | Los envía al modelo de IA para procesarlos, pero no se almacenan permanentemente |
 
-Para más detalles, consulta la [presentación del taller](100-oc-divulga.qmd) o mira el [vídeo de la sesión](https://umurcia.zoom.us/rec/play/ta3zzdOjkFywo35Vv7wnFcdCrcN9RDUWLQMlHe7XisW5Rnngz-crhdENH_zNkkzCWIkwoxmZPVppYldd.RBA5dxmy19eX7_wq?accessLevel=meeting&canPlayFromShare=true&from=share_recording_detail&continueMode=true&oldStyle=true&componentName=rec-play&originRequestUrl=https%3A%2F%2Fumurcia.zoom.us%2Frec%2Fshare%2FYKZsu4UUeSnneT9xbQyFCPgkImjaFQqMxLQRyeQXsDsFGurxpD9E7fZjkoxVkavK.1wf4sZyQa88k4NH0){target="_blank"}.
+Para más detalles, consulta la [presentación del taller](100-oc-divulga.html) o mira el [vídeo de la sesión](https://umurcia.zoom.us/rec/play/ta3zzdOjkFywo35Vv7wnFcdCrcN9RDUWLQMlHe7XisW5Rnngz-crhdENH_zNkkzCWIkwoxmZPVppYldd.RBA5dxmy19eX7_wq?accessLevel=meeting&canPlayFromShare=true&from=share_recording_detail&continueMode=true&oldStyle=true&componentName=rec-play&originRequestUrl=https%3A%2F%2Fumurcia.zoom.us%2Frec%2Fshare%2FYKZsu4UUeSnneT9xbQyFCPgkImjaFQqMxLQRyeQXsDsFGurxpD9E7fZjkoxVkavK.1wf4sZyQa88k4NH0){target="_blank"}.
 
 ## Ejemplo: de un borrador a un informe
 
@@ -405,7 +416,7 @@ Dos documentos complementarios te ayudarán a situarte:
 
 - **[Diagnóstico del perfil de usuario](diagnostico-usuario.qmd)** — Describe quién es el creador de contenidos universitario, sus barreras personales y culturales, su relación con la tecnología y los errores típicos al empezar.
 
-- **[Presentación del taller](100-oc-divulga.qmd)** — Material de la sesión práctica con ejemplos, ejercicios y referencias para seguir aprendiendo.
+- **[Presentación del taller](100-oc-divulga.html)** — Material de la sesión práctica con ejemplos, ejercicios y referencias para seguir aprendiendo.
 
 ::: {.callout-tip}
 
@@ -443,7 +454,7 @@ El cambio empieza por entender el modelo. Sigue por probarlo con algo pequeño. 
 
 Recursos prácticos y accesibles para familiarizarte con el modelo de trabajo:
 
-- **[Presentación del taller](100-oc-divulga.qmd)** — Material visual con ejemplos y ejercicios guiados.
+- **[Presentación del taller](100-oc-divulga.html)** — Material visual con ejemplos y ejercicios guiados.
 
 - **[Vídeo de la sesión explicativa](https://umurcia.zoom.us/rec/play/ta3zzdOjkFywo35Vv7wnFcdCrcN9RDUWLQMlHe7XisW5Rnngz-crhdENH_zNkkzCWIkwoxmZPVppYldd.RBA5dxmy19eX7_wq?accessLevel=meeting&canPlayFromShare=true&from=share_recording_detail&continueMode=true&oldStyle=true&componentName=rec-play&originRequestUrl=https%3A%2F%2Fumurcia.zoom.us%2Frec%2Fshare%2FYKZsu4UUeSnneT9xbQyFCPgkImjaFQqMxLQRyeQXsDsFGurxpD9E7fZjkoxVkavK.1wf4sZyQa88k4NH0){target="_blank"}** — Grabación de una sesión en la que se demuestra el flujo de trabajo completo.
 
@@ -496,6 +507,6 @@ La conclusión es clara: **el problema no es la herramienta, sino el flujo de tr
 
 Si quieres ver el análisis completo —con datos, tablas y los cuatro patrones identificados—, consulta estos documentos:
 
-- **[Anexo: Ejemplo de uso ineficiente de un procesador de textos](analisis-plantilla-ineficiente.qmd)** — Caso real de dos plantillas que reproducen todas las ineficiencias descritas.
+- **Ejemplo de uso ineficiente de un procesador de textos** — Caso real de dos plantillas que reproducen todas las ineficiencias descritas. Ver [documento completo](analisis-plantilla-ineficiente.qmd).
 
-- **[Anexo: Características compartidas en el uso del procesador de textos](analisis-plantillas-universitarias.qmd)** — Análisis comparativo de diez documentos universitarios con datos cuantitativos y patrones transversales.
+- **Características compartidas en el uso del procesador de textos** — Análisis comparativo de diez documentos universitarios con datos cuantitativos y patrones transversales. Ver [documento completo](analisis-plantillas-universitarias.qmd).

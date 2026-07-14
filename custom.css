@@ -3,12 +3,8 @@
 /* Indentado en todos los párrafos */
 p { text-indent: 2em; }
 
-/* Tamaños de cabecera reducidos */
-h2 { font-size: 1.4em; }
-h3 { font-size: 1.2em; }
-h4 { font-size: 1.1em; }
-h5 { font-size: 1.05em; }
-h6 { font-size: 1em; }
+/* Separación entre elementos de lista */
+li { margin-bottom: 0.3em; }
 
 /* Callouts: ancho 90% alineado a la derecha */
 .callout {
@@ -39,10 +35,16 @@ h6 { font-size: 1em; }
   margin-right: 0;
 }
 
-/* Tablas fuera de callouts: 90%, derecha */
+/* Tablas fuera de callouts: 90%, derecha, fuente más pequeña */
 table:not(.callout table) {
   max-width: 90%;
   margin-left: auto;
+  font-size: 0.85em !important;
+}
+
+.table th,
+.table td {
+  font-size: 0.85em !important;
 }
 
 /* Tablas dentro de callouts: ancho completo del contenedor */

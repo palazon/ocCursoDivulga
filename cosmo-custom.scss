@@ -1,0 +1,16 @@
+/*-- scss:defaults --*/
+
+// Sobreescribe tamaños de cabecera de Bootstrap ANTES de importar cosmo
+
+$h1-font-size: 1.1rem;
+$h2-font-size: 1.0rem;
+$h3-font-size: 0.95rem;
+$h4-font-size: 0.9rem;
+$h5-font-size: 0.85rem;
+$h6-font-size: 0.8rem;
+
+/*-- scss:rules --*/
+
+h1, h2, h3, h4, h5, h6 {
+  color: #c0392b;
+}
