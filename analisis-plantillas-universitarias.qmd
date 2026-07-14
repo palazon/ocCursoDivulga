@@ -1,0 +1,141 @@
+---
+title: "Anexo: Características compartidas en el uso del procesador de textos"
+author: "JA Palazón"
+date: "2026-07-03"
+lang: es
+format:
+  html:
+    theme: cosmo
+    css: custom.css
+    self-contained: true
+  pdf:
+    documentclass: scrbook
+    papersize: a4
+    fontsize: 11pt
+    geometry:
+      - top=2cm
+      - bottom=2cm
+      - left=2cm
+      - right=2cm
+    colorlinks: true
+    linkcolor: Maroon
+    citecolor: Maroon
+    urlcolor: Maroon
+    number-sections: true
+---
+
+# Corpus analizado
+
+Los documentos se etiquetan con identificadores descriptivos para preservar el anonimato de sus instituciones de origen.
+
+| Etiqueta | Descripción |
+|----------|-------------|
+| **Plantilla artículo APA** | Plantilla de artículo científico con normas APA 7.ª ed. y controles de contenido |
+| **Plantilla artículo revista** | Plantilla de artículo para revista científica con instrucciones tipográficas integradas |
+| **Plantilla normas técnicas** | Plantilla de trabajo académico según normas técnicas nacionales, con estilos al 99 % |
+| **Plantilla APA EaD** | Plantilla de trabajo académico en APA 7.ª ed. para educación a distancia |
+| **Plantilla tesis IEEE** | Plantilla de tesis con normas IEEE y controles de contenido desplegables |
+| **Plantilla tesis Chicago** | Plantilla de tesis con sistema Chicago-Deusto (notas y bibliografía) |
+| **Formulario movilidad entrante** | Solicitud de movilidad académica entrante con controles de contenido |
+| **Formulario movilidad saliente** | Solicitud de movilidad académica saliente con controles de contenido |
+| **Plantilla artículo ineficiente** | Plantilla de artículo de revista con formato directo y nulo uso de estilos |
+| **Guía formato institucional** | Documento de instrucciones de formato con marcado manual |
+
+Las dos últimas etiquetas corresponden a los mismos archivos analizados en el Anexo sobre plantilla ineficiente. Se incluyen aquí como línea base del «modelo tradicional».
+
+# Ejes de análisis
+
+Se han examinado los diez documentos en cinco dimensiones medibles dentro del formato `.docx`:
+
+1. **Estilos de párrafo vs. formato directo** — porcentaje de párrafos que heredan su formato de un estilo definido. Cuanto más alto, menos formateo manual necesita el usuario.
+
+2. **Campos automáticos** — presencia de campos TOC (tabla de contenidos), TOA (tabla de autoridades) o similares que se actualizan solos al modificar el contenido.
+
+3. **Controles de contenido** — uso de SDT (*structured document tags*) que delimitan zonas editables y protegen la estructura, frente a simples marcadores de posición `[entre corchetes]` que el usuario puede borrar o modificar accidentalmente.
+
+4. **Estructura de secciones** — uso de saltos de sección con paginación diferenciada (romana para preliminares, arábiga para el cuerpo) y encabezados distintos por sección.
+
+5. **Referencias cruzadas e hipervínculos** — uso de vínculos internos (tabla de contenidos que enlaza a secciones, referencias a figuras) y externos (URLs).
+
+# Resultados
+
+| Documento | Párrafos totales | % con estilo | TOC | Controles contenido | Marcadores `[...]` | Hipervínculos |
+|---|---|---|---|---|---|---|
+|Plantilla artículo APA|639|34%|No|60|28|56|
+|Plantilla artículo revista|122|0%|No|0|2|6|
+|Plantilla normas técnicas|825|99%|Sí|4|0|54|
+|Plantilla APA EaD|367|56%|Sí|0|11|40|
+|Plantilla tesis IEEE|667|29%|Sí|62|59|44|
+|Plantilla tesis Chicago|127|23%|No|0|25|0|
+|Formulario movilidad entrante|121|0%|No|72|0|2|
+|Formulario movilidad saliente|126|2%|No|76|0|2|
+|Plantilla artículo ineficiente|49|18%|No|0|0|0|
+|Guía formato institucional|48|23%|No|0|0|0|
+
+# Patrones transversales
+
+Del cruce de los datos cuantitativos con los problemas descritos en el Anexo sobre plantilla ineficiente emergen cuatro patrones recurrentes.
+
+## Patrón A: Formato directo dominante
+
+Lo presentan la **Plantilla artículo revista** (0 %), la **Plantilla artículo ineficiente** (18 %) y la **Guía formato institucional** (23 %). En estos documentos el formato se aplica párrafo a párrafo mediante botones de la barra de herramientas (negrita, tamaño, color, alineación). Los estilos están definidos en la galería pero no se utilizan.
+
+**Consecuencias:**
+
+- Si el usuario cambia de opinión sobre el interlineado, debe recorrer todo el documento y actualizar cada párrafo manualmente.
+
+- No existe tabla de contenidos automática porque no hay estilos de título a los que el TOC pueda enlazarse.
+
+- El aspecto visual depende de la versión de Word y de la configuración regional: al abrir el documento en otro equipo, el formato puede variar.
+
+## Patrón B: Estilos declarados pero infrautilizados
+
+Lo presentan la **Plantilla artículo APA** (34 %), la **Plantilla tesis IEEE** (29 %) y la **Plantilla tesis Chicago** (23 %). Definen estilos de título (Título 1, 2, 3) y algunos párrafos los usan, pero la mayoría del documento emplea formato directo «por encima» del estilo.
+
+**Consecuencias:**
+
+- La tabla de contenidos, si existe, se genera solo a partir de los párrafos con estilo. Los títulos formateados a mano quedan fuera, produciendo un índice incompleto.
+
+- El mantenimiento es engorroso: modificar el estilo no actualiza los párrafos con formato directo, creando inconsistencias visuales.
+
+- El número elevado de controles de contenido (60 y 62 respectivamente) y de marcadores `[...]` (28 y 59) indica que estas plantillas intentan guiar al usuario combinando ambas técnicas, pero la mezcla añade complejidad sin resolver el problema de base.
+
+## Patrón C: Estilos como base sólida
+
+Lo presentan la **Plantilla normas técnicas** (99 %) y la **Plantilla APA EaD** (56 %). En el primer caso, casi la totalidad de los párrafos usan estilos; en el segundo, algo más de la mitad. Ambos incluyen tabla de contenidos automática y una estructura de estilos jerarquizada (Título 1 → 2 → 3).
+
+**Consecuencias positivas:**
+
+- La tabla de contenidos se actualiza con un clic y siempre refleja la estructura real del documento.
+
+- Cambiar el formato de toda una categoría (p. ej., todos los títulos de nivel 2) requiere modificar un único estilo.
+
+- El documento es más portable entre versiones de Word y entre plataformas (Windows, Mac, web).
+
+La **Plantilla normas técnicas**, con un 99 % de cobertura de estilos, es el ejemplo más próximo al modelo ideal. Su único talón de Aquiles es que los estilos se definen dentro del propio archivo `.docx` y no son procesables externamente.
+
+## Patrón D: Controles de contenido como mecanismo de protección
+
+Lo presentan los dos **Formularios movilidad** (72 y 76 controles). Estos documentos emplean *structured document tags* para delimitar campos de relleno (nombre, fecha, selecciones desplegables), lo que impide que el usuario altere la estructura del formulario. Sin embargo, ningún párrafo usa estilos de párrafo: todo el formato es directo.
+
+**Consecuencias:**
+
+- Los controles de contenido protegen la integridad estructural, pero el formato sigue siendo frágil: un usuario que copie y pegue texto desde otro documento puede arrastrar formatos extraños.
+
+- Sin estilos de párrafo, no es viable generar una tabla de contenidos ni aplicar cambios masivos de formato.
+
+# Lecciones para la confección de plantillas
+
+Del cruce de los cuatro patrones se derivan varias conclusiones aplicables al diseño de plantillas universitarias:
+
+1. **Los estilos de párrafo son la columna vertebral.** Sin ellos no hay automatización posible (TOC, numeración, listas de figuras). El objetivo debería ser el 100 % de cobertura, como demuestra la Plantilla normas técnicas.
+
+2. **Los controles de contenido protegen, pero no formatean.** Son excelentes para delimitar zonas editables en formularios, pero no sustituyen a los estilos. La combinación ideal sería: estilos de párrafo para el formato general + controles de contenido para los campos variables.
+
+3. **Los marcadores `[entre corchetes]` son frágiles.** El usuario puede borrarlos, modificarlos o confundirlos con contenido real. Los controles de contenido o, mejor aún, los metadatos externos (YAML, variables de plantilla) son preferibles.
+
+4. **El formato directo es el enemigo de la consistencia.** Cada párrafo formateado a mano es un punto potencial de divergencia. En los documentos analizados, la correlación entre bajo uso de estilos y ausencia de automatización es perfecta.
+
+5. **Las plantillas más logradas combinan estilos y campos automáticos.** La Plantilla normas técnicas (99 % estilos, TOC, listas automáticas) y la Plantilla APA EaD (56 % estilos, TOC, estilos jerarquizados) muestran que la inversión en una estructura de estilos bien diseñada se amortiza en mantenimiento y usabilidad.
+
+6. **El procesador de textos condiciona pero no determina la calidad del resultado.** Un mismo programa (Microsoft Word) alberga desde documentos con formato 100 % directo hasta documentos con cobertura casi total de estilos. La diferencia no es la herramienta, sino el flujo de trabajo y la formación de quien diseña la plantilla.

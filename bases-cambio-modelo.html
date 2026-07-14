@@ -21,6 +21,41 @@ ul.task-list li input[type="checkbox"] {
 width: 0.8em;
 margin: 0 0.8em 0.2em -1em;  vertical-align: middle;
 }
+
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+}
+pre.numberSource { margin-left: 3em; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -2219,11 +2254,16 @@ margin-left: 0;
    
   <ul>
   <li><a href="#antes-de-empezar" id="toc-antes-de-empezar" class="nav-link active" data-scroll-target="#antes-de-empezar">Antes de empezar</a></li>
+  <li><a href="#antes-de-leer" id="toc-antes-de-leer" class="nav-link" data-scroll-target="#antes-de-leer">Antes de leer</a></li>
   <li><a href="#introducción" id="toc-introducción" class="nav-link" data-scroll-target="#introducción">Introducción</a></li>
   <li><a href="#qué-necesitas-hacer" id="toc-qué-necesitas-hacer" class="nav-link" data-scroll-target="#qué-necesitas-hacer">¿Qué necesitas hacer?</a></li>
   <li><a href="#con-qué-lo-haces-ahora" id="toc-con-qué-lo-haces-ahora" class="nav-link" data-scroll-target="#con-qué-lo-haces-ahora">¿Con qué lo haces ahora?</a></li>
   <li><a href="#qué-problemas-arrastra-ese-modelo" id="toc-qué-problemas-arrastra-ese-modelo" class="nav-link" data-scroll-target="#qué-problemas-arrastra-ese-modelo">¿Qué problemas arrastra ese modelo?</a></li>
-  <li><a href="#un-modelo-diferente" id="toc-un-modelo-diferente" class="nav-link" data-scroll-target="#un-modelo-diferente">Un modelo diferente</a></li>
+  <li><a href="#un-modelo-diferente" id="toc-un-modelo-diferente" class="nav-link" data-scroll-target="#un-modelo-diferente">Un modelo diferente</a>
+  <ul class="collapse">
+  <li><a href="#qué-es-opencode" id="toc-qué-es-opencode" class="nav-link" data-scroll-target="#qué-es-opencode">¿Qué es OpenCode?</a></li>
+  <li><a href="#ejemplo-de-un-borrador-a-un-informe" id="toc-ejemplo-de-un-borrador-a-un-informe" class="nav-link" data-scroll-target="#ejemplo-de-un-borrador-a-un-informe">Ejemplo: de un borrador a un informe</a></li>
+  </ul></li>
   <li><a href="#qué-ganas-con-el-cambio" id="toc-qué-ganas-con-el-cambio" class="nav-link" data-scroll-target="#qué-ganas-con-el-cambio">Qué ganas con el cambio</a>
   <ul class="collapse">
   <li><a href="#calidad" id="toc-calidad" class="nav-link" data-scroll-target="#calidad">Calidad</a></li>
@@ -2233,29 +2273,12 @@ margin-left: 0;
   </ul></li>
   <li><a href="#de-la-teoría-a-la-práctica" id="toc-de-la-teoría-a-la-práctica" class="nav-link" data-scroll-target="#de-la-teoría-a-la-práctica">De la teoría a la práctica</a></li>
   <li><a href="#conclusión" id="toc-conclusión" class="nav-link" data-scroll-target="#conclusión">Conclusión</a></li>
-  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias">Referencias</a></li>
-  <li><a href="#anexo-a-ejemplo-de-uso-ineficiente-de-un-procesador-de-textos" id="toc-anexo-a-ejemplo-de-uso-ineficiente-de-un-procesador-de-textos" class="nav-link" data-scroll-target="#anexo-a-ejemplo-de-uso-ineficiente-de-un-procesador-de-textos">Anexo A: Ejemplo de uso ineficiente de un procesador de textos</a>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias">Referencias</a>
   <ul class="collapse">
-  <li><a href="#presentación-del-caso" id="toc-presentación-del-caso" class="nav-link" data-scroll-target="#presentación-del-caso">Presentación del caso</a></li>
-  <li><a href="#problemas-detectados" id="toc-problemas-detectados" class="nav-link" data-scroll-target="#problemas-detectados">Problemas detectados</a></li>
-  <li><a href="#relación-con-el-modelo-actual" id="toc-relación-con-el-modelo-actual" class="nav-link" data-scroll-target="#relación-con-el-modelo-actual">Relación con el modelo actual</a></li>
-  <li><a href="#contraste-con-el-modelo-propuesto" id="toc-contraste-con-el-modelo-propuesto" class="nav-link" data-scroll-target="#contraste-con-el-modelo-propuesto">Contraste con el modelo propuesto</a></li>
-  <li><a href="#conclusión-1" id="toc-conclusión-1" class="nav-link" data-scroll-target="#conclusión-1">Conclusión</a></li>
+  <li><a href="#para-empezar" id="toc-para-empezar" class="nav-link" data-scroll-target="#para-empezar">Para empezar</a></li>
+  <li><a href="#para-profundizar" id="toc-para-profundizar" class="nav-link" data-scroll-target="#para-profundizar">Para profundizar</a></li>
   </ul></li>
-  <li><a href="#anexo-b-características-compartidas-en-el-uso-del-procesador-de-textos" id="toc-anexo-b-características-compartidas-en-el-uso-del-procesador-de-textos" class="nav-link" data-scroll-target="#anexo-b-características-compartidas-en-el-uso-del-procesador-de-textos">Anexo B: Características compartidas en el uso del procesador de textos</a>
-  <ul class="collapse">
-  <li><a href="#corpus-analizado" id="toc-corpus-analizado" class="nav-link" data-scroll-target="#corpus-analizado">Corpus analizado</a></li>
-  <li><a href="#ejes-de-análisis" id="toc-ejes-de-análisis" class="nav-link" data-scroll-target="#ejes-de-análisis">Ejes de análisis</a></li>
-  <li><a href="#resultados" id="toc-resultados" class="nav-link" data-scroll-target="#resultados">Resultados</a></li>
-  <li><a href="#patrones-transversales" id="toc-patrones-transversales" class="nav-link" data-scroll-target="#patrones-transversales">Patrones transversales</a>
-  <ul class="collapse">
-  <li><a href="#patrón-a-formato-directo-dominante" id="toc-patrón-a-formato-directo-dominante" class="nav-link" data-scroll-target="#patrón-a-formato-directo-dominante">Patrón A: Formato directo dominante</a></li>
-  <li><a href="#patrón-b-estilos-declarados-pero-infrautilizados" id="toc-patrón-b-estilos-declarados-pero-infrautilizados" class="nav-link" data-scroll-target="#patrón-b-estilos-declarados-pero-infrautilizados">Patrón B: Estilos declarados pero infrautilizados</a></li>
-  <li><a href="#patrón-c-estilos-como-base-sólida" id="toc-patrón-c-estilos-como-base-sólida" class="nav-link" data-scroll-target="#patrón-c-estilos-como-base-sólida">Patrón C: Estilos como base sólida</a></li>
-  <li><a href="#patrón-d-controles-de-contenido-como-mecanismo-de-protección" id="toc-patrón-d-controles-de-contenido-como-mecanismo-de-protección" class="nav-link" data-scroll-target="#patrón-d-controles-de-contenido-como-mecanismo-de-protección">Patrón D: Controles de contenido como mecanismo de protección</a></li>
-  </ul></li>
-  <li><a href="#lecciones-para-la-confección-de-plantillas" id="toc-lecciones-para-la-confección-de-plantillas" class="nav-link" data-scroll-target="#lecciones-para-la-confección-de-plantillas">Lecciones para la confección de plantillas</a></li>
-  </ul></li>
+  <li><a href="#anexo-a-las-plantillas-universitarias-y-el-modelo-actual" id="toc-anexo-a-las-plantillas-universitarias-y-el-modelo-actual" class="nav-link" data-scroll-target="#anexo-a-las-plantillas-universitarias-y-el-modelo-actual">Anexo A: Las plantillas universitarias y el modelo actual</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Otros formatos</h2><ul><li><a href="bases-cambio-modelo.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
 </div>
@@ -2297,6 +2320,16 @@ margin-left: 0;
 <h1 class="unnumbered">Antes de empezar</h1>
 <p>Este documento describe el modelo de trabajo actual del personal universitario con los contenidos digitales, identifica las deficiencias que arrastra y propone un cambio de enfoque: pasar de depender de aplicaciones concretas a trabajar con contenido en texto plano asistido por agentes de inteligencia artificial. Está pensado como base conceptual para quien se acerca por primera vez a herramientas como OpenCode.</p>
 <p>Este documento se dirige principalmente al personal universitario, pero el modelo de trabajo que describe —texto plano como materia prima, agente como transformador— es aplicable a cualquier persona que cree y gestione contenido en su día a día. Estudiantes que preparan trabajos fin de grado, memorias de prácticas o informes de laboratorio. Profesionales en empresas que redactan propuestas, documentan procesos o elaboran presentaciones. Gestores que organizan información, rellenan formularios o mantienen actas. Todos, en la universidad y fuera de ella, compartimos el mismo patrón: el contenido nace, se transforma y se distribuye. Y todos arrastramos los mismos problemas cuando ese contenido depende de la aplicación que lo creó. Si te reconoces en esta descripción —estés donde estés—, este documento también es para ti.</p>
+</section>
+<section id="antes-de-leer" class="level1 unnumbered">
+<h1 class="unnumbered">Antes de leer</h1>
+<p>Si es la primera vez que te acercas a este modelo de trabajo, estos recursos te ayudarán a situarte antes de continuar:</p>
+<ul>
+<li><strong><a href="100-oc-divulga.qmd">Presentación del taller</a></strong> — Material visual con ejemplos y ejercicios guiados de la sesión práctica.</li>
+<li><strong><a href="https://umurcia.zoom.us/rec/play/ta3zzdOjkFywo35Vv7wnFcdCrcN9RDUWLQMlHe7XisW5Rnngz-crhdENH_zNkkzCWIkwoxmZPVppYldd.RBA5dxmy19eX7_wq?accessLevel=meeting&amp;canPlayFromShare=true&amp;from=share_recording_detail&amp;continueMode=true&amp;oldStyle=true&amp;componentName=rec-play&amp;originRequestUrl=https%3A%2F%2Fumurcia.zoom.us%2Frec%2Fshare%2FYKZsu4UUeSnneT9xbQyFCPgkImjaFQqMxLQRyeQXsDsFGurxpD9E7fZjkoxVkavK.1wf4sZyQa88k4NH0" target="_blank">Vídeo de la sesión explicativa</a></strong> — Grabación de una sesión en la que se explica el modelo y se demuestra el flujo de trabajo con OpenCode.</li>
+<li><strong>Marcando Palabras</strong> — Libro en desarrollo que amplía estos conceptos con ejercicios prácticos de Markdown y Quarto. Próximamente disponible.</li>
+</ul>
+<p>No necesitas verlos todos antes de seguir leyendo. Pero si quieres una idea rápida de cómo funciona todo en la práctica, el vídeo es el recurso más directo.</p>
 </section>
 <section id="introducción" class="level1">
 <h1>Introducción</h1>
@@ -2517,7 +2550,43 @@ Precaución
 <section id="un-modelo-diferente" class="level1">
 <h1>Un modelo diferente</h1>
 <p>El modelo alternativo parte de una idea muy sencilla: <strong>separa el contenido de la forma</strong>.</p>
-<p>En lugar de escribir directamente en Word o PowerPoint, trabajas con tu contenido en un formato que no depende de ningún programa concreto: el texto plano. En concreto, Markdown, una forma de escribir texto con marcas mínimas para indicar títulos, listas, negritas o enlaces. Es tan sencillo que se aprende en cinco minutos.</p>
+<p>En lugar de escribir directamente en Word o PowerPoint, trabajas con tu contenido en un formato que no depende de ningún programa concreto: el texto plano. En concreto, Markdown, una forma de escribir texto con marcas mínimas para indicar títulos, listas, negritas o enlaces.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Así se ve Markdown
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Esto es un archivo Markdown. Las marcas son mínimas y se entienden al momento:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Informe de prácticas</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Introducción</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>Este informe describe las **prácticas realizadas** en el</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>departamento de Biología durante el mes de marzo.</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## Desarrollo</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>Los resultados obtenidos fueron:</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Muestra A: crecimiento del 12 %</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Muestra B: crecimiento del 8 %</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Muestra C: sin datos disponibles</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Los datos deben confirmarse con una segunda ronda</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; de mediciones antes de su publicación.</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## Conclusiones</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>El experimento confirma la hipótesis inicial.</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>Ver <span class="co">[</span><span class="ot">anexo con datos completos</span><span class="co">](datos.xlsx)</span>.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Con esto, OpenCode genera un documento Word, una presentación, un PDF o una página web. No necesitas saber nada más de Markdown para empezar.</p>
+</div>
+</div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -2531,6 +2600,84 @@ Tip
 <p>No necesitas empezar escribiendo en Markdown desde cero. Puedes dar tus primeras instrucciones a OpenCode sobre documentos .docx o .pdf que ya tengas. Con el uso irás viendo que producir el material directamente en texto plano te da más control, menos pasos intermedios y una estructura que las herramientas ofimáticas no facilitan.</p>
 </div>
 </div>
+<section id="qué-es-opencode" class="level2">
+<h2 class="anchored" data-anchor-id="qué-es-opencode">¿Qué es OpenCode?</h2>
+<p>Antes de continuar, conviene saber con qué vamos a trabajar. OpenCode es un <strong>asistente de inteligencia artificial</strong> que se ejecuta en tu ordenador y transforma archivos:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 47%">
+<col style="width: 52%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Pregunta</th>
+<th>Respuesta</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>¿Qué hace?</td>
+<td>Transforma archivos de un formato a otro usando lenguaje natural</td>
+</tr>
+<tr class="even">
+<td>¿Es gratuito?</td>
+<td>Sí</td>
+</tr>
+<tr class="odd">
+<td>¿Necesita instalación?</td>
+<td>Sí, pero el taller guiado lo instala en minutos</td>
+</tr>
+<tr class="even">
+<td>¿Necesita internet?</td>
+<td>Sí, para comunicarse con el modelo de IA</td>
+</tr>
+<tr class="odd">
+<td>¿Funciona en Windows, Mac, Linux?</td>
+<td>En los tres</td>
+</tr>
+<tr class="even">
+<td>¿Sube mis archivos a la nube?</td>
+<td>Los envía al modelo de IA para procesarlos, pero no se almacenan permanentemente</td>
+</tr>
+</tbody>
+</table>
+<p>Para más detalles, consulta la <a href="100-oc-divulga.qmd">presentación del taller</a> o mira el <a href="https://umurcia.zoom.us/rec/play/ta3zzdOjkFywo35Vv7wnFcdCrcN9RDUWLQMlHe7XisW5Rnngz-crhdENH_zNkkzCWIkwoxmZPVppYldd.RBA5dxmy19eX7_wq?accessLevel=meeting&amp;canPlayFromShare=true&amp;from=share_recording_detail&amp;continueMode=true&amp;oldStyle=true&amp;componentName=rec-play&amp;originRequestUrl=https%3A%2F%2Fumurcia.zoom.us%2Frec%2Fshare%2FYKZsu4UUeSnneT9xbQyFCPgkImjaFQqMxLQRyeQXsDsFGurxpD9E7fZjkoxVkavK.1wf4sZyQa88k4NH0" target="_blank">vídeo de la sesión</a>.</p>
+</section>
+<section id="ejemplo-de-un-borrador-a-un-informe" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplo-de-un-borrador-a-un-informe">Ejemplo: de un borrador a un informe</h2>
+<p>Para que veas cómo funciona en la práctica, supongamos que tienes un borrador como este:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Tu borrador (Markdown)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Informe de prácticas — Biología</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Objetivo</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>Evaluar el crecimiento de tres muestras de *Arabidopsis*</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>bajo condiciones de estrés hídrico.</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## Resultados</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Muestra <span class="pp">|</span> Crecimiento <span class="pp">|</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="pp">|---------|-------------|</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> A       <span class="pp">|</span> 12 %        <span class="pp">|</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> B       <span class="pp">|</span> 8 %         <span class="pp">|</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> C       <span class="pp">|</span> Sin datos   <span class="pp">|</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## Conclusiones</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>La muestra A muestra mayor resistencia al estrés.</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>La muestra C requiere una segunda ronda de mediciones.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<p>Ahora le pides a OpenCode: <em>“Genera un informe en PDF a partir de este texto, con estilo académico y tabla de contenidos”</em>. El resultado es un documento formateado, con portada, numeración de páginas y tabla de contenidos automática. Sin tocar Word. Sin ajustar estilos. Sin perder tiempo maquetando.</p>
 <p>Una vez que tienes tu contenido en texto plano, un <strong>agente</strong> —un programa de inteligencia artificial como OpenCode— se encarga de transformarlo al formato que necesites: un documento de Word, una presentación, una página web, un PDF, un correo … todo desde el mismo texto original.</p>
 <p>El cambio es sutil pero profundo:</p>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -2710,6 +2857,7 @@ Figura 1: Comparación entre el modelo actual, la transición y el modelo nuevo
 <p>Como lector, lo que necesitas es un documento bien presentado, en el formato que exige tu contexto: el PDF para la revista, el .docx para el departamento, la presentación para el seminario. Eso no lo discute nadie.</p>
 <p>OpenCode es el puente entre ambos mundos. Tú trabajas en el formato que te va bien a ti. OpenCode se encarga de generar el formato que le va bien a quien lo recibe. Y lo hace sin perderse: combinando fuentes si hace falta, aplicando plantillas, garantizando que el resultado final es exactamente lo que pediste. Revisas, confirmas, entregas.</p>
 </section>
+</section>
 <section id="qué-ganas-con-el-cambio" class="level1">
 <h1>Qué ganas con el cambio</h1>
 <p>Pasar a este modelo no es solo una cuestión de principios. Tiene beneficios muy concretos:</p>
@@ -2755,7 +2903,7 @@ Tip
 <ul>
 <li><p><strong>No dependes de una suite concreta.</strong> Tus documentos no caducan con el programa. El texto plano se lee siempre, en cualquier ordenador, ahora y dentro de veinte años.</p></li>
 <li><p><strong>Puedes cambiar de herramienta.</strong> Si mañana dejas de usar Word y pasas a otra cosa, tu contenido sigue siendo el mismo. No pierdes nada.</p></li>
-<li><p><strong>Tus datos están en tu ordenador.</strong> No necesitas enviarlos a la nube para que los procese el agente. OpenCode funciona local, sobre tus archivos.</p></li>
+<li><p><strong>Tus archivos están en tu ordenador.</strong> No necesitas copiarlos a una plataforma externa para que los procese el agente. OpenCode trabaja sobre tus archivos directamente —aunque para pensar necesite conexión a internet, no almacena tus datos en ningún servidor externo de forma permanente.</p></li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -2782,6 +2930,24 @@ Nota
 <li><p><strong><a href="diagnostico-usuario.qmd">Diagnóstico del perfil de usuario</a></strong> — Describe quién es el creador de contenidos universitario, sus barreras personales y culturales, su relación con la tecnología y los errores típicos al empezar.</p></li>
 <li><p><strong><a href="100-oc-divulga.qmd">Presentación del taller</a></strong> — Material de la sesión práctica con ejemplos, ejercicios y referencias para seguir aprendiendo.</p></li>
 </ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Prueba esto ahora
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si quieres una idea rápida de cómo funciona este modelo, abre el Bloc de Notas (o cualquier editor de texto) y escribe estas tres líneas:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Mi primer documento</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a> Este es un **párrafo de prueba** con negrita.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Ahora abre OpenCode y dile: <em>“Convierte este texto a PDF”</em>. En segundos verás un documento formateado con título, párrafo y negrita. Sin tocar Word. Sin ajustar estilos.</p>
+<p>Si no tienes OpenCode instalado, mira el <a href="https://umurcia.zoom.us/rec/play/ta3zzdOjkFywo35Vv7wnFcdCrcN9RDUWLQMlHe7XisW5Rnngz-crhdENH_zNkkzCWIkwoxmZPVppYldd.RBA5dxmy19eX7_wq?accessLevel=meeting&amp;canPlayFromShare=true&amp;from=share_recording_detail&amp;continueMode=true&amp;oldStyle=true&amp;componentName=rec-play&amp;originRequestUrl=https%3A%2F%2Fumurcia.zoom.us%2Frec%2Fshare%2FYKZsu4UUeSnneT9xbQyFCPgkImjaFQqMxLQRyeQXsDsFGurxpD9E7fZjkoxVkavK.1wf4sZyQa88k4NH0" target="_blank">vídeo de la sesión</a> para ver cómo se hace en la práctica.</p>
+</div>
+</div>
 </section>
 <section id="conclusión" class="level1">
 <h1>Conclusión</h1>
@@ -2792,374 +2958,45 @@ Nota
 </section>
 <section id="referencias" class="level1 unnumbered">
 <h1 class="unnumbered">Referencias</h1>
+<section id="para-empezar" class="level2">
+<h2 class="anchored" data-anchor-id="para-empezar">Para empezar</h2>
+<p>Recursos prácticos y accesibles para familiarizarte con el modelo de trabajo:</p>
 <ul>
-<li><p><strong><a href="https://programminghistorian.org/es/lecciones/escritura-sostenible-usando-pandoc-y-markdown" target="_blank">Escritura sostenible en texto plano usando Pandoc y Markdown</a></strong><br>
-Dennis Tenen y Grant Wythoff — <em>Programming Historian</em> (trad. al español)</p>
-<p><em>Guía académica de referencia sobre el modelo de trabajo con texto plano. Explica por qué escribir en texto plano libera al investigador de formatos propietarios y frágiles, y cómo Pandoc permite generar cualquier formato de salida desde un mismo origen. Escrita por académicos y para académicos, es la lectura complementaria ideal para quien quiera entender la filosofía que hay detrás de este taller.</em></p></li>
-<li><p><strong><a href="https://cibercliografia.org/tag/escritura-academica-sostenible/" target="_blank">Blog de Cibercliografía — escritura académica sostenible</a></strong><br>
-Varios autores</p>
-<p><em>Recopilación de artículos, reseñas y ampliaciones en torno a la escritura académica en texto plano. Incluye comentarios y aplicaciones prácticas del artículo de Tenen, así como experiencias de otros investigadores que han adoptado el modelo.</em></p></li>
-<li><p><strong><a href="https://en.wikipedia.org/wiki/The_Art_of_UNIX_Programming" target="_blank">The Art of UNIX Programming</a></strong><br>
-Eric S. Raymond — Addison-Wesley, 2003</p>
-<p><em>Clásico de la filosofía Unix que explica los principios de hacer una sola cosa bien, conectar programas mediante tuberías de texto y mantener la simplicidad. Esas ideas —texto plano como interfaz universal, composición de herramientas simples— son el sustrato conceptual del modelo que este documento propone.</em></p></li>
-<li><p><strong><a href="https://www.press.uillinois.edu/books/?id=p084599" target="_blank">Reading Machines: Toward an Algorithmic Criticism</a></strong><br>
-Stephen Ramsay — University of Illinois Press, 2011</p>
-<p><em>Reflexión sobre cómo la computación cambia la forma de leer y escribir. Ramsay defiende que el ordenador no solo procesa texto, sino que abre nuevas formas de interpretación. Directamente conectado con la idea de usar agentes como transformadores de contenido.</em></p></li>
-<li><p><strong><a href="https://www.writethedocs.org" target="_blank">Write the Docs</a></strong><br>
-Comunidad global</p>
-<p><em>Comunidad de referencia en el mundo de la documentación técnica. Su filosofía —documentación como código, separación de contenido y presentación, uso de texto plano y control de versiones— es paralela al modelo de trabajo que aquí se presenta.</em></p></li>
-<li><p><strong><a href="https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/" target="_blank">What Is Code?</a></strong><br>
-Paul Ford — Bloomberg Businessweek, 2015</p>
-<p><em>Ensayo divulgativo y visualmente brillante que explica qué es el código y cómo el texto plano se convierte en programas. Una lectura complementaria excelente para entender por qué separar contenido de forma es una idea tan potente.</em></p></li>
+<li><p><strong><a href="100-oc-divulga.qmd">Presentación del taller</a></strong> — Material visual con ejemplos y ejercicios guiados.</p></li>
+<li><p><strong><a href="https://umurcia.zoom.us/rec/play/ta3zzdOjkFywo35Vv7wnFcdCrcN9RDUWLQMlHe7XisW5Rnngz-crhdENH_zNkkzCWIkwoxmZPVppYldd.RBA5dxmy19eX7_wq?accessLevel=meeting&amp;canPlayFromShare=true&amp;from=share_recording_detail&amp;continueMode=true&amp;oldStyle=true&amp;componentName=rec-play&amp;originRequestUrl=https%3A%2F%2Fumurcia.zoom.us%2Frec%2Fshare%2FYKZsu4UUeSnneT9xbQyFCPgkImjaFQqMxLQRyeQXsDsFGurxpD9E7fZjkoxVkavK.1wf4sZyQa88k4NH0" target="_blank">Vídeo de la sesión explicativa</a></strong> — Grabación de una sesión en la que se demuestra el flujo de trabajo completo.</p></li>
+<li><p><strong>Marcando Palabras</strong> — Libro en desarrollo con ejercicios prácticos de Markdown y Quarto. Próximamente disponible.</p></li>
+<li><p><strong><a href="https://www.markdownguide.org/basic-syntax/" target="_blank">Guía rápida de Markdown</a></strong> — Referencia concisa de la sintaxis básica (títulos, negritas, listas, enlaces).</p></li>
 </ul>
 </section>
-<section id="anexo-a-ejemplo-de-uso-ineficiente-de-un-procesador-de-textos" class="level1 unnumbered">
-<h1 class="unnumbered">Anexo A: Ejemplo de uso ineficiente de un procesador de textos</h1>
-<p>Este anexo ilustra con un caso real el «modelo actual» descrito en la sección <em>¿Qué problemas arrastra ese modelo?</em> y sirve como contrapunto práctico al modelo con texto plano que propone el documento.</p>
-<section id="presentación-del-caso" class="level2">
-<h2 class="anchored" data-anchor-id="presentación-del-caso">Presentación del caso</h2>
-<p>Se dispone de dos archivos concebidos para guiar a quienes han de preparar un artículo académico con un formato editorial determinado:</p>
+<section id="para-profundizar" class="level2">
+<h2 class="anchored" data-anchor-id="para-profundizar">Para profundizar</h2>
+<p>Textos académicos y comunitarios que profundizan en la filosofía y la técnica detrás de este modelo:</p>
 <ul>
-<li><p><strong><code>Plantilla...docx</code></strong> — documento con la estructura del artículo (título, resumen, apartados, referencias) y texto explicativo sobre qué debe incluirse en cada sección.</p></li>
-<li><p><strong><code>Consideraciones...docx</code></strong> — documento independiente que enumera las normas de formato obligatorias: tipografías, tamaños, interlineado, tratamiento de tablas y figuras, extensión máxima.</p></li>
-</ul>
-<p>Ambos archivos fueron generados con un procesador de textos tradicional y se entregan por separado a la persona que escribe el artículo.</p>
-</section>
-<section id="problemas-detectados" class="level2">
-<h2 class="anchored" data-anchor-id="problemas-detectados">Problemas detectados</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Problema</th>
-<th>Manifestación</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Información duplicada y dispersa</strong></td>
-<td>Las normas de formato viven en un documento distinto a la plantilla. El usuario debe tener dos archivos abiertos y aplicar las reglas manualmente, sección por sección.</td>
-</tr>
-<tr class="even">
-<td><strong>Estilos desvinculados de las normas</strong></td>
-<td>Las normas exigen «Palatino Linotype 10 pt para el cuerpo, Gill Sans MT 10 pt para epígrafes», pero los estilos predefinidos en la plantilla no coinciden: <code>Ttulo1</code> está configurado a 20 pt y <code>Normal</code> carece de formato base. El usuario debe formatear cada párrafo a mano o, peor, ignorar los estilos y aplicar formato directo.</td>
-</tr>
-<tr class="odd">
-<td><strong>Instrucciones y contenido mezclados</strong></td>
-<td>El texto explicativo («Se deberá incluir el estado de la cuestión…») ocupa el mismo espacio que el contenido real. Nada impide que el usuario arrastre frases de ejemplo al artículo final, o que borre accidentalmente las indicaciones y pierda la guía estructural.</td>
-</tr>
-<tr class="even">
-<td><strong>Sin automatización</strong></td>
-<td>No hay tabla de contenidos automática, ni numeración de títulos, ni campo de recuento de palabras, ni validación del formato. Todo debe hacerse manualmente, artículo tras artículo.</td>
-</tr>
-<tr class="odd">
-<td><strong>Sin trazabilidad</strong></td>
-<td>Los metadatos de ambos archivos carecen de autor, organización y título. El tiempo de edición registrado es cero y hay una sola revisión. No es posible saber quién creó los documentos, cuándo se actualizaron ni qué cambió entre versiones.</td>
-</tr>
-<tr class="even">
-<td><strong>Sin control de versiones</strong></td>
-<td>Al ser archivos <code>.docx</code> tradicionales, no existe un historial de cambios, ni ramas de trabajo, ni posibilidad de colaboración concurrente limpia. Cualquier modificación de las normas o la plantilla sobreescribe la versión anterior sin dejar rastro.</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="relación-con-el-modelo-actual" class="level2">
-<h2 class="anchored" data-anchor-id="relación-con-el-modelo-actual">Relación con el modelo actual</h2>
-<p>En estos dos archivos se cumplen varios de los problemas descritos en el diagnóstico del documento principal:</p>
-<ul>
-<li><p><strong>«Cada programa tiene su formato»</strong> — las normas de formato existen solo como texto legible dentro de un <code>.docx</code>. No son reglas procesables que el programa pueda verificar o aplicar automáticamente.</p></li>
-<li><p><strong>«Los formatos cambian con las versiones»</strong> — al no haber control de versiones, no queda registro de cuándo ni en qué consistieron los cambios en las normas o la plantilla.</p></li>
-<li><p><strong>«Las aplicaciones no se hablan entre sí»</strong> — la plantilla y las consideraciones son dos archivos independientes que el usuario debe reconciliar mentalmente, comprobando una y otra vez que cumple ambas.</p></li>
-<li><p><strong>«Repites la misma tarea una y otra vez»</strong> — el formato debe aplicarse manualmente en cada sección, cada tabla, cada figura, en cada artículo y cada envío.</p></li>
-</ul>
-</section>
-<section id="contraste-con-el-modelo-propuesto" class="level2">
-<h2 class="anchored" data-anchor-id="contraste-con-el-modelo-propuesto">Contraste con el modelo propuesto</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Modelo tradicional (procesador de textos)</th>
-<th>Modelo propuesto (texto plano + agente)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Dos documentos que el usuario debe sincronizar manualmente</td>
-<td>Una sola fuente en Markdown</td>
-</tr>
-<tr class="even">
-<td>Normas enunciadas como texto, aplicables solo a mano</td>
-<td>Reglas de formato en la configuración (YAML, plantilla, CSS) que el agente aplica al transformar</td>
-</tr>
-<tr class="odd">
-<td>Sin trazabilidad: se desconoce el origen y la evolución de los archivos</td>
-<td>Git + control de versiones: cada cambio queda registrado con autor, fecha y motivo</td>
-</tr>
-<tr class="even">
-<td>El usuario dedica tiempo a maquetar en lugar de a escribir</td>
-<td>El usuario escribe contenido; el agente se encarga de la presentación</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="conclusión-1" class="level2">
-<h2 class="anchored" data-anchor-id="conclusión-1">Conclusión</h2>
-<p>Este caso ilustra exactamente las ineficiencias que el documento principal denuncia. Los dos archivos, creados con la intención de ayudar, reproducen el patrón que se quiere superar: duplicidad de fuentes, trabajo manual repetitivo, falta de trazabilidad y dependencia total de la herramienta de procesamiento. El contraste con el modelo basado en texto plano y agente muestra que el problema no es la herramienta en sí, sino el flujo de trabajo que impone.</p>
-</section>
-</section>
-<section id="anexo-b-características-compartidas-en-el-uso-del-procesador-de-textos" class="level1 unnumbered">
-<h1 class="unnumbered">Anexo B: Características compartidas en el uso del procesador de textos</h1>
-<p>Este anexo amplía el diagnóstico del Anexo A mediante el análisis comparativo de diez documentos universitarios. Se identifican patrones transversales de uso del procesador que explican por qué muchas plantillas, pese a su utilidad inicial, arrastran las ineficiencias descritas en el documento principal, y por qué otras consiguen evitarlas parcial o totalmente.</p>
-<section id="corpus-analizado" class="level2">
-<h2 class="anchored" data-anchor-id="corpus-analizado">Corpus analizado</h2>
-<p>Los documentos se etiquetan con identificadores descriptivos para preservar el anonimato de sus instituciones de origen.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 43%">
-<col style="width: 56%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Etiqueta</th>
-<th>Descripción</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Plantilla artículo APA</strong></td>
-<td>Plantilla de artículo científico con normas APA 7.ª ed. y controles de contenido</td>
-</tr>
-<tr class="even">
-<td><strong>Plantilla artículo revista</strong></td>
-<td>Plantilla de artículo para revista científica con instrucciones tipográficas integradas</td>
-</tr>
-<tr class="odd">
-<td><strong>Plantilla normas técnicas</strong></td>
-<td>Plantilla de trabajo académico según normas técnicas nacionales, con estilos al 99 %</td>
-</tr>
-<tr class="even">
-<td><strong>Plantilla APA EaD</strong></td>
-<td>Plantilla de trabajo académico en APA 7.ª ed. para educación a distancia</td>
-</tr>
-<tr class="odd">
-<td><strong>Plantilla tesis IEEE</strong></td>
-<td>Plantilla de tesis con normas IEEE y controles de contenido desplegables</td>
-</tr>
-<tr class="even">
-<td><strong>Plantilla tesis Chicago</strong></td>
-<td>Plantilla de tesis con sistema Chicago-Deusto (notas y bibliografía)</td>
-</tr>
-<tr class="odd">
-<td><strong>Formulario movilidad entrante</strong></td>
-<td>Solicitud de movilidad académica entrante con controles de contenido</td>
-</tr>
-<tr class="even">
-<td><strong>Formulario movilidad saliente</strong></td>
-<td>Solicitud de movilidad académica saliente con controles de contenido</td>
-</tr>
-<tr class="odd">
-<td><strong>Plantilla artículo ineficiente</strong></td>
-<td>Plantilla de artículo de revista con formato directo y nulo uso de estilos</td>
-</tr>
-<tr class="even">
-<td><strong>Guía formato institucional</strong></td>
-<td>Documento de instrucciones de formato con marcado manual</td>
-</tr>
-</tbody>
-</table>
-<p>Las dos últimas etiquetas corresponden a los mismos archivos analizados en el Anexo A. Se incluyen aquí como línea base del «modelo tradicional».</p>
-</section>
-<section id="ejes-de-análisis" class="level2">
-<h2 class="anchored" data-anchor-id="ejes-de-análisis">Ejes de análisis</h2>
-<p>Se han examinado los diez documentos en cinco dimensiones medibles dentro del formato <code>.docx</code>:</p>
-<ol type="1">
-<li><p><strong>Estilos de párrafo vs. formato directo</strong> — porcentaje de párrafos que heredan su formato de un estilo definido. Cuanto más alto, menos formateo manual necesita el usuario.</p></li>
-<li><p><strong>Campos automáticos</strong> — presencia de campos TOC (tabla de contenidos), TOA (tabla de autoridades) o similares que se actualizan solos al modificar el contenido.</p></li>
-<li><p><strong>Controles de contenido</strong> — uso de SDT (<em>structured document tags</em>) que delimitan zonas editables y protegen la estructura, frente a simples marcadores de posición <code>[entre corchetes]</code> que el usuario puede borrar o modificar accidentalmente.</p></li>
-<li><p><strong>Estructura de secciones</strong> — uso de saltos de sección con paginación diferenciada (romana para preliminares, arábiga para el cuerpo) y encabezados distintos por sección.</p></li>
-<li><p><strong>Referencias cruzadas e hipervínculos</strong> — uso de vínculos internos (tabla de contenidos que enlaza a secciones, referencias a figuras) y externos (URLs).</p></li>
-</ol>
-</section>
-<section id="resultados" class="level2">
-<h2 class="anchored" data-anchor-id="resultados">Resultados</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Documento</th>
-<th>Párrafos totales</th>
-<th>% con estilo</th>
-<th>TOC</th>
-<th>Controles contenido</th>
-<th>Marcadores <code>[...]</code></th>
-<th>Hipervínculos</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Plantilla artículo APA</td>
-<td>639</td>
-<td>34%</td>
-<td>No</td>
-<td>60</td>
-<td>28</td>
-<td>56</td>
-</tr>
-<tr class="even">
-<td>Plantilla artículo revista</td>
-<td>122</td>
-<td>0%</td>
-<td>No</td>
-<td>0</td>
-<td>2</td>
-<td>6</td>
-</tr>
-<tr class="odd">
-<td>Plantilla normas técnicas</td>
-<td>825</td>
-<td>99%</td>
-<td>Sí</td>
-<td>4</td>
-<td>0</td>
-<td>54</td>
-</tr>
-<tr class="even">
-<td>Plantilla APA EaD</td>
-<td>367</td>
-<td>56%</td>
-<td>Sí</td>
-<td>0</td>
-<td>11</td>
-<td>40</td>
-</tr>
-<tr class="odd">
-<td>Plantilla tesis IEEE</td>
-<td>667</td>
-<td>29%</td>
-<td>Sí</td>
-<td>62</td>
-<td>59</td>
-<td>44</td>
-</tr>
-<tr class="even">
-<td>Plantilla tesis Chicago</td>
-<td>127</td>
-<td>23%</td>
-<td>No</td>
-<td>0</td>
-<td>25</td>
-<td>0</td>
-</tr>
-<tr class="odd">
-<td>Formulario movilidad entrante</td>
-<td>121</td>
-<td>0%</td>
-<td>No</td>
-<td>72</td>
-<td>0</td>
-<td>2</td>
-</tr>
-<tr class="even">
-<td>Formulario movilidad saliente</td>
-<td>126</td>
-<td>2%</td>
-<td>No</td>
-<td>76</td>
-<td>0</td>
-<td>2</td>
-</tr>
-<tr class="odd">
-<td>Plantilla artículo ineficiente</td>
-<td>49</td>
-<td>18%</td>
-<td>No</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td>Guía formato institucional</td>
-<td>48</td>
-<td>23%</td>
-<td>No</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="patrones-transversales" class="level2">
-<h2 class="anchored" data-anchor-id="patrones-transversales">Patrones transversales</h2>
-<p>Del cruce de los datos cuantitativos con los problemas descritos en el Anexo A emergen cuatro patrones recurrentes.</p>
-<section id="patrón-a-formato-directo-dominante" class="level3">
-<h3 class="anchored" data-anchor-id="patrón-a-formato-directo-dominante">Patrón A: Formato directo dominante</h3>
-<p>Lo presentan la <strong>Plantilla artículo revista</strong> (0 %), la <strong>Plantilla artículo ineficiente</strong> (18 %) y la <strong>Guía formato institucional</strong> (23 %). En estos documentos el formato se aplica párrafo a párrafo mediante botones de la barra de herramientas (negrita, tamaño, color, alineación). Los estilos están definidos en la galería pero no se utilizan.</p>
-<p><strong>Consecuencias:</strong></p>
-<ul>
-<li><p>Si el usuario cambia de opinión sobre el interlineado, debe recorrer todo el documento y actualizar cada párrafo manualmente.</p></li>
-<li><p>No existe tabla de contenidos automática porque no hay estilos de título a los que el TOC pueda enlazarse.</p></li>
-<li><p>El aspecto visual depende de la versión de Word y de la configuración regional: al abrir el documento en otro equipo, el formato puede variar.</p></li>
-</ul>
-</section>
-<section id="patrón-b-estilos-declarados-pero-infrautilizados" class="level3">
-<h3 class="anchored" data-anchor-id="patrón-b-estilos-declarados-pero-infrautilizados">Patrón B: Estilos declarados pero infrautilizados</h3>
-<p>Lo presentan la <strong>Plantilla artículo APA</strong> (34 %), la <strong>Plantilla tesis IEEE</strong> (29 %) y la <strong>Plantilla tesis Chicago</strong> (23 %). Definen estilos de título (Título 1, 2, 3) y algunos párrafos los usan, pero la mayoría del documento emplea formato directo «por encima» del estilo.</p>
-<p><strong>Consecuencias:</strong></p>
-<ul>
-<li><p>La tabla de contenidos, si existe, se genera solo a partir de los párrafos con estilo. Los títulos formateados a mano quedan fuera, produciendo un índice incompleto.</p></li>
-<li><p>El mantenimiento es engorroso: modificar el estilo no actualiza los párrafos con formato directo, creando inconsistencias visuales.</p></li>
-<li><p>El número elevado de controles de contenido (60 y 62 respectivamente) y de marcadores <code>[...]</code> (28 y 59) indica que estas plantillas intentan guiar al usuario combinando ambas técnicas, pero la mezcla añade complejidad sin resolver el problema de base.</p></li>
-</ul>
-</section>
-<section id="patrón-c-estilos-como-base-sólida" class="level3">
-<h3 class="anchored" data-anchor-id="patrón-c-estilos-como-base-sólida">Patrón C: Estilos como base sólida</h3>
-<p>Lo presentan la <strong>Plantilla normas técnicas</strong> (99 %) y la <strong>Plantilla APA EaD</strong> (56 %). En el primer caso, casi la totalidad de los párrafos usan estilos; en el segundo, algo más de la mitad. Ambos incluyen tabla de contenidos automática y una estructura de estilos jerarquizada (Título 1 → 2 → 3).</p>
-<p><strong>Consecuencias positivas:</strong></p>
-<ul>
-<li><p>La tabla de contenidos se actualiza con un clic y siempre refleja la estructura real del documento.</p></li>
-<li><p>Cambiar el formato de toda una categoría (p. ej., todos los títulos de nivel 2) requiere modificar un único estilo.</p></li>
-<li><p>El documento es más portable entre versiones de Word y entre plataformas (Windows, Mac, web).</p></li>
-</ul>
-<p>La <strong>Plantilla normas técnicas</strong>, con un 99 % de cobertura de estilos, es el ejemplo más próximo al modelo ideal. Su único talón de Aquiles es que los estilos se definen dentro del propio archivo <code>.docx</code> y no son procesables externamente.</p>
-</section>
-<section id="patrón-d-controles-de-contenido-como-mecanismo-de-protección" class="level3">
-<h3 class="anchored" data-anchor-id="patrón-d-controles-de-contenido-como-mecanismo-de-protección">Patrón D: Controles de contenido como mecanismo de protección</h3>
-<p>Lo presentan los dos <strong>Formularios movilidad</strong> (72 y 76 controles). Estos documentos emplean <em>structured document tags</em> para delimitar campos de relleno (nombre, fecha, selecciones desplegables), lo que impide que el usuario altere la estructura del formulario. Sin embargo, ningún párrafo usa estilos de párrafo: todo el formato es directo.</p>
-<p><strong>Consecuencias:</strong></p>
-<ul>
-<li><p>Los controles de contenido protegen la integridad estructural, pero el formato sigue siendo frágil: un usuario que copie y pegue texto desde otro documento puede arrastrar formatos extraños.</p></li>
-<li><p>Sin estilos de párrafo, no es viable generar una tabla de contenidos ni aplicar cambios masivos de formato.</p></li>
+<li><p><strong><a href="https://programminghistorian.org/es/lecciones/escritura-sostenible-usando-pandoc-y-markdown" target="_blank">Escritura sostenible en texto plano usando Pandoc y Markdown</a></strong> Dennis Tenen y Grant Wythoff — <em>Programming Historian</em> (trad. al español)</p>
+<p><em>Guía académica de referencia sobre el modelo de trabajo con texto plano. Explica por qué escribir en texto plano libera al investigador de formatos propietarios y frágiles, y cómo Pandoc permite generar cualquier formato de salida desde un mismo origen.</em></p></li>
+<li><p><strong><a href="https://cibercliografia.org/tag/escritura-academica-sostenible/" target="_blank">Blog de Cibercliografía — escritura académica sostenible</a></strong> Varios autores</p>
+<p><em>Recopilación de artículos, reseñas y ampliaciones en torno a la escritura académica en texto plano. Incluye comentarios y aplicaciones prácticas del artículo de Tenen.</em></p></li>
+<li><p><strong><a href="https://en.wikipedia.org/wiki/The_Art_of_UNIX_Programming" target="_blank">The Art of UNIX Programming</a></strong> Eric S. Raymond — Addison-Wesley, 2003</p>
+<p><em>Clásico de la filosofía Unix que explica los principios de hacer una sola cosa bien, conectar programas mediante tuberías de texto y mantener la simplicidad.</em></p></li>
+<li><p><strong><a href="https://www.press.uillinois.edu/books/?id=p084599" target="_blank">Reading Machines: Toward an Algorithmic Criticism</a></strong> Stephen Ramsay — University of Illinois Press, 2011</p>
+<p><em>Reflexión sobre cómo la computación cambia la forma de leer y escribir. Ramsay defiende que el ordenador no solo procesa texto, sino que abre nuevas formas de interpretación.</em></p></li>
+<li><p><strong><a href="https://www.writethedocs.org" target="_blank">Write the Docs</a></strong> Comunidad global</p>
+<p><em>Comunidad de referencia en el mundo de la documentación técnica. Su filosofía —documentación como código, separación de contenido y presentación— es paralela al modelo que aquí se presenta.</em></p></li>
+<li><p><strong><a href="https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/" target="_blank">What Is Code?</a></strong> Paul Ford — Bloomberg Businessweek, 2015</p>
+<p><em>Ensayo divulgativo que explica qué es el código y cómo el texto plano se convierte en programas. Una lectura complementaria excelente para entender por qué separar contenido de forma es una idea tan potente.</em></p></li>
 </ul>
 </section>
 </section>
-<section id="lecciones-para-la-confección-de-plantillas" class="level2">
-<h2 class="anchored" data-anchor-id="lecciones-para-la-confección-de-plantillas">Lecciones para la confección de plantillas</h2>
-<p>Del cruce de los cuatro patrones se derivan varias conclusiones aplicables al diseño de plantillas universitarias:</p>
-<ol type="1">
-<li><p><strong>Los estilos de párrafo son la columna vertebral.</strong> Sin ellos no hay automatización posible (TOC, numeración, listas de figuras). El objetivo debería ser el 100 % de cobertura, como demuestra la Plantilla normas técnicas.</p></li>
-<li><p><strong>Los controles de contenido protegen, pero no formatean.</strong> Son excelentes para delimitar zonas editables en formularios, pero no sustituyen a los estilos. La combinación ideal sería: estilos de párrafo para el formato general + controles de contenido para los campos variables.</p></li>
-<li><p><strong>Los marcadores <code>[entre corchetes]</code> son frágiles.</strong> El usuario puede borrarlos, modificarlos o confundirlos con contenido real. Los controles de contenido o, mejor aún, los metadatos externos (YAML, variables de plantilla) son preferibles.</p></li>
-<li><p><strong>El formato directo es el enemigo de la consistencia.</strong> Cada párrafo formateado a mano es un punto potencial de divergencia. En los documentos analizados, la correlación entre bajo uso de estilos y ausencia de automatización es perfecta.</p></li>
-<li><p><strong>Las plantillas más logradas combinan estilos y campos automáticos.</strong> La Plantilla normas técnicas (99 % estilos, TOC, listas automáticas) y la Plantilla APA EaD (56 % estilos, TOC, estilos jerarquizados) muestran que la inversión en una estructura de estilos bien diseñada se amortiza en mantenimiento y usabilidad.</p></li>
-<li><p><strong>El procesador de textos condiciona pero no determina la calidad del resultado.</strong> Un mismo programa (Microsoft Word) alberga desde documentos con formato 100 % directo hasta documentos con cobertura casi total de estilos. La diferencia no es la herramienta, sino el flujo de trabajo y la formación de quien diseña la plantilla.</p></li>
-</ol>
-</section>
+<section id="anexo-a-las-plantillas-universitarias-y-el-modelo-actual" class="level1 unnumbered">
+<h1 class="unnumbered">Anexo A: Las plantillas universitarias y el modelo actual</h1>
+<p>Las plantillas ofimáticas que circulan en la universidad —las que usas para artículos, tesis, formularios— comparten un patrón preocupante. Un análisis de diez de ellas revela que la mayoría dependen del formato directo (aplicar estilo párrafo a párrafo con los botones de la barra) en lugar de usar estilos de párrafo. Esto significa que cada cambio de formato debe hacerse a mano, una y otra vez, en cada sección, en cada documento.</p>
+<p>Los problemas más habituales son: estilos declarados pero que nadie usa, instrucciones mezcladas con el contenido real, ausencia de tabla de contenidos automática y falta de control de versiones. En el extremo opuesto, alguna plantilla logra un 99 % de cobertura de estilos y demuestra que, cuando la estructura está bien pensada, el procesador de textos funciona razonablemente bien.</p>
+<p>La conclusión es clara: <strong>el problema no es la herramienta, sino el flujo de trabajo y la formación de quien diseña la plantilla</strong>. Un mismo programa (Word) alberga desde documentos con formato 100 % manual hasta documentos con estructura casi perfecta.</p>
+<p>Si quieres ver el análisis completo —con datos, tablas y los cuatro patrones identificados—, consulta estos documentos:</p>
+<ul>
+<li><p><strong><a href="analisis-plantilla-ineficiente.qmd">Anexo: Ejemplo de uso ineficiente de un procesador de textos</a></strong> — Caso real de dos plantillas que reproducen todas las ineficiencias descritas.</p></li>
+<li><p><strong><a href="analisis-plantillas-universitarias.qmd">Anexo: Características compartidas en el uso del procesador de textos</a></strong> — Análisis comparativo de diez documentos universitarios con datos cuantitativos y patrones transversales.</p></li>
+</ul>
 </section>
 
 

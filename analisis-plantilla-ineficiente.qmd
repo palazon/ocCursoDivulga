@@ -1,0 +1,71 @@
+---
+title: "Anexo: Ejemplo de uso ineficiente de un procesador de textos"
+author: "JA Palazón"
+date: "2026-07-03"
+lang: es
+format:
+  html:
+    theme: cosmo
+    css: custom.css
+    self-contained: true
+  pdf:
+    documentclass: scrbook
+    papersize: a4
+    fontsize: 11pt
+    geometry:
+      - top=2cm
+      - bottom=2cm
+      - left=2cm
+      - right=2cm
+    colorlinks: true
+    linkcolor: Maroon
+    citecolor: Maroon
+    urlcolor: Maroon
+    number-sections: true
+---
+
+# Presentación del caso
+
+Se dispone de dos archivos concebidos para guiar a quienes han de preparar un artículo académico con un formato editorial determinado:
+
+- **`Plantilla...docx`** — documento con la estructura del artículo (título, resumen, apartados, referencias) y texto explicativo sobre qué debe incluirse en cada sección.
+
+- **`Consideraciones...docx`** — documento independiente que enumera las normas de formato obligatorias: tipografías, tamaños, interlineado, tratamiento de tablas y figuras, extensión máxima.
+
+Ambos archivos fueron generados con un procesador de textos tradicional y se entregan por separado a la persona que escribe el artículo.
+
+# Problemas detectados
+
+| Problema | Manifestación |
+|---|---|
+| **Información duplicada y dispersa** | Las normas de formato viven en un documento distinto a la plantilla. El usuario debe tener dos archivos abiertos y aplicar las reglas manualmente, sección por sección. |
+| **Estilos desvinculados de las normas** | Las normas exigen «Palatino Linotype 10 pt para el cuerpo, Gill Sans MT 10 pt para epígrafes», pero los estilos predefinidos en la plantilla no coinciden: `Ttulo1` está configurado a 20 pt y `Normal` carece de formato base. El usuario debe formatear cada párrafo a mano o, peor, ignorar los estilos y aplicar formato directo. |
+| **Instrucciones y contenido mezclados** | El texto explicativo («Se deberá incluir el estado de la cuestión…») ocupa el mismo espacio que el contenido real. Nada impide que el usuario arrastre frases de ejemplo al artículo final, o que borre accidentalmente las indicaciones y pierda la guía estructural. |
+| **Sin automatización** | No hay tabla de contenidos automática, ni numeración de títulos, ni campo de recuento de palabras, ni validación del formato. Todo debe hacerse manualmente, artículo tras artículo. |
+| **Sin trazabilidad** | Los metadatos de ambos archivos carecen de autor, organización y título. El tiempo de edición registrado es cero y hay una sola revisión. No es posible saber quién creó los documentos, cuándo se actualizaron ni qué cambió entre versiones. |
+| **Sin control de versiones** | Al ser archivos `.docx` tradicionales, no existe un historial de cambios, ni ramas de trabajo, ni posibilidad de colaboración concurrente limpia. Cualquier modificación de las normas o la plantilla sobreescribe la versión anterior sin dejar rastro. |
+
+# Relación con el modelo actual
+
+En estos dos archivos se cumplen varios de los problemas descritos en el diagnóstico del documento principal:
+
+- **«Cada programa tiene su formato»** — las normas de formato existen solo como texto legible dentro de un `.docx`. No son reglas procesables que el programa pueda verificar o aplicar automáticamente.
+
+- **«Los formatos cambian con las versiones»** — al no haber control de versiones, no queda registro de cuándo ni en qué consistieron los cambios en las normas o la plantilla.
+
+- **«Las aplicaciones no se hablan entre sí»** — la plantilla y las consideraciones son dos archivos independientes que el usuario debe reconciliar mentalmente, comprobando una y otra vez que cumple ambas.
+
+- **«Repites la misma tarea una y otra vez»** — el formato debe aplicarse manualmente en cada sección, cada tabla, cada figura, en cada artículo y cada envío.
+
+# Contraste con el modelo propuesto
+
+| Modelo tradicional (procesador de textos) | Modelo propuesto (texto plano + agente) |
+|---|---|
+| Dos documentos que el usuario debe sincronizar manualmente | Una sola fuente en Markdown |
+| Normas enunciadas como texto, aplicables solo a mano | Reglas de formato en la configuración (YAML, plantilla, CSS) que el agente aplica al transformar |
+| Sin trazabilidad: se desconoce el origen y la evolución de los archivos | Git + control de versiones: cada cambio queda registrado con autor, fecha y motivo |
+| El usuario dedica tiempo a maquetar en lugar de a escribir | El usuario escribe contenido; el agente se encarga de la presentación |
+
+# Conclusión
+
+Este caso ilustra exactamente las ineficiencias que el documento principal denuncia. Los dos archivos, creados con la intención de ayudar, reproducen el patrón que se quiere superar: duplicidad de fuentes, trabajo manual repetitivo, falta de trazabilidad y dependencia total de la herramienta de procesamiento. El contraste con el modelo basado en texto plano y agente muestra que el problema no es la herramienta en sí, sino el flujo de trabajo que impone.
