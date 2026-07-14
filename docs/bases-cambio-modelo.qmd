@@ -230,9 +230,9 @@ Antes de continuar, conviene saber con qué vamos a trabajar. OpenCode es un **a
 | ¿Qué hace? | Transforma archivos de un formato a otro usando lenguaje natural |
 | ¿Es gratuito? | Sí |
 | ¿Necesita instalación? | Sí, pero el taller guiado lo instala en minutos |
-| ¿Necesita internet? | Sí, para comunicarse con el modelo de IA |
+| ¿Necesita internet? | Depende. Con un modelo remoto, sí. Con un modelo local, no |
 | ¿Funciona en Windows, Mac, Linux? | En los tres |
-| ¿Sube mis archivos a la nube? | Los envía al modelo de IA para procesarlos, pero no se almacenan permanentemente |
+| ¿Sube mis archivos a la nube? | Depende del modelo. Con un modelo local, no. Con un modelo remoto, los envía al proveedor para procesarlos, pero no se almacenan permanentemente |
 
 Para más detalles, consulta la [presentación del taller](../100-oc-divulga.html) o mira el [vídeo de la sesión](https://umurcia.zoom.us/rec/play/ta3zzdOjkFywo35Vv7wnFcdCrcN9RDUWLQMlHe7XisW5Rnngz-crhdENH_zNkkzCWIkwoxmZPVppYldd.RBA5dxmy19eX7_wq?accessLevel=meeting&canPlayFromShare=true&from=share_recording_detail&continueMode=true&oldStyle=true&componentName=rec-play&originRequestUrl=https%3A%2F%2Fumurcia.zoom.us%2Frec%2Fshare%2FYKZsu4UUeSnneT9xbQyFCPgkImjaFQqMxLQRyeQXsDsFGurxpD9E7fZjkoxVkavK.1wf4sZyQa88k4NH0){target="_blank"}.
 
@@ -461,6 +461,8 @@ Recursos prácticos y accesibles para familiarizarte con el modelo de trabajo:
 - **Marcando Palabras** — Libro en desarrollo con ejercicios prácticos de Markdown y Quarto. Próximamente disponible.
 
 - **[Guía rápida de Markdown](https://www.markdownguide.org/basic-syntax/){target="_blank"}** — Referencia concisa de la sintaxis básica (títulos, negritas, listas, enlaces).
+
+- **[Preguntas frecuentes](faq-cambio-modelo.html)** — Resolución de dudas prácticas antes de lanzarte a probar.
 
 ## Para profundizar
 

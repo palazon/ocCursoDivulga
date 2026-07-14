@@ -1,8 +1,8 @@
 ---
 title: "FAQ: Preguntas frecuentes sobre el cambio de modelo"
-subtitle: "Dudas típicas al pasar de trabajar con aplicaciones a trabajar con agentes"
+subtitle: "Dudas típicas al pasar de llevar el contenido a la aplicación a trabajar con agentes"
 author: "JA Palazón; D Rivera"
-date: "20260705"
+date: "2026-07-05"
 lang: es
 toc: true
 toc-title: "Contenido"
@@ -77,7 +77,7 @@ Además, solo necesitas conocer cinco o seis marcas para cubrir el 90% de lo que
 
 ## ¿Necesito instalar muchas cosas?
 
-Dos pasos: instalar OpenCode y tener un editor de texto (el bloc de notas vale, aunque hay opciones más cómodas). Todo es gratuito y de código abierto. No necesitas licencias, cuentas ni suscripciones.
+Dos pasos: instalar OpenCode y tener un editor de texto (el bloc de notas vale, aunque hay opciones más cómodas). Todo es gratuito y de código abierto. No necesitas licencias, cuentas ni suscripciones. Si prefieres que te lo instalen, el taller guiado lo hace en minutos.
 
 # ¿Y si trabajo con gente que usa Word?
 
@@ -89,7 +89,7 @@ El jefe recibe un Word exactamente igual que si lo hubieras escrito en Word.
 
 ## ¿Qué pasa con los documentos que ya tengo?
 
-Los conservas. Nadie te pide que borres nada. Puedes migrar gradualmente: empiezas con un documento nuevo en Markdown, y los antiguos siguen donde están. Cuando necesites actualizar uno, lo conviertes a Markdown o se lo pides al agente y sigues desde ahí.
+Los conservas. Nadie te pide que borres nada. Puedes empezar de dos formas: crear un documento nuevo en Markdown, o dar al agente un .docx o .pdf que ya tengas y que él lo convierta. Los antiguos siguen donde están. Cuando necesites actualizar uno, se lo pasas y sigues desde ahí.
 
 No hay una fecha de corte. Vas probando, y cuando veas que funciona, lo usas más.
 
@@ -107,11 +107,11 @@ Se parecen en que ambos usan inteligencia artificial para entender lo que pides.
 
 ## ¿Funciona sin internet?
 
-Sí. OpenCode se ejecuta en tu ordenador y usa modelos de IA locales o remotos según configures. Puedes trabajar completamente desconectado si usas un modelo local. No necesitas estar pendiente de la conexión.
+Depende de cómo lo configures. Con un modelo remoto (la opción más habitual), necesitas internet. Con un modelo local, puedes trabajar sin conexión. En cualquier caso, el programa se ejecuta en tu ordenador.
 
 ## ¿Sube mis documentos a la nube?
 
-No. OpenCode trabaja sobre los archivos de tu ordenador. No los envía a ningún servidor externo a menos que tú configures un modelo remoto (y en ese caso puedes elegir qué modelo y qué servicio). Tus datos de investigación, tus guías docentes, tus informes de gestión no salen de tu máquina si no quieres.
+Depende del modelo que uses. Con un modelo local, no: todo se procesa en tu ordenador. Con un modelo remoto, los archivos se envían al proveedor del modelo para procesarlos, pero no se almacenan permanentemente. Tú decides con qué modelo trabajas.
 
 ## ¿Puede inventarse cosas?
 
