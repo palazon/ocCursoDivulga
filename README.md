@@ -1,53 +1,36 @@
-# OpenCode para divulgación científica — taller
+# Asistente IA para el trabajo universitario
 
 <p align="center">
-  <img src="https://opencode.ai/logo.png" alt="OpenCode" width="200">
+  <a href="100-oc-divulga.html">
+    <img src="images/portada-presentacion.png" alt="Abrir presentación del taller" width="720">
+  </a>
 </p>
 
-Presentación y materiales del taller *Asistente IA para el trabajo universitario*,
-impartido en la Facultad de Biología de la Universidad de Murcia.
+<p align="center">
+  <em>Haz clic en la imagen para abrir la presentación</em>
+</p>
 
-**Versión:** 1.0
+Materiales del taller impartido en la Facultad de Biología de la Universidad de Murcia.
 
-## Contenido
+**Versión:** 1.0 · **Licencia:** CC BY-NC-SA 4.0
 
-| Archivo | Descripción |
-|---------|-------------|
-| `100-oc-divulga.qmd` | Fuente de la presentación (Quarto revealjs) |
-| `100-oc-divulga.html` | Presentación autocontenida, listo para abrir en navegador |
-| `dafo-presentacion.html` | Análisis DAFO de la presentación |
-| `AGENTS.md` | Instrucciones y convenciones del proyecto para OpenCode |
-| `LICENSE` | Licencia CC BY-NC-SA 4.0 |
-| `VERSION` | Versión actual del material |
+## Recursos principales
 
-### Documentos de apoyo (`docs/`)
+- **[Presentación del taller](100-oc-divulga.html)** — Diapositivas autocontenidas con ejemplos, ejercicios y referencias. Se abre directamente en el navegador.
+- **[Vídeo de la sesión](https://umurcia.zoom.us/rec/play/ta3zzdOjkFywo35Vv7wnFcdCrcN9RDUWLQMlHe7XisW5Rnngz-crhdENH_zNkkzCWIkwoxmZPVppYldd.RBA5dxmy19eX7_wq?accessLevel=meeting&canPlayFromShare=true&from=share_recording_detail&continueMode=true&oldStyle=true&componentName=rec-play&originRequestUrl=https%3A%2F%2Fumurcia.zoom.us%2Frec%2Fshare%2FYKZsu4UUeSnneT9xbQyFCPgkImjaFQqMxLQRyeQXsDsFGurxpD9E7fZjkoxVkavK.1wf4sZyQa88k4NH0)** — Grabación de la sesión explicativa en Zoom.
 
-| Archivo | Descripción |
-|---------|-------------|
-| `bases-cambio-modelo.{qmd,html,pdf}` | Ensayo: del modelo de apps al de texto plano + agentes |
-| `diagnostico-usuario.{qmd,html}` | Diagnóstico del perfil de usuario y sus dificultades |
-| `faq-cambio-modelo.{qmd,html,pdf}` | Preguntas frecuentes sobre el cambio de modelo |
-| `analisis-plantilla-ineficiente.qmd` | Análisis de una plantilla Word ineficiente |
-| `analisis-plantillas-universitarias.qmd` | Análisis comparativo de plantillas universitarias |
-| `custom.css` | Estilos compartidos para documentos Quarto |
-| `cosmo-custom.scss` | Sobreescripciones del tema Cosmo (Bootstrap) |
+## Documentos de apoyo
+
+- **[Del modelo de aplicaciones al de texto plano](docs/bases-cambio-modelo.html)** — Ensayo que explica por qué conviene pasar de apps a documentos de texto con asistentes de IA.
+- **[Diagnóstico del perfil de usuario](docs/diagnostico-usuario.html)** — Describe las dificultades habituales del personal universitario con la tecnología.
+- **[Preguntas frecuentes](docs/faq-cambio-modelo.html)** — Respuestas a las dudas más comunes sobre el cambio de modelo de trabajo.
+- **[Análisis de plantilla ineficiente](docs/analisis-plantilla-ineficiente.qmd)** — Caso real de una plantilla Word con problemas de diseño.
+- **[Análisis de plantillas universitarias](docs/analisis-plantillas-universitarias.qmd)** — Comparativa de diez documentos universitarios con datos cuantitativos.
 
 ## Estructura de la sesión
 
-- **Introducción** — Bienvenida, objetivos, barreras al cambio, qué es OpenCode
-- **Parte 1 — Primeros pasos** — Ejemplos prácticos: resumen, comparativa, fusión, formatos
-- **Parte 2 — Un proyecto** — Caso completo sobre tejidos animales
-- **Parte 3 — Más potencia** — Agentes, skills, MCP, Git
-- **Cierre** — Conclusiones, próximos pasos, referencias
-
-## Generar la presentación
-
-```bash
-quarto render 100-oc-divulga.qmd
-```
-
-Requiere [Quarto](https://quarto.org).
-
-## Licencia
-
-CC BY-NC-SA 4.0 — Ver archivo `LICENSE`.
+1. **Introducción** — Bienvenida, objetivos, barreras al cambio, qué es OpenCode
+2. **Primeros pasos** — Ejemplos prácticos: resumen, comparativa, fusión, formatos
+3. **Un proyecto** — Caso completo sobre tejidos animales
+4. **Más potencia** — Agentes, skills, MCP, Git
+5. **Cierre** — Conclusiones, próximos pasos, referencias
