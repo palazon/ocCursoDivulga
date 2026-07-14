@@ -79,7 +79,7 @@ Este documento se dirige principalmente al personal universitario, pero el model
 
 Si es la primera vez que te acercas a este modelo de trabajo, estos recursos te ayudarán a situarte antes de continuar:
 
-- **[Presentación del taller](100-oc-divulga.html)** — Material visual con ejemplos y ejercicios guiados de la sesión práctica.
+- **[Presentación del taller](../100-oc-divulga.html)** — Material visual con ejemplos y ejercicios guiados de la sesión práctica.
 - **[Vídeo de la sesión explicativa](https://umurcia.zoom.us/rec/play/ta3zzdOjkFywo35Vv7wnFcdCrcN9RDUWLQMlHe7XisW5Rnngz-crhdENH_zNkkzCWIkwoxmZPVppYldd.RBA5dxmy19eX7_wq?accessLevel=meeting&canPlayFromShare=true&from=share_recording_detail&continueMode=true&oldStyle=true&componentName=rec-play&originRequestUrl=https%3A%2F%2Fumurcia.zoom.us%2Frec%2Fshare%2FYKZsu4UUeSnneT9xbQyFCPgkImjaFQqMxLQRyeQXsDsFGurxpD9E7fZjkoxVkavK.1wf4sZyQa88k4NH0){target="_blank"}** — Grabación de una sesión en la que se explica el modelo y se demuestra el flujo de trabajo con OpenCode.
 - **Marcando Palabras** — Libro en desarrollo que amplía estos conceptos con ejercicios prácticos de Markdown y Quarto. Próximamente disponible.
 
@@ -234,7 +234,7 @@ Antes de continuar, conviene saber con qué vamos a trabajar. OpenCode es un **a
 | ¿Funciona en Windows, Mac, Linux? | En los tres |
 | ¿Sube mis archivos a la nube? | Los envía al modelo de IA para procesarlos, pero no se almacenan permanentemente |
 
-Para más detalles, consulta la [presentación del taller](100-oc-divulga.html) o mira el [vídeo de la sesión](https://umurcia.zoom.us/rec/play/ta3zzdOjkFywo35Vv7wnFcdCrcN9RDUWLQMlHe7XisW5Rnngz-crhdENH_zNkkzCWIkwoxmZPVppYldd.RBA5dxmy19eX7_wq?accessLevel=meeting&canPlayFromShare=true&from=share_recording_detail&continueMode=true&oldStyle=true&componentName=rec-play&originRequestUrl=https%3A%2F%2Fumurcia.zoom.us%2Frec%2Fshare%2FYKZsu4UUeSnneT9xbQyFCPgkImjaFQqMxLQRyeQXsDsFGurxpD9E7fZjkoxVkavK.1wf4sZyQa88k4NH0){target="_blank"}.
+Para más detalles, consulta la [presentación del taller](../100-oc-divulga.html) o mira el [vídeo de la sesión](https://umurcia.zoom.us/rec/play/ta3zzdOjkFywo35Vv7wnFcdCrcN9RDUWLQMlHe7XisW5Rnngz-crhdENH_zNkkzCWIkwoxmZPVppYldd.RBA5dxmy19eX7_wq?accessLevel=meeting&canPlayFromShare=true&from=share_recording_detail&continueMode=true&oldStyle=true&componentName=rec-play&originRequestUrl=https%3A%2F%2Fumurcia.zoom.us%2Frec%2Fshare%2FYKZsu4UUeSnneT9xbQyFCPgkImjaFQqMxLQRyeQXsDsFGurxpD9E7fZjkoxVkavK.1wf4sZyQa88k4NH0){target="_blank"}.
 
 ## Ejemplo: de un borrador a un informe
 
@@ -416,7 +416,7 @@ Dos documentos complementarios te ayudarán a situarte:
 
 - **[Diagnóstico del perfil de usuario](diagnostico-usuario.qmd)** — Describe quién es el creador de contenidos universitario, sus barreras personales y culturales, su relación con la tecnología y los errores típicos al empezar.
 
-- **[Presentación del taller](100-oc-divulga.html)** — Material de la sesión práctica con ejemplos, ejercicios y referencias para seguir aprendiendo.
+- **[Presentación del taller](../100-oc-divulga.html)** — Material de la sesión práctica con ejemplos, ejercicios y referencias para seguir aprendiendo.
 
 ::: {.callout-tip}
 
@@ -454,7 +454,7 @@ El cambio empieza por entender el modelo. Sigue por probarlo con algo pequeño. 
 
 Recursos prácticos y accesibles para familiarizarte con el modelo de trabajo:
 
-- **[Presentación del taller](100-oc-divulga.html)** — Material visual con ejemplos y ejercicios guiados.
+- **[Presentación del taller](../100-oc-divulga.html)** — Material visual con ejemplos y ejercicios guiados.
 
 - **[Vídeo de la sesión explicativa](https://umurcia.zoom.us/rec/play/ta3zzdOjkFywo35Vv7wnFcdCrcN9RDUWLQMlHe7XisW5Rnngz-crhdENH_zNkkzCWIkwoxmZPVppYldd.RBA5dxmy19eX7_wq?accessLevel=meeting&canPlayFromShare=true&from=share_recording_detail&continueMode=true&oldStyle=true&componentName=rec-play&originRequestUrl=https%3A%2F%2Fumurcia.zoom.us%2Frec%2Fshare%2FYKZsu4UUeSnneT9xbQyFCPgkImjaFQqMxLQRyeQXsDsFGurxpD9E7fZjkoxVkavK.1wf4sZyQa88k4NH0){target="_blank"}** — Grabación de una sesión en la que se demuestra el flujo de trabajo completo.
 

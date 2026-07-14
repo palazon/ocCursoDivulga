@@ -13,12 +13,24 @@ impartido en la Facultad de Biología de la Universidad de Murcia.
 
 | Archivo | Descripción |
 |---------|-------------|
-| `100-oc-divulga.qmd` | Fuente de la presentación (Quarto revealjs, ~35 slides) |
+| `100-oc-divulga.qmd` | Fuente de la presentación (Quarto revealjs) |
 | `100-oc-divulga.html` | Presentación autocontenida, listo para abrir en navegador |
 | `dafo-presentacion.html` | Análisis DAFO de la presentación |
 | `AGENTS.md` | Instrucciones y convenciones del proyecto para OpenCode |
 | `LICENSE` | Licencia CC BY-NC-SA 4.0 |
 | `VERSION` | Versión actual del material |
+
+### Documentos de apoyo (`docs/`)
+
+| Archivo | Descripción |
+|---------|-------------|
+| `bases-cambio-modelo.{qmd,html,pdf}` | Ensayo: del modelo de apps al de texto plano + agentes |
+| `diagnostico-usuario.{qmd,html}` | Diagnóstico del perfil de usuario y sus dificultades |
+| `faq-cambio-modelo.{qmd,html,pdf}` | Preguntas frecuentes sobre el cambio de modelo |
+| `analisis-plantilla-ineficiente.qmd` | Análisis de una plantilla Word ineficiente |
+| `analisis-plantillas-universitarias.qmd` | Análisis comparativo de plantillas universitarias |
+| `custom.css` | Estilos compartidos para documentos Quarto |
+| `cosmo-custom.scss` | Sobreescripciones del tema Cosmo (Bootstrap) |
 
 ## Estructura de la sesión
 
