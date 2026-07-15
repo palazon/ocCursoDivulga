@@ -12,8 +12,7 @@ format:
     css: custom.css
     self-contained: true
   pdf:
-    documentclass: scrbook
-    classoption: openany
+    documentclass: article
     papersize: a4
     fontsize: 12pt
     geometry:
@@ -36,10 +35,8 @@ format:
         \renewcommand{\ttdefault}{lmtt}
         \renewcommand{\sfdefault}{lmss}
         \usepackage{titlesec}
-        \setkomafont{chapter}{\sffamily\bfseries\Large}
         \titleformat{\section}{\sffamily\large\bfseries}{\thesection}{1em}{}
         \titleformat{\subsection}{\sffamily\normalsize\bfseries}{\thesubsection}{1em}{}
-        \titlespacing*{\chapter}{0pt}{10pt}{8pt}
         \titlespacing*{\section}{0pt}{8pt}{4pt}
         \titlespacing*{\subsection}{0pt}{6pt}{3pt}
         \usepackage{indentfirst}
