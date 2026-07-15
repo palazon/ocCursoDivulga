@@ -1,7 +1,7 @@
 ---
 title: "Bases para un cambio de modelo"
 subtitle: "De llevar el contenido a la aplicación a trabajar con agentes"
-author: "JA Palazón"
+author: "JA Palazón; jEsuSdA 8)"
 date: "2026-07-03"
 lang: es
 toc: true
@@ -435,6 +435,42 @@ Ahora abre OpenCode y dile: *"Convierte este texto a PDF"*. En segundos verás u
 Si no tienes OpenCode instalado, mira el [vídeo de la sesión](https://umurcia.zoom.us/rec/play/ta3zzdOjkFywo35Vv7wnFcdCrcN9RDUWLQMlHe7XisW5Rnngz-crhdENH_zNkkzCWIkwoxmZPVppYldd.RBA5dxmy19eX7_wq?accessLevel=meeting&canPlayFromShare=true&from=share_recording_detail&continueMode=true&oldStyle=true&componentName=rec-play&originRequestUrl=https%3A%2F%2Fumurcia.zoom.us%2Frec%2Fshare%2FYKZsu4UUeSnneT9xbQyFCPgkImjaFQqMxLQRyeQXsDsFGurxpD9E7fZjkoxVkavK.1wf4sZyQa88k4NH0){target="_blank"} para ver cómo se hace en la práctica.
 
 :::
+
+
+## Versionado: olvídate de «versión_final_corregida.docx»
+
+Si trabajas con documentos —informes, guías, actas, presentaciones—, seguramente reconozcas estos nombres:
+
+- `informe_v2.docx`
+- `informe_v2_corregido.docx`
+- `informe_v2_corregido_definitivo.docx`
+- `informe_v2_corregido_definitivo_REAL.docx`
+
+Son intentos de resolver un problema real: **¿cómo guardo las versiones anteriores de un documento sin que se acumulen y me estorben?** La respuesta habitual es crear copias con nombres cada vez más largos. Pero eso no es un control de versiones: es un desastre. No puedes saber qué cambió entre una versión y otra. No puedes volver atrás sin abrir diez archivos. Y si alguien modifica la versión equivocada, el lío está servido.
+
+### Lo que el versionado resuelve
+
+El versionado —usando herramientas como Git— te permite:
+
+- **Guardar cada cambio** con un mensaje que explica qué se hizo y por qué.
+- **Volver atrás** a cualquier punto del historial, sin buscar entre copias.
+- **Comparar versiones** para ver exactamente qué cambió, línea por línea.
+- **Trabajar en paralelo** sin temor a sobreescribir el trabajo de otro.
+- **Archivar versiones anteriores** sin que estorben: están registradas, pero no ocupan espacio en tu escritorio.
+
+### Cómo funciona con OpenCode
+
+Cuando trabajas con OpenCode sobre un proyecto, el historial de versiones se gestiona automáticamente. Cada vez que el agente modifica un archivo, puedes guardar el cambio con un mensaje descriptivo. No necesitas crear copias manualmente: el sistema las lleva por ti.
+
+Si necesitas recuperar algo que se borró o comparar cómo era un documento antes de una edición, lo haces con una instrucción sencilla. Sin buscar en carpetas, sin abrir archivos uno por uno.
+
+::: {.callout-tip}
+
+**En la práctica.** Imagina que tienes un borrador de una guía docente. Le pides a OpenCode que reorganice las secciones, que añada ejemplos y que adapte el tono. Si el resultado no te convence, puedes volver al estado anterior con un solo comando. Si te convence, guardas el cambio con un mensaje como «Reorganización de secciones y adición de ejemplos». Mañana, o dentro de un mes, podrás ver qué hiciste y por qué. Sin «versión_final_corregida_v3.docx».
+
+:::
+
+El versionado no es una herramienta solo para programadores. Es una forma de **trabajar con documentos de verdad**: con historia, con seguridad y sin miedo a equivocarte.
 
 
 # Conclusión

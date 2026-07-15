@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="JA Palazón">
+<meta name="author" content="JA Palazón; jEsuSdA 8)">
 
 <title>Bases para un cambio de modelo</title>
 <style>
@@ -2272,7 +2272,14 @@ margin-left: 0;
   <li><a href="#aprendizaje" id="toc-aprendizaje" class="nav-link" data-scroll-target="#aprendizaje">Aprendizaje</a></li>
   <li><a href="#independencia" id="toc-independencia" class="nav-link" data-scroll-target="#independencia">Independencia</a></li>
   </ul></li>
-  <li><a href="#de-la-teoría-a-la-práctica" id="toc-de-la-teoría-a-la-práctica" class="nav-link" data-scroll-target="#de-la-teoría-a-la-práctica">De la teoría a la práctica</a></li>
+  <li><a href="#de-la-teoría-a-la-práctica" id="toc-de-la-teoría-a-la-práctica" class="nav-link" data-scroll-target="#de-la-teoría-a-la-práctica">De la teoría a la práctica</a>
+  <ul class="collapse">
+  <li><a href="#versionado-olvídate-de-versión_final_corregida.docx" id="toc-versionado-olvídate-de-versión_final_corregida.docx" class="nav-link" data-scroll-target="#versionado-olvídate-de-versión_final_corregida.docx">Versionado: olvídate de «versión_final_corregida.docx»</a>
+  <ul class="collapse">
+  <li><a href="#lo-que-el-versionado-resuelve" id="toc-lo-que-el-versionado-resuelve" class="nav-link" data-scroll-target="#lo-que-el-versionado-resuelve">Lo que el versionado resuelve</a></li>
+  <li><a href="#cómo-funciona-con-opencode" id="toc-cómo-funciona-con-opencode" class="nav-link" data-scroll-target="#cómo-funciona-con-opencode">Cómo funciona con OpenCode</a></li>
+  </ul></li>
+  </ul></li>
   <li><a href="#conclusión" id="toc-conclusión" class="nav-link" data-scroll-target="#conclusión">Conclusión</a></li>
   <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias">Referencias</a>
   <ul class="collapse">
@@ -2298,7 +2305,7 @@ margin-left: 0;
     <div>
     <div class="quarto-title-meta-heading">Autor/a</div>
     <div class="quarto-title-meta-contents">
-             <p>JA Palazón </p>
+             <p>JA Palazón; jEsuSdA 8) </p>
           </div>
   </div>
     
@@ -2949,6 +2956,47 @@ Nota
 <p>Si no tienes OpenCode instalado, mira el <a href="https://umurcia.zoom.us/rec/play/ta3zzdOjkFywo35Vv7wnFcdCrcN9RDUWLQMlHe7XisW5Rnngz-crhdENH_zNkkzCWIkwoxmZPVppYldd.RBA5dxmy19eX7_wq?accessLevel=meeting&amp;canPlayFromShare=true&amp;from=share_recording_detail&amp;continueMode=true&amp;oldStyle=true&amp;componentName=rec-play&amp;originRequestUrl=https%3A%2F%2Fumurcia.zoom.us%2Frec%2Fshare%2FYKZsu4UUeSnneT9xbQyFCPgkImjaFQqMxLQRyeQXsDsFGurxpD9E7fZjkoxVkavK.1wf4sZyQa88k4NH0" target="_blank">vídeo de la sesión</a> para ver cómo se hace en la práctica.</p>
 </div>
 </div>
+<section id="versionado-olvídate-de-versión_final_corregida.docx" class="level2">
+<h2 class="anchored" data-anchor-id="versionado-olvídate-de-versión_final_corregida.docx">Versionado: olvídate de «versión_final_corregida.docx»</h2>
+<p>Si trabajas con documentos —informes, guías, actas, presentaciones—, seguramente reconozcas estos nombres:</p>
+<ul>
+<li><code>informe_v2.docx</code></li>
+<li><code>informe_v2_corregido.docx</code></li>
+<li><code>informe_v2_corregido_definitivo.docx</code></li>
+<li><code>informe_v2_corregido_definitivo_REAL.docx</code></li>
+</ul>
+<p>Son intentos de resolver un problema real: <strong>¿cómo guardo las versiones anteriores de un documento sin que se acumulen y me estorben?</strong> La respuesta habitual es crear copias con nombres cada vez más largos. Pero eso no es un control de versiones: es un desastre. No puedes saber qué cambió entre una versión y otra. No puedes volver atrás sin abrir diez archivos. Y si alguien modifica la versión equivocada, el lío está servido.</p>
+<section id="lo-que-el-versionado-resuelve" class="level3">
+<h3 class="anchored" data-anchor-id="lo-que-el-versionado-resuelve">Lo que el versionado resuelve</h3>
+<p>El versionado —usando herramientas como Git— te permite:</p>
+<ul>
+<li><strong>Guardar cada cambio</strong> con un mensaje que explica qué se hizo y por qué.</li>
+<li><strong>Volver atrás</strong> a cualquier punto del historial, sin buscar entre copias.</li>
+<li><strong>Comparar versiones</strong> para ver exactamente qué cambió, línea por línea.</li>
+<li><strong>Trabajar en paralelo</strong> sin temor a sobreescribir el trabajo de otro.</li>
+<li><strong>Archivar versiones anteriores</strong> sin que estorben: están registradas, pero no ocupan espacio en tu escritorio.</li>
+</ul>
+</section>
+<section id="cómo-funciona-con-opencode" class="level3">
+<h3 class="anchored" data-anchor-id="cómo-funciona-con-opencode">Cómo funciona con OpenCode</h3>
+<p>Cuando trabajas con OpenCode sobre un proyecto, el historial de versiones se gestiona automáticamente. Cada vez que el agente modifica un archivo, puedes guardar el cambio con un mensaje descriptivo. No necesitas crear copias manualmente: el sistema las lleva por ti.</p>
+<p>Si necesitas recuperar algo que se borró o comparar cómo era un documento antes de una edición, lo haces con una instrucción sencilla. Sin buscar en carpetas, sin abrir archivos uno por uno.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>En la práctica.</strong> Imagina que tienes un borrador de una guía docente. Le pides a OpenCode que reorganice las secciones, que añada ejemplos y que adapte el tono. Si el resultado no te convence, puedes volver al estado anterior con un solo comando. Si te convence, guardas el cambio con un mensaje como «Reorganización de secciones y adición de ejemplos». Mañana, o dentro de un mes, podrás ver qué hiciste y por qué. Sin «versión_final_corregida_v3.docx».</p>
+</div>
+</div>
+<p>El versionado no es una herramienta solo para programadores. Es una forma de <strong>trabajar con documentos de verdad</strong>: con historia, con seguridad y sin miedo a equivocarte.</p>
+</section>
+</section>
 </section>
 <section id="conclusión" class="level1">
 <h1>Conclusión</h1>
