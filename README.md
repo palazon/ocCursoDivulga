@@ -28,10 +28,10 @@ Materiales del taller impartido en la Facultad de Biología de la Universidad de
 
 ## Documentos de apoyo
 
-- **[Del modelo de aplicaciones al de texto plano](https://palazon.github.io/ocCursoDivulga/docs/bases-cambio-modelo.html)** — Ensayo que explica por qué conviene pasar de apps a documentos de texto con asistentes de IA.
-- **[Diagnóstico del perfil de usuario](https://palazon.github.io/ocCursoDivulga/docs/diagnostico-usuario.html)** — Describe las dificultades habituales del personal universitario con la tecnología.
-- **[Preguntas frecuentes](https://palazon.github.io/ocCursoDivulga/docs/faq-cambio-modelo.html)** — Respuestas a las dudas más comunes sobre el cambio de modelo de trabajo.
-- **[Glosario](https://palazon.github.io/ocCursoDivulga/docs/glosario.html)** — Definición de los términos técnicos.
-- **[Análisis de plantilla ineficiente](https://palazon.github.io/ocCursoDivulga/docs/analisis-plantilla-ineficiente.html)** — Caso real de una plantilla Word con problemas de diseño.
-- **[Análisis de plantillas universitarias](https://palazon.github.io/ocCursoDivulga/docs/analisis-plantillas-universitarias.html)** — Comparativa de diez documentos universitarios con datos cuantitativos.
+- **[Por qué muchos están cambiando de modelo](https://palazon.github.io/ocCursoDivulga/docs/bases-cambio-modelo.html)** — Argumentos y razones para pasar de aplicaciones a contenido en texto plano con asistentes de IA.
+- **[Quién es el usuario de OpenCode](https://palazon.github.io/ocCursoDivulga/docs/diagnostico-usuario.html)** — Rasgos, barreras y oportunidades de quienes nos acercamos por primera vez a herramientas de IA.
+- **[Preguntas frecuentes](https://palazon.github.io/ocCursoDivulga/docs/faq-cambio-modelo.html)** — Las dudas más habituales antes de empezar, resueltas con claridad.
+- **[Glosario](https://palazon.github.io/ocCursoDivulga/docs/glosario.html)** — Definición de los términos técnicos que aparecen en estos documentos.
+- **[Una plantilla Word analizada](https://palazon.github.io/ocCursoDivulga/docs/analisis-plantilla-ineficiente.html)** — Qué ocurre cuando el formato se aplica a mano, paso a paso, en un documento real.
+- **[Diez plantillas universitarias comparadas](https://palazon.github.io/ocCursoDivulga/docs/analisis-plantillas-universitarias.html)** — Datos y patrones comunes en documentos de uso habitual en la universidad.
 
