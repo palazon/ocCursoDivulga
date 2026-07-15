@@ -1,0 +1,117 @@
+---
+title: "Glosario"
+subtitle: "Términos técnicos utilizados en los documentos de apoyo"
+author: "JA Palazón"
+date: "2026-07-15"
+lang: es
+toc: true
+toc-title: "Contenido"
+format:
+  html:
+    theme: cosmo
+    css: custom.css
+    self-contained: true
+  pdf:
+    documentclass: scrbook
+    classoption: openany
+    papersize: a4
+    fontsize: 12pt
+    geometry:
+      - top=2cm
+      - bottom=2cm
+      - left=2cm
+      - right=2cm
+    colorlinks: true
+    linkcolor: Maroon
+    urlcolor: Maroon
+    number-sections: true
+    include-in-header:
+      text: |
+        \usepackage[automark]{scrlayer-scrpage}
+        \clearpairofpagestyles
+        \cfoot*{\pagemark}
+        \pagestyle{plain}
+        \renewcommand{\contentsname}{Contenidos}
+        \usepackage[scaled=0.85]{beramono}
+        \renewcommand{\ttdefault}{lmtt}
+        \renewcommand{\sfdefault}{lmss}
+        \usepackage{titlesec}
+        \setkomafont{chapter}{\sffamily\bfseries\Large}
+        \titleformat{\section}{\sffamily\large\bfseries}{\thesection}{1em}{}
+        \titleformat{\subsection}{\sffamily\normalsize\bfseries}{\thesubsection}{1em}{}
+        \titlespacing*{\chapter}{0pt}{10pt}{8pt}
+        \titlespacing*{\section}{0pt}{8pt}{4pt}
+        \titlespacing*{\subsection}{0pt}{6pt}{3pt}
+        \usepackage{indentfirst}
+        \setlength{\parindent}{2em}
+---
+
+# Conceptos de modelo de trabajo
+
+**Texto plano**
+: Texto sin formato ni estilos visuales, guardado como caracteres simples. Se abre con cualquier editor y no depende de ningún programa concreto. A diferencia de un documento de Word, no tiene botones, menús ni barras de herramientas: solo letras, números y signos de puntuación.
+
+**Markdown**
+: Forma de escribir texto plano con marcas mínimas para indicar títulos, listas, negritas o enlaces. Un `#` delante marca un título, un `*` una negrita, un guion una lista. Se aprende en minutos y cubre el 90% de lo que necesitas en el día a día.
+
+**Flujo de trabajo**
+: Serie de pasos que sigues para crear un documento: escribes el contenido en Markdown, das instrucciones al agente sobre el formato que necesitas, revisas el resultado y entregas. En el modelo anterior, escribías y formateabas dentro de la misma aplicación.
+
+# La herramienta
+
+**OpenCode**
+: Asistente de inteligencia artificial que se ejecuta en tu ordenador. Transforma archivos de un formato a otro usando lenguaje natural: le dices «pasa esto a PDF con portada» y lo hace. Trabaja sobre tus archivos locales.
+
+**Agente**
+: Programa de inteligencia artificial que ejecuta tareas concretas sobre tus documentos. OpenCode es un agente. También puedes configurar agentes especializados para tareas repetitivas, como generar informes con un formato fijo o revisar la coherencia de un texto largo.
+
+**Terminal**
+: Ventana de texto donde escribes comandos. En OpenCode, abres la terminal, escribes una instrucción en lenguaje natural como `opencode "pasa esto a PDF"` y el agente la ejecuta. No es programación: es una sola línea de texto. Si la terminal te da respeto, también puedes usar herramientas gráficas como Obsidian o RStudio.
+
+**Prompt**
+: Instrucción que escribes para el agente. Puede ser una frase como «coge este documento y conviértelo a presentación» o «resume este informe en una página». A más detalle en el prompt, mejor el resultado.
+
+# Inteligencia artificial
+
+**Modelo de IA / de lenguaje**
+: El «cerebro» que entiende lo que escribes y genera la respuesta. Es el componente que procesa tu instrucción y decide qué hacer con tus archivos. Puede ejecutarse en tu ordenador (modelo local) o en servidores externos (modelo remoto).
+
+**Modelo local**
+: Modelo de IA que se ejecuta en tu ordenador. No necesita internet y tus archivos no salen de tu máquina. Requiere más recursos del ordenador (memoria y procesador) y suele ser menos potente que los modelos remotos.
+
+**Modelo remoto**
+: Modelo de IA ejecutado en servidores de un proveedor (como OpenAI, Anthropic o Google). Necesita internet; los archivos se envían al proveedor para procesarlos, pero no se almacenan permanentemente. Suele ser más potente que los modelos locales.
+
+**Alucinaciones**
+: Cuando un modelo de IA genera información incorrecta o inventada. En OpenCode el riesgo es menor que en un chatbot porque trabaja sobre tu contenido: tú le pasas el texto y él lo transforma, no genera información nueva desde cero. Además, tú revisas el resultado antes de entregarlo.
+
+# Formatos y tecnologías
+
+**HTML**
+: Lenguaje para crear páginas web. Los documentos HTML se abren directamente en el navegador. Cuando generas un documento con OpenCode en formato HTML, cualquiera puede verlo sin necesidad de instalar programas.
+
+**PDF**
+: Formato de documento universal que se ve igual en cualquier dispositivo y sistema operativo. Ideal para imprimir, archivar o enviar por correo. OpenCode genera PDFs con portada, índice, numeración y estilos profesionales.
+
+**CSS**
+: Reglas de estilo que controlan colores, tamaños de letra, márgenes y espaciado de un documento HTML. Si quieres títulos en azul, tablas sin bordes o un encabezado específico, defines un archivo CSS y OpenCode lo aplica.
+
+**LaTeX**
+: Sistema de composición tipográfica para generar PDFs de alta calidad. Especialmente útil para documentos académicos con ecuaciones, bibliografía o formatos de revista. OpenCode puede usar plantillas LaTeX para aplicar estilos complejos automáticamente.
+
+**Quarto**
+: Sistema de publicación basado en Markdown que genera HTML, PDF y presentaciones desde un mismo archivo. Es el «dialecto» de Markdown que usan los documentos de este proyecto. Permite incluir código, tablas, diagramas y referencias bibliográficas.
+
+# Otros
+
+**Git**
+: Sistema de control de versiones. Registra cada cambio que haces en tus documentos para que puedas volver atrás, comparar versiones o trabajar en equipo sin perder nada. OpenCode puede gestionar el historial de versiones de tus proyectos automáticamente.
+
+**Moodle**
+: Plataforma de aprendizaje virtual usada en la mayoría de universidades. Los materiales generados con OpenCode —PDFs, HTML, presentaciones— se suben a Moodle como cualquier otro archivo. Moodle no distingue cómo se ha creado el contenido.
+
+# Para saber más
+
+- [Guía rápida de Markdown](https://www.markdownguide.org/basic-syntax/){target="_blank"} — Referencia concisa de la sintaxis básica.
+- [Bases para un cambio de modelo](bases-cambio-modelo.html) — Documento conceptual que explica el modelo de trabajo.
+- [Preguntas frecuentes](faq-cambio-modelo.html) — Resolución de dudas prácticas.

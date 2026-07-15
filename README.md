@@ -24,6 +24,7 @@ Materiales del taller impartido en la Facultad de Biología de la Universidad de
 - **[Del modelo de aplicaciones al de texto plano](https://github.com/palazon/ocCursoDivulga/blob/main/docs/bases-cambio-modelo.html)** — Ensayo que explica por qué conviene pasar de apps a documentos de texto con asistentes de IA.
 - **[Diagnóstico del perfil de usuario](https://github.com/palazon/ocCursoDivulga/blob/main/docs/diagnostico-usuario.html)** — Describe las dificultades habituales del personal universitario con la tecnología.
 - **[Preguntas frecuentes](https://github.com/palazon/ocCursoDivulga/blob/main/docs/faq-cambio-modelo.html)** — Respuestas a las dudas más comunes sobre el cambio de modelo de trabajo.
+- **[Glosario](https://github.com/palazon/ocCursoDivulga/blob/main/docs/glosario.html)** — Definición de los términos técnicos.
 - **[Análisis de plantilla ineficiente](https://github.com/palazon/ocCursoDivulga/blob/main/docs/analisis-plantilla-ineficiente.qmd)** — Caso real de una plantilla Word con problemas de diseño.
 - **[Análisis de plantillas universitarias](https://github.com/palazon/ocCursoDivulga/blob/main/docs/analisis-plantillas-universitarias.qmd)** — Comparativa de diez documentos universitarios con datos cuantitativos.
 

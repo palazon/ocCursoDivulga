@@ -53,7 +53,7 @@ format:
 
 <div class="subtitle">
 
-Este documento recoge las dudas más habituales que surgen al plantearse el cambio de modelo de trabajo: dejar de depender de aplicaciones ofimáticas y pasar a trabajar con contenido en texto plano asistido por un agente de inteligencia artificial (OpenCode). Está pensado para quien ha leído *Bases para un cambio de modelo* y quiere resolver las preguntas prácticas antes de lanzarse a probar.
+Este documento recoge las dudas más habituales que surgen al plantearse el cambio de modelo de trabajo: dejar de depender de aplicaciones ofimáticas y pasar a trabajar con contenido en texto plano asistido por un agente de inteligencia artificial (OpenCode). Está pensado para quien ha leído *Bases para un cambio de modelo* y quiere resolver las preguntas prácticas antes de lanzarse a probar. Para una definición de los términos técnicos, consulta el [glosario](glosario.html).
 
 </div>
 

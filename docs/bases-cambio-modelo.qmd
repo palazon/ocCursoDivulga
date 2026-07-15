@@ -462,6 +462,8 @@ Recursos prácticos y accesibles para familiarizarte con el modelo de trabajo:
 
 - **[Guía rápida de Markdown](https://www.markdownguide.org/basic-syntax/){target="_blank"}** — Referencia concisa de la sintaxis básica (títulos, negritas, listas, enlaces).
 
+- **[Glosario](glosario.html)** — Definición de los términos técnicos usados en estos documentos.
+
 - **[Preguntas frecuentes](faq-cambio-modelo.html)** — Resolución de dudas prácticas antes de lanzarte a probar.
 
 ## Para profundizar
