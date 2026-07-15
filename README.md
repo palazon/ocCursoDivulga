@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://palazon.github.io/ocCursoDivulga/100-oc-divulga.html">
-    <img src="images/portada-presentacion.png" alt="Abrir presentación del taller" width="720">
+    <img src="images/portada-presentacion.png" alt="Abrir presentación del taller" width="500">
   </a>
 </p>
 
