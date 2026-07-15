@@ -6,9 +6,7 @@
   </a>
 </p>
 
-<p align="center">
-  <em>Haz clic en la imagen para abrir la presentación</em>
-</p>
+*Haz clic en la imagen para abrir la presentación*
 
 Materiales del taller impartido en la Facultad de Biología de la Universidad de Murcia.
 
@@ -25,6 +23,11 @@ Materiales del taller impartido en la Facultad de Biología de la Universidad de
   4. **Más potencia** — Agentes, skills, MCP, Git
   5. **Cierre** — Conclusiones, próximos pasos, referencias
 - **[Vídeo de la sesión](https://umurcia.zoom.us/rec/play/ta3zzdOjkFywo35Vv7wnFcdCrcN9RDUWLQMlHe7XisW5Rnngz-crhdENH_zNkkzCWIkwoxmZPVppYldd.RBA5dxmy19eX7_wq?accessLevel=meeting&canPlayFromShare=true&from=share_recording_detail&continueMode=true&oldStyle=true&componentName=rec-play&originRequestUrl=https%3A%2F%2Fumurcia.zoom.us%2Frec%2Fshare%2FYKZsu4UUeSnneT9xbQyFCPgkImjaFQqMxLQRyeQXsDsFGurxpD9E7fZjkoxVkavK.1wf4sZyQa88k4NH0)** — Grabación de la sesión explicativa en Zoom.
+
+## Cursos de OpenCode
+
+- **[OpenCode 101 — Curso básico](https://palazon.github.io/ocCursoIntro/)** — 12 pasos para empezar a usar OpenCode: instalación, prompts, reestructurar documentos, traducir, investigar y revisar textos.
+- **[OpenCode 102 — Curso avanzado](https://palazon.github.io/ocCursoAvanzado/)** — Automatización y personalización: agentes, skills, Git, MCP, permisos y colaboración en equipo.
 
 ## Documentos de apoyo
 
