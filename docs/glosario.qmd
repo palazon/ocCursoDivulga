@@ -4,8 +4,6 @@ subtitle: "Términos técnicos utilizados en los documentos de apoyo"
 author: "JA Palazón"
 date: "2026-07-15"
 lang: es
-toc: true
-toc-title: "Contenido"
 format:
   html:
     theme: cosmo
