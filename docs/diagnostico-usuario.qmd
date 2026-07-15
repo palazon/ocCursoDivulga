@@ -1,7 +1,7 @@
 ---
 title: "Diagnóstico del perfil de usuario"
 subtitle: "Dificultades, barreras y oportunidades del creador de contenidos académico"
-author: "JA Palazón; D Rivera"
+author: "JA Palazón"
 date: "20260703"
 lang: es
 format:

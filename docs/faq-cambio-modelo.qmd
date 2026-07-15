@@ -1,7 +1,7 @@
 ---
 title: "FAQ: Preguntas frecuentes sobre el cambio de modelo"
 subtitle: "Dudas típicas al pasar de llevar el contenido a la aplicación a trabajar con agentes"
-author: "JA Palazón; D Rivera"
+author: "JA Palazón"
 date: "2026-07-05"
 lang: es
 toc: true
