@@ -44,7 +44,6 @@ Materiales del taller impartido en la Facultad de Biología de la Universidad de
 
 [Consulta los cambios y el problema conocido más importante](cambios-opencode-v1.18.md): por defecto no hay acceso a *Plan/Build*.
 
-
 ## Licencia
 
 Este material se distribuye bajo la licencia
@@ -52,5 +51,4 @@ Este material se distribuye bajo la licencia
 
 Puedes compartirlo y adaptarlo, pero solo con fines no comerciales
 y bajo la misma licencia.
-
 
