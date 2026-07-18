@@ -1,0 +1,7 @@
+*.swp
+*.swo
+*~
+.opencode/node_modules/
+.opencode/package-lock.json
+*_files/
+*.html

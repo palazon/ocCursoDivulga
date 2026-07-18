@@ -1,0 +1,118 @@
+---
+title: "Ficha de referencia rápida"
+subtitle: "OpenCode para gestión universitaria"
+author: "JA Palazón"
+date: "2 de julio de 2026"
+lang: es
+format:
+  html:
+    theme: cosmo
+    toc: false
+    number-sections: false
+---
+
+## ¿Qué es OpenCode?
+
+**Un asistente de IA que entiende lenguaje natural** para crear,
+revisar y mejorar documentos. Sin necesidad de programar.
+
+- Versión web: [opencode.ai](https://opencode.ai)
+- Versión de escritorio: Descargable desde opencode.ai
+
+---
+
+## Cómo usarlo
+
+1. **Abre** OpenCode (web o escritorio)
+2. **Escribe** lo que necesitas en lenguaje natural
+3. **Revisa** el resultado生成
+4. **Pide ajustes** si es necesario
+
+---
+
+## Estructura de una petición efectiva
+
+```
+[Acción] + [Contexto] + [Formato] + [Detalles]
+```
+
+**Ejemplo:**
+
+> "Crea un acta de reunión de departamento con fecha 5 de julio,
+> asistentes: María, Pedro, Ana. Incluye: orden del día,
+> intervenciones, acuerdos y tareas asignadas."
+
+---
+
+## Verbos útiles
+
+| Para qué | Verbos para empezar |
+|----------|---------------------|
+| Crear | Crea, Redacta, Escribe, Genera |
+| Modificar | Reestructura, Reformula, Resume, Amplía |
+| Revisar | Revisa, Corrige, Mejora, Pulir |
+| Traducir | Traduce, Adapta |
+| Analizar | Analiza, Resume, Comenta |
+
+---
+
+## Ejemplos por ámbito
+
+### Actas
+> "Crea un acta de reunión con estos apuntes: [texto]"
+
+### Correos formales
+> "Redacta un correo formal para convocar una reunión el viernes 10 a las 12:00"
+
+### Informes
+> "Genera un informe de actividad del departamento con estas datos: [datos]"
+
+### Material docente
+> "Crea una guía didáctica de 30 horas sobre Biología Molecular"
+
+### Revisión
+> "Revisa este texto y mejora: claridad, coherencia, ortografía"
+
+---
+
+## Consejos clave
+
+1. **Sé específico** — No digas "haz un informe", di "haz un informe de 2 páginas sobre..."
+2. **Incluye contexto** — ¿Para qué es? ¿A quién va dirigido?
+3. **Itera** — Si no sale perfecto, pide ajustes
+4. **Revisa siempre** — OpenCode es una herramienta, tú eres el responsable del contenido
+
+---
+
+## Recursos
+
+| Recurso | Enlace |
+|---------|--------|
+| Curso básico (101) | [palazon.github.io/ocCursoIntro](https://palazon.github.io/ocCursoIntro/) |
+| Curso avanzado (102) | [palazon.github.io/ocCursoAvanzado](https://palazon.github.io/ocCursoAvanzado/) |
+| Ideas de uso | [palazon.github.io/ocCursoIntro/ideas101.html](https://palazon.github.io/ocCursoIntro/ideas101.html) |
+| Preguntas frecuentes | [palazon.github.io/ocCursoIntro/faq.html](https://palazon.github.io/ocCursoIntro/faq.html) |
+
+---
+
+## Solución de problemas
+
+| Problema | Solución |
+|----------|----------|
+| No entiende mi petición | Sé más específico, incluye más contexto |
+| El resultado es muy largo | Pide "un resumen de 200 palabras" |
+| El resultado es muy corto | Pide "amplía la sección sobre..." |
+| No me gusta el tono | Pide "usa un tono más formal/informal" |
+| Falta información | Añade los datos que faltan en tu petición |
+
+---
+
+## Contacto
+
+- **Sesión:** 2 de julio de 2026, Aulario Facultad de Biología
+- **Dudas:** Consulta los cursos 101 y 102
+- **Comunidad:** Foro de usuarios de OpenCode
+
+---
+
+*Ficha de referencia · Sesión "OpenCode para gestión universitaria" · 2 de julio de 2026*

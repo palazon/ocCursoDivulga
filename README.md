@@ -38,3 +38,17 @@ Materiales del taller impartido en la Facultad de Biología de la Universidad de
 - **[Una plantilla Word analizada](https://palazon.github.io/ocCursoDivulga/docs/analisis-plantilla-ineficiente.html)** — Qué ocurre cuando el formato se aplica a mano, paso a paso, en un documento real.
 - **[Diez plantillas universitarias comparadas](https://palazon.github.io/ocCursoDivulga/docs/analisis-plantillas-universitarias.html)** — Datos y patrones comunes en documentos de uso habitual en la universidad.
 
+## Nuevas versiones
+
+**Novedades / Actualización:** La Desktop App de OpenCode ya no es beta.
+
+[Consulta los cambios y el problema conocido más importante](cambios-opencode-v1.18.md): por defecto no hay acceso a *Plan/Build*.
+
+## Licencia
+
+Este material se distribuye bajo la licencia
+[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es).
+
+Puedes compartirlo y adaptarlo, pero solo con fines no comerciales
+y bajo la misma licencia.
+
