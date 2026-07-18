@@ -1,123 +1,49 @@
-# Sesión: OpenCode para gestión universitaria
+# Asistente IA para el trabajo universitario
 
 <p align="center">
-  <img src="https://opencode.ai/logo.png" alt="OpenCode" width="200">
+  <a href="https://palazon.github.io/ocCursoDivulga/100-oc-divulga.html">
+    <img src="images/portada-presentacion.png" alt="Abrir presentación del taller" width="500">
+  </a>
 </p>
 
-## Datos de la sesión
+*Haz clic en la imagen para abrir la presentación*
 
-| Campo | Valor |
-|-------|-------|
-| **Fecha** | 2 de julio de 2026 |
-| **Hora** | 9:30 - 11:30 (2 horas) |
-| **Lugar** | Aulario de la Facultad de Biología |
-| **Audiencia** | Creadores de contenido universitario (no programadores) |
-| **Confirmación** | xxx@um.es |
+Materiales del taller impartido en la Facultad de Biología de la Universidad de Murcia.
 
-## Objetivo
+**Versión:** 1.0 · **Licencia:** CC BY-NC-SA 4.0
 
-Taller práctico de 2 horas para que creadores de contenido universitario
-descubran OpenCode como asistente de IA que trabaja en su ordenador:
-resumir, comparar, fusionar documentos, generar presentaciones, crear
-proyectos, automatizar tareas repetitivas.
+> **[Versión navegable de todos los materiales](https://palazon.github.io/ocCursoDivulga/)** — Accede directamente a la presentación, documentos y glosario desde el navegador.
 
-## Estructura de la sesión
+## Recursos principales
 
-### Intro y contexto
+- **[Presentación del taller](https://palazon.github.io/ocCursoDivulga/100-oc-divulga.html)** — Diapositivas autocontenidas con ejemplos, ejercicios y referencias. Se abre directamente en el navegador.
+  1. **Introducción** — Bienvenida, objetivos, barreras al cambio, qué es OpenCode
+  2. **Primeros pasos** — Ejemplos prácticos: resumen, comparativa, fusión, formatos
+  3. **Un proyecto** — Caso completo sobre tejidos animales
+  4. **Más potencia** — Agentes, skills, MCP, Git
+  5. **Cierre** — Conclusiones, próximos pasos, referencias
+- **[Vídeo de la sesión](https://umurcia.zoom.us/rec/play/ta3zzdOjkFywo35Vv7wnFcdCrcN9RDUWLQMlHe7XisW5Rnngz-crhdENH_zNkkzCWIkwoxmZPVppYldd.RBA5dxmy19eX7_wq?accessLevel=meeting&canPlayFromShare=true&from=share_recording_detail&continueMode=true&oldStyle=true&componentName=rec-play&originRequestUrl=https%3A%2F%2Fumurcia.zoom.us%2Frec%2Fshare%2FYKZsu4UUeSnneT9xbQyFCPgkImjaFQqMxLQRyeQXsDsFGurxpD9E7fZjkoxVkavK.1wf4sZyQa88k4NH0)** — Grabación de la sesión explicativa en Zoom.
 
-- Bienvenida, objetivos, barreras al cambio, qué es OpenCode, alternativas, formatos de archivo
+## Cursos de OpenCode
 
-### Parte 1 — Primeros pasos
+- **[OpenCode 101 — Curso básico](https://palazon.github.io/ocCursoIntro/)** — 12 pasos para empezar a usar OpenCode: instalación, prompts, reestructurar documentos, traducir, investigar y revisar textos.
+- **[OpenCode 102 — Curso avanzado](https://palazon.github.io/ocCursoAvanzado/)** — Automatización y personalización: agentes, skills, Git, MCP, permisos y colaboración en equipo.
 
-- Abriendo OpenCode, atajos de teclado, ejemplos prácticos (resumen, comparativa, fusión, formatos de salida), flujo de trabajo (Plan → Build → Tú), consejos y errores comunes
+## Documentos de apoyo
 
-### Parte 2 — Un proyecto
+- **[Por qué muchos están cambiando de modelo](https://palazon.github.io/ocCursoDivulga/docs/bases-cambio-modelo.html)** — Argumentos y razones para pasar de aplicaciones a contenido en texto plano con asistentes de IA.
+- **[Quién es el usuario de OpenCode](https://palazon.github.io/ocCursoDivulga/docs/diagnostico-usuario.html)** — Rasgos, barreras y oportunidades de quienes nos acercamos por primera vez a herramientas de IA.
+- **[Preguntas frecuentes](https://palazon.github.io/ocCursoDivulga/docs/faq-cambio-modelo.html)** — Las dudas más habituales antes de empezar, resueltas con claridad.
+- **[Glosario](https://palazon.github.io/ocCursoDivulga/docs/glosario.html)** — Definición de los términos técnicos que aparecen en estos documentos.
+- **[Una plantilla Word analizada](https://palazon.github.io/ocCursoDivulga/docs/analisis-plantilla-ineficiente.html)** — Qué ocurre cuando el formato se aplica a mano, paso a paso, en un documento real.
+- **[Diez plantillas universitarias comparadas](https://palazon.github.io/ocCursoDivulga/docs/analisis-plantillas-universitarias.html)** — Datos y patrones comunes en documentos de uso habitual en la universidad.
 
-- Ejemplo completo: proyecto de prácticas sobre tejidos animales (generación, borrador, modificación, inclusión de documentación)
+## Nuevas versiones
 
-### Parte 3 — Más potencia
+**Novedades / Actualización:** La Desktop App de OpenCode ya no es beta.
 
-- Más allá de la documentación, agentes, skills, MCP, Git
+[Consulta los cambios y el problema conocido más importante](cambios-opencode-v1.18.md): por defecto no hay acceso a *Plan/Build*.
 
-### Cierre
-
-- Conclusiones, próximos pasos, referencias
-
-## Contenido del proyecto
-
-### Presentación activa
-
-Archivo: `presentacion/v2.qmd`
-
-~35 diapositivas en Quarto revealjs, autocontenidas. Tema oscuro institucional (#002028), tres partes + extras.
-
-> La versión inicial (`presentacion/index.qmd`) se mantiene como referencia histórica.
-
-### Análisis DAFO
-
-Archivo: `dafo-presentacion.html`
-
-Análisis de debilidades, amenazas, fortalezas y oportunidades de la presentación. Actualizado tras cada ronda de cambios.
-
-### Notas de diseño
-
-Archivo: `apuntesParaPresentacion.md`
-
-Directrices de estilo visual, tono, audiencia y estructura para la presentación.
-
-### Instrucciones del proyecto
-
-Archivo: `AGENTS.md`
-
-Comandos, estructura y convenciones para el desarrollo de la sesión con OpenCode.
-
-### Guía de ejercicios
-
-Archivo: `ejercicios/guia-ejercicios.qmd`
-
-Guía paso a paso para los ejercicios prácticos de la sesión.
-Incluye ejemplos, variantes y consejos.
-
-### Ficha de referencia rápida
-
-Archivo: `recursos/ficha-referencia.qmd`
-
-Documento conciso para consultar después de la sesión. Incluye
-estructura de peticiones, verbos útiles y recursos.
-
-## Cursos de apoyo
-
-Esta sesión se apoya en dos cursos existentes:
-
-- **OpenCode 101** — Curso básico de 12 pasos para creadores de contenido
-  [palazon.github.io/ocCursoIntro](https://palazon.github.io/ocCursoIntro/)
-
-- **OpenCode 102** — Curso avanzado de 8 pasos (automatización, personalización)
-  [palazon.github.io/ocCursoAvanzado](https://palazon.github.io/ocCursoAvanzado/)
-
-## Requisitos para asistentes
-
-- Portátil propio con batería cargada
-- OpenCode instalado (TUI o Desktop App)
-- Conexión a internet (wifi del aulario)
-
-## Generar materiales
-
-Para generar los materiales en formato HTML:
-
-```bash
-# Instalar Quarto (si no está instalado)
-# https://quarto.org/docs/get-started/
-
-# Generar presentación (activa)
-quarto render presentacion/v2.qmd
-
-# Generar guía de ejercicios
-quarto render ejercicios/guia-ejercicios.qmd
-
-# Generar ficha de referencia
-quarto render recursos/ficha-referencia.qmd
-```
 
 ## Licencia
 
@@ -127,6 +53,4 @@ Este material se distribuye bajo la licencia
 Puedes compartirlo y adaptarlo, pero solo con fines no comerciales
 y bajo la misma licencia.
 
----
 
-*Sesión "OpenCode para gestión universitaria" · 2 de julio de 2026*
