@@ -22,7 +22,7 @@ Materiales del taller impartido en la Facultad de Biología de la Universidad de
   3. **Un proyecto** — Caso completo sobre tejidos animales
   4. **Más potencia** — Agentes, skills, MCP, Git
   5. **Cierre** — Conclusiones, próximos pasos, referencias
-- **[Vídeo de la sesión](https://umurcia.zoom.us/rec/play/ta3zzdOjkFywo35Vv7wnFcdCrcN9RDUWLQMlHe7XisW5Rnngz-crhdENH_zNkkzCWIkwoxmZPVppYldd.RBA5dxmy19eX7_wq?accessLevel=meeting&canPlayFromShare=true&from=share_recording_detail&continueMode=true&oldStyle=true&componentName=rec-play&originRequestUrl=https%3A%2F%2Fumurcia.zoom.us%2Frec%2Fshare%2FYKZsu4UUeSnneT9xbQyFCPgkImjaFQqMxLQRyeQXsDsFGurxpD9E7fZjkoxVkavK.1wf4sZyQa88k4NH0)** — Grabación de la sesión explicativa en Zoom.
+- **[Vídeo de la sesión](https://umurcia.zoom.us/rec/play/ta3zzdOjkFywo35Vv7wnFcdCrcN9RDUWLQMlHe7XisW5Rnngz-crhdENH_zNkkzCWIkwoxmZPVppYldd.RBA5dxmy19eX7_wq?accessLevel=meeting&canPlayFromShare=true&from=share_recording_detail&continueMode=true&oldStyle=true&componentName=rec-play&originRequestUrl=https%3A%2F%2Fumurcia.zoom.us%2Frec%2Fshare%2FYKZsu4UUeSnneT9xbQyFCPgkImjaFQqMxLQRyeQXsDsFGurxpD9E7fZjkoxVkavK.1wf4sZyQa88k4NH0)** — Grabación de la sesión explicativa en Zoom. Esta versión se desarrolló con la versión beta de OpenCode; si te interesa seguir los pasos en tu ordenador, es conveniente que mires el apartado *Nuevas versiones* más adelante.
 
 ## Cursos de OpenCode
 
