@@ -3,7 +3,9 @@ title: "Guía breve de OpenCode 2026"
 subtitle: "Instalación, configuración y ajustes"
 author: "JA Palazón Ferrando"
 date: today
-format: html
+format:
+  html:
+    self-contained: true
 ---
 
 <style>
@@ -210,4 +212,4 @@ Genera un informe ejecutivo de 1 página basado en los datos del archivo resulta
 
 ## Más información
 
-Para más contenido sobre OpenCode y otras herramientas de IA, visita [palazon.github.com](https://palazon.github.com).
+Para más contenido sobre OpenCode y otras herramientas de IA, visita [ocCursoDivulga](https://palazon.github.io/ocCursoDivulga/).
