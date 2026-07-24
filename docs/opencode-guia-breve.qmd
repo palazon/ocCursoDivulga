@@ -6,6 +6,7 @@ date: today
 format:
   html:
     self-contained: true
+lang: es
 ---
 
 <style>
