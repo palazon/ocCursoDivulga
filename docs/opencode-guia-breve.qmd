@@ -212,4 +212,4 @@ Genera un informe ejecutivo de 1 página basado en los datos del archivo resulta
 
 ## Más información
 
-Para más contenido sobre OpenCode y otras herramientas de IA, visita [ocCursoDivulga](https://palazon.github.io/ocCursoDivulga/).
+Para más contenido sobre OpenCode visita [ocCursoDivulga](https://palazon.github.io/ocCursoDivulga/).
