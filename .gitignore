@@ -5,4 +5,5 @@
 .opencode/package-lock.json
 *_files/
 *.html
-!recursos/opencode-guia-breve.html
+!docs/opencode-guia-breve.html
+!docs/opencode-guia-breve_files/

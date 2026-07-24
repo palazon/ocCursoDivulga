@@ -8,7 +8,7 @@ Sesión "OpenCode para gestión universitaria" — materiales en Quarto.
 # Regenerar cualquier archivo individual
 quarto render presentacion/v2.qmd
 quarto render ejercicios/guia-ejercicios.qmd
-quarto render recursos/opencode-guia-breve.qmd
+quarto render docs/opencode-guia-breve.qmd
 quarto render recursos/ficha-referencia.qmd
 ```
 
@@ -19,7 +19,7 @@ No hay build system, tests, linter ni typecheck. Solo Quarto.
 - `presentacion/v2.qmd` — Presentación principal (revealjs, tema oscuro institucional)
 - `presentacion/index.qmd` — Versión inicial de la presentación (no usar, referencial)
 - `ejercicios/guia-ejercicios.qmd` — Guía de ejercicios prácticos
-- `recursos/opencode-guia-breve.qmd` — Guía breve de instalación y configuración
+- `docs/opencode-guia-breve.qmd` — Guía breve de instalación y configuración
 - `recursos/ficha-referencia.qmd` — Ficha de consulta rápida
 - `apuntesParaPresentacion.md` — Notas y guía de estilo para la presentación
 

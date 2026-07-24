@@ -36,7 +36,7 @@ Materiales del taller impartido en la Facultad de Biología de la Universidad de
 - **[Preguntas frecuentes](https://palazon.github.io/ocCursoDivulga/docs/faq-cambio-modelo.html)** — Las dudas más habituales antes de empezar, resueltas con claridad.
 - **[Glosario](https://palazon.github.io/ocCursoDivulga/docs/glosario.html)** — Definición de los términos técnicos que aparecen en estos documentos.
 - **[Una plantilla Word analizada](https://palazon.github.io/ocCursoDivulga/docs/analisis-plantilla-ineficiente.html)** — Qué ocurre cuando el formato se aplica a mano, paso a paso, en un documento real.
-- **[Guía breve de OpenCode](https://palazon.github.io/ocCursoDivulga/recursos/opencode-guia-breve.html)** — Instalación, configuración y ajustes esenciales.
+- **[Guía breve de OpenCode](https://palazon.github.io/ocCursoDivulga/docs/opencode-guia-breve.html)** — Instalación, configuración y ajustes esenciales.
 - **[Diez plantillas universitarias comparadas](https://palazon.github.io/ocCursoDivulga/docs/analisis-plantillas-universitarias.html)** — Datos y patrones comunes en documentos de uso habitual en la universidad.
 
 ## Nuevas versiones
